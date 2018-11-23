@@ -1,0 +1,17 @@
+# What is the set of aggregate properties for [an aggregate datatype X]?
+
+
+prefix OntoDT: <http://www.ontodm.com/OntoDT#>
+prefix OntoDT2: <http://ontodm.com/OntoDT#>
+prefix obo: <http://purl.obolibrary.org/obo/>
+SELECT ?x0 WHERE { 
+$?PPx1$  rdfs:subClassOf OntoDT2:OntoDT_378476, [ rdf:type owl:Restriction ; 
+      owl:onProperty OntoDT:OntoDT_0000405;    
+      owl:someValuesFrom ?x1 
+ ] . 
+?x1 rdfs:subClassOf [ rdf:type owl:Restriction ; 
+      owl:onProperty obo:OBI_0000298;    
+      owl:someValuesFrom ?x0
+ ] .
+?x0 rdfs:subClassOf* OntoDT2:OntoDT_283020 . 
+}

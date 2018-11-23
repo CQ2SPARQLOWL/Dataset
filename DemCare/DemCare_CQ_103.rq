@@ -1,0 +1,16 @@
+# What types of descriptive information are relevant to a result? 
+
+
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix event: <http://www.demcare.eu/ontologies/event.owl#>
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix exch: <http://www.demcare.eu/ontologies/exchangemodel.owl#>
+
+select distinct *
+where
+{
+    [] rdfs:subClassOf exch:Result, [
+    owl:onProperty ?p;
+    owl:someValuesFrom []
+    ].
+}

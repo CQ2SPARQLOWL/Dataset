@@ -1,0 +1,18 @@
+# What are the main types of entities?
+
+
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix event: <http://www.demcare.eu/ontologies/event.owl#>
+
+select distinct *
+where
+{
+?e rdfs:subClassOf event:Entity .
+    filter not exists
+    {
+        ?e rdfs:subClassOf ?f .
+        ?f rdfs:subClassOf event:Entity.
+        filter(?f != event:Entity && ?e != ?f)
+    }
+    filter(?e != event:Entity && ?e != owl:Nothing)
+}

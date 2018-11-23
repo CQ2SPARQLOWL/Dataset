@@ -1,0 +1,19 @@
+# What is the valid input for [this software]?
+
+
+prefix swo: <http://www.ebi.ac.uk/swo/> 
+prefix obo: <http://purl.obolibrary.org/obo/>
+SELECT DISTINCT ?x1 WHERE { 
+$PPx1$ rdfs:subClassOf swo:SWO_0000001 . 
+$PPx1$ rdfs:subClassOf  
+    [ rdf:type owl:Restriction ; 
+       owl:onProperty swo:SWO_0000086 ; 
+       owl:someValuesFrom [ owl:intersectionOf ( obo:IAO_0000027 
+                                                                                         [ rdf:type owl:Restriction ; 
+                                                                                           owl:onProperty swo:SWO_0004002 ; 
+                                                                                           owl:someValuesFrom ?x1 
+                                                                                         ] 
+                                                                                     ) 
+     ] 
+ ] ; 
+} 

@@ -1,0 +1,18 @@
+# What are the aggregated datatypes that have [an aggregate generator property X]?
+
+
+prefix OntoDT: <http://www.ontodm.com/OntoDT#>
+prefix OntoDT2: <http://ontodm.com/OntoDT#>
+prefix obo: <http://purl.obolibrary.org/obo/>
+SELECT ?x0 WHERE { 
+?x0  rdfs:subClassOf* OntoDT2:OntoDT_378476 .
+?x0  rdfs:subClassOf [ rdf:type owl:Restriction ; 
+      owl:onProperty OntoDT:OntoDT_0000405;    
+      owl:someValuesFrom ?x1 
+ ] . 
+?x1 rdfs:subClassOf [ rdf:type owl:Restriction ; 
+      owl:onProperty obo:OBI_0000298;    
+      owl:someValuesFrom $?PPx1$
+ ] .
+$PPx1$ rdfs:subClassOf OntoDT2:OntoDT_283020 . 
+}

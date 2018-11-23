@@ -1,0 +1,18 @@
+# What are the main types of objects?
+
+
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix event: <http://www.demcare.eu/ontologies/event.owl#>
+
+select distinct *
+where
+{
+?e rdfs:subClassOf event:Object .
+    filter not exists
+    {
+        ?e rdfs:subClassOf ?f .
+        ?f rdfs:subClassOf event:Object.
+        filter(?f != event:Object && ?e != ?f)
+    }
+    filter(?e != event:Object && ?e != owl:Nothing)
+}

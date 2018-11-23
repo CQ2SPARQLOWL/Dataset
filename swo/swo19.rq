@@ -1,0 +1,16 @@
+# What are the export options for [this software]?
+
+
+prefix swo: <http://www.ebi.ac.uk/swo/> 
+prefix obo: <http://purl.obolibrary.org/obo/>
+SELECT ?format WHERE { $PPx1$ rdfs:subClassOf swo:SWO_0000001,[
+        a owl:Restriction ;
+        owl:onProperty swo:SWO_0000087 ; 
+        owl:someValuesFrom [
+                                  a owl:Restriction ;
+                                  owl:onProperty swo:SWO_0004002 ; 
+                                  owl:someValuesFrom ?format
+                              ]
+    ] .
+?format rdfs:subClassOf obo:IAO_0000098 ; 
+filter(?format!=obo:IAO_0000098) }

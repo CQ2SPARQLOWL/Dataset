@@ -1,0 +1,17 @@
+# Which stuffs have as part exactly two substuffs?
+
+
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+prefix : <http://www.meteck.org/files/ontologies/stuff.owl#>
+
+select distinct *
+where
+{
+?stuff rdfs:subClassOf [
+a owl:Restriction ;
+owl:onProperty :hasSubStuff ;
+owl:cardinality "2"^^xsd:nonNegativeInteger
+]
+}

@@ -1,0 +1,14 @@
+# What are the possible types of fixed sensors?
+
+
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix event: <http://www.demcare.eu/ontologies/event.owl#>
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix exch: <http://www.demcare.eu/ontologies/exchangemodel.owl#>
+
+select distinct *
+where
+{
+?e rdfs:subClassOf exch:FixedSensor .
+    filter(?e != exch:FixedSensor && ?e != owl:Nothing)
+}

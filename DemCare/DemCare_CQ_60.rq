@@ -1,0 +1,17 @@
+# What information is of clinical interest regarding a nap?
+
+
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix event: <http://www.demcare.eu/ontologies/event.owl#>
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix exch: <http://www.demcare.eu/ontologies/exchangemodel.owl#>
+prefix home: <http://www.demcare.eu/ontologies/home.owl#>
+
+select distinct *
+where
+{
+    [] rdfs:subClassOf event:Nap, [
+    owl:onProperty ?p;
+    owl:someValuesFrom []
+    ].
+}

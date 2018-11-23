@@ -1,0 +1,19 @@
+# Which plants eat animals?
+
+
+# Which plants eat animals?
+
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix : <http://www.meteck.org/teaching/ontologies/AfricanWildlifeOntology1.owl#>
+
+select distinct ?eats
+where
+{
+?eats rdfs:subClassOf :plant, [
+a owl:Restriction ;
+owl:onProperty :eats;
+owl:someValuesFrom :animal
+] .
+filter(?eats != owl:Nothing)
+}

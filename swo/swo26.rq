@@ -1,0 +1,41 @@
+# Is the output format of [it] proprietary?
+
+
+prefix swo: <http://www.ebi.ac.uk/swo/> 
+prefix obo: <http://purl.obolibrary.org/obo/>
+ASK WHERE { $PPx1$ rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty swo:SWO_0000087 ; 
+        owl:someValuesFrom [
+                                  a owl:Restriction ;
+                                  owl:onProperty swo:SWO_0004002 ; 
+                                  owl:someValuesFrom ?format
+                              ]
+    ] .
+?format rdfs:subClassOf obo:IAO_0000098 .
+filter(not exists {
+?subformat rdfs:subClassOf ?format .
+filter(isURI(?subformat) && ?subformat!=?format && ?subformat!=owl:Nothing)
+})
+filter(not exists {
+    ?os_sw rdfs:subClassOf swo:SWO_0000001,
+                            [
+                                a owl:Restriction ;
+                                owl:onProperty swo:SWO_0000087 ; 
+                                owl:someValuesFrom [
+                                                          a owl:Restriction ;
+                                                          owl:onProperty swo:SWO_0004002 ;
+                                                          owl:someValuesFrom ?format
+                                                      ]
+                            ] ,
+                            [
+                                a owl:Restriction ;
+                                owl:onProperty swo:has_license ;
+                                owl:someValuesFrom [
+                                        a owl:Restriction ;
+                                        owl:onProperty swo:SWO_9001002 ;
+                                        owl:someValuesFrom swo:SWO_9000020 
+                                ]
+                             ].
+                             filter(isURI(?os_sw) && ?os_sw!=owl:Nothing)
+}) }

@@ -1,0 +1,20 @@
+# Are there animals that are carnivore but still eat some plants or parts of plants?
+
+
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix : <http://www.meteck.org/teaching/ontologies/AfricanWildlifeOntology1.owl#>
+
+ask
+where
+{
+filter not exists {
+ :carnivore owl:disjointWith [
+        a owl:Restriction ;
+        owl:onProperty :eats ;
+        owl:someValuesFrom [
+        owl:unionOf (:plant :PlantParts)
+        ]
+        ] .
+        }
+}

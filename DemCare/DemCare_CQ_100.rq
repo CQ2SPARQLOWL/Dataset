@@ -1,0 +1,19 @@
+# What are the main types of data a report may refer to?
+
+
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix event: <http://www.demcare.eu/ontologies/event.owl#>
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix exch: <http://www.demcare.eu/ontologies/exchangemodel.owl#>
+
+select distinct *
+where
+{
+exch:Report rdfs:subClassOf [
+owl:onProperty exch:describes ;
+owl:allValuesFrom [
+owl:unionOf/rdf:rest*/rdf:first ?c
+]
+]
+}

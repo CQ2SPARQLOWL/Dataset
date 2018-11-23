@@ -1,0 +1,15 @@
+# What kind of colloid is [this colloid stuff]?
+
+
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+prefix : <http://www.meteck.org/files/ontologies/stuff.owl#>
+
+select distinct *
+where
+{
+$PPx1$ rdfs:subClassOf ?class .
+?class rdfs:subClassOf :Colloid.
+filter(?class != :Colloid && ?class != $PPx1$)
+}

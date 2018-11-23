@@ -1,0 +1,16 @@
+# Can [this software] export from its proprietary data format to an open format such as csv, txt?
+
+
+prefix swo: <http://www.ebi.ac.uk/swo/> 
+prefix obo: <http://purl.obolibrary.org/obo/>
+ASK WHERE { $PPx1$ rdfs:subClassOf swo:SWO_0000001,[
+        a owl:Restriction ;
+        owl:onProperty swo:SWO_0000087 ;
+        owl:someValuesFrom [
+                                  a owl:Restriction ;
+                                  owl:onProperty swo:SWO_0004002 ;
+                                  owl:someValuesFrom <http://www.ebi.ac.uk/efo/swo/SWO_0000117>
+                              ]
+    ] .
+?format rdfs:subClassOf obo:IAO_0000098 ;
+filter(?format!=obo:IAO_0000098)}

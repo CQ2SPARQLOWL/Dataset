@@ -1,0 +1,22 @@
+# In which phases are the stuffs in [this colloid]?
+
+
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix : <http://www.meteck.org/files/ontologies/stuff.owl#>
+
+select  *
+where
+{
+$PPx1$ rdfs:subClassOf :Colloid,[
+a owl:Restriction ;
+owl:onProperty :hasPartStuff ;
+owl:someValuesFrom [
+a owl:Restriction ;
+owl:onProperty :hasState ;
+owl:someValuesFrom ?state
+]
+].
+?state rdfs:subClassOf :StuffState .
+filter(?state != :StuffState)
+}

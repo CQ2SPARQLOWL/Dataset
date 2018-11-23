@@ -1,0 +1,10 @@
+# Is [this software] available as a web service?
+
+
+prefix swo: <http://www.ebi.ac.uk/swo/> 
+prefix obo: <http://purl.obolibrary.org/obo/> 
+ASK WHERE { $PPx1$ rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty swo:SWO_0004001 ;
+        owl:someValuesFrom <http://www.ebi.ac.uk/swo/interface/SWO_9000051>
+        ] , swo:SWO_0000001. }

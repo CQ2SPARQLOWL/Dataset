@@ -1,0 +1,18 @@
+# What are the main types of events?
+
+
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix event: <http://www.demcare.eu/ontologies/event.owl#>
+
+select distinct *
+where
+{
+?e rdfs:subClassOf event:Event .
+    filter not exists
+    {
+        ?e rdfs:subClassOf ?f .
+        ?f rdfs:subClassOf event:Event.
+        filter(?f != event:Event && ?e != ?f)
+    }
+    filter(?e != event:Event && ?e != owl:Nothing)
+}

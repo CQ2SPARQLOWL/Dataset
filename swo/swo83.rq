@@ -1,0 +1,12 @@
+# In what language was [it] implemented?
+
+
+prefix swo: <http://www.ebi.ac.uk/swo/> 
+prefix obo: <http://purl.obolibrary.org/obo/>
+SELECT ?lang WHERE { $PPx1$ rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ebi.ac.uk/efo/swo/SWO_0000741> ;
+    owl:someValuesFrom ?lang
+    ] .
+?lang rdfs:subClassOf obo:IAO_0000025 .
+filter(?lang!=obo:IAO_0000025) }

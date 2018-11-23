@@ -1,0 +1,14 @@
+# Is [this software] open source development? Is there a community development?
+
+
+prefix swo: <http://www.ebi.ac.uk/swo/> 
+prefix obo: <http://purl.obolibrary.org/obo/>
+ASK WHERE { $PPx1$ rdfs:subClassOf swo:SWO_0000001,[
+    a owl:Restriction ;
+    owl:onProperty swo:has_license ;
+    owl:someValuesFrom [
+            a owl:Restriction ;
+            owl:onProperty swo:SWO_9001002 ;
+            owl:someValuesFrom swo:SWO_9000020 
+    ]
+ ]. }

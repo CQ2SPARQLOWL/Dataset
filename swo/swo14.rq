@@ -1,0 +1,13 @@
+# Which software tool created [this data]?
+
+
+prefix swo: <http://www.ebi.ac.uk/swo/> 
+prefix obo: <http://purl.obolibrary.org/obo/>
+SELECT ?sw WHERE { ?sw rdfs:subClassOf swo:SWO_0000001 ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty swo:SWO_0000087 ;   
+        owl:someValuesFrom $PPx1$
+    ].
+$PPx1$ rdfs:subClassOf obo:IAO_0000027 .
+}

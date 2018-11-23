@@ -1,0 +1,13 @@
+# Which of the named and published “algorithms” does [this tool] use?
+
+
+prefix swo: <http://www.ebi.ac.uk/swo/> 
+prefix obo: <http://purl.obolibrary.org/obo/>
+SELECT ?alg WHERE {$PPx1$ rdfs:subClassOf swo:SWO_0000001 ,
+                     [
+                        a owl:Restriction ;
+                        owl:onProperty <http://www.ebi.ac.uk/efo/swo/SWO_0000740>;
+                        owl:someValuesFrom ?alg
+                     ] .
+?alg rdfs:subClassOf obo:IAO_0000064 .
+filter(?alg != obo:IAO_0000064) . }

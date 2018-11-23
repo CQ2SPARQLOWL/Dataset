@@ -1,0 +1,33 @@
+# What open source, maintained software can I use to process [these] in [this format]?
+
+
+prefix swo: <http://www.ebi.ac.uk/swo/> 
+prefix obo: <http://purl.obolibrary.org/obo/>
+SELECT ?sw WHERE { ?sw rdfs:subClassOf swo:SWO_0000001 ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty swo:SWO_0000086 ;  
+        owl:someValuesFrom [
+                             a owl:Restriction ;
+                             owl:onProperty swo:SWO_0004002 ; 
+                             owl:someValuesFrom $PPx2$
+                         ]
+    ] , [
+        a owl:Restriction ;
+        owl:onProperty <http://www.ebi.ac.uk/swo/maturity/SWO_9000067> ;
+        owl:someValuesFrom [
+            owl:unionOf (
+                <http://www.ebi.ac.uk/swo/maturity/SWO_9000065>  
+                <http://www.ebi.ac.uk/swo/maturity/SWO_9000073>    
+            )
+        ]
+    ] , [
+        a owl:Restriction ;
+        owl:onProperty swo:has_license ;
+        owl:someValuesFrom [
+            a owl:Restriction ;
+            owl:onProperty swo:SWO_9001002 ;
+            owl:someValuesFrom swo:SWO_9000020 
+        ]
+    ].
+filter(?sw != owl:Nothing) }

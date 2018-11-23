@@ -1,0 +1,13 @@
+# Is [it] appropriate software for [my task]?
+
+
+prefix swo: <http://www.ebi.ac.uk/swo/> 
+prefix obo: <http://purl.obolibrary.org/obo/>
+ASK WHERE { $PPx1$ rdfs:subClassOf swo:SWO_0000001 ,
+                     [
+                        a owl:Restriction ;
+                        owl:onProperty swo:SWO_0040005 ;
+                        owl:someValuesFrom $PPx2$
+                     ] . 
+$PPx2$ rdfs:subClassOf swo:SWO_0000003 .
+}

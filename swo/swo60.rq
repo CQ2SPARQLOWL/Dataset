@@ -1,0 +1,14 @@
+# Is [it] open source or not?
+
+
+prefix swo: <http://www.ebi.ac.uk/swo/> 
+prefix obo: <http://purl.obolibrary.org/obo/>
+ASK WHERE { $PPx1$ rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty swo:has_license ;
+    owl:someValuesFrom [
+            a owl:Restriction ;
+            owl:onProperty swo:SWO_9001002 ;
+            owl:someValuesFrom swo:SWO_9000020 
+    ]
+ ]. }

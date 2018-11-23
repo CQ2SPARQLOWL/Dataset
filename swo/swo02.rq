@@ -1,0 +1,20 @@
+# What are the alternatives to [this software]?
+
+
+prefix swo: <http://www.ebi.ac.uk/swo/> 
+prefix obo: <http://purl.obolibrary.org/obo/>
+SELECT ?sw2 WHERE {$PPx1$ rdfs:subClassOf swo:SWO_0000001 ,
+                     [
+                        a owl:Restriction ;
+                        owl:onProperty <http://www.ebi.ac.uk/efo/swo/SWO_0000740>;
+                        owl:someValuesFrom ?alg
+                     ] .
+?sw2 rdfs:subClassOf swo:SWO_0000001 ,
+                     [
+                        a owl:Restriction ;
+                        owl:onProperty <http://www.ebi.ac.uk/efo/swo/SWO_0000740>;
+                        owl:someValuesFrom ?alg
+                     ] .
+?alg rdfs:subClassOf obo:IAO_0000064 .
+filter(?alg != obo:IAO_0000064) .
+filter(?sw1 != ?sw2). }

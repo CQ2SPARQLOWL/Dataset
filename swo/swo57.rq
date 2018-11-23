@@ -1,0 +1,16 @@
+# When was the 1.0 version of [it] released?
+
+
+prefix swo: <http://www.ebi.ac.uk/swo/> 
+prefix obo: <http://purl.obolibrary.org/obo/>
+SELECT ?date WHERE { $PPx1$ rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty swo:SWO_0004000 ;
+    owl:hasValue  "1.0"
+] ,
+[
+    a owl:Restriction ;
+    owl:onProperty <http://www.ebi.ac.uk/swo/maturity/SWO_9000068> ;
+    owl:hasValue   ?date
+]
+. }

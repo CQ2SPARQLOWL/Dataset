@@ -1,0 +1,12 @@
+# What are the types of indoor place?
+
+
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix event: <http://www.demcare.eu/ontologies/event.owl#>
+
+select distinct *
+where
+{
+?e rdfs:subClassOf event:Room .
+    filter(?e != event:Room && ?e != owl:Nothing)
+}

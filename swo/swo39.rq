@@ -1,0 +1,10 @@
+# Which URL can I get [it] from?
+
+
+prefix swo: <http://www.ebi.ac.uk/swo/> 
+prefix obo: <http://purl.obolibrary.org/obo/>
+SELECT ?url WHERE { $PPx1$ rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty swo:SWO_0000046 ;
+    owl:hasValue  ?url
+] . }

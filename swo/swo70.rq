@@ -1,0 +1,9 @@
+# Is there any documentation for [it] and where can I find it?
+
+
+prefix swo: <http://www.ebi.ac.uk/swo/> 
+prefix obo: <http://purl.obolibrary.org/obo/>
+SELECT ?doc WHERE { $PPx1$ rdfs:subClassOf [ rdf:type owl:Restriction ;
+                      owl:onProperty swo:SWO_0000043 ;
+                      owl:hasValue ?doc
+                    ]. }

@@ -1,0 +1,18 @@
+# What data are measured for cognitive abilities assessment?
+
+
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix event: <http://www.demcare.eu/ontologies/event.owl#>
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix exch: <http://www.demcare.eu/ontologies/exchangemodel.owl#>
+prefix home: <http://www.demcare.eu/ontologies/home.owl#>
+prefix lab: <http://www.demcare.eu/ontologies/lab.owl#>
+
+select distinct *
+where
+{
+    [] rdfs:subClassOf lab:CognitiveAbilitiesAssessment, [
+    owl:onProperty ?p;
+    owl:someValuesFrom []
+    ].
+}

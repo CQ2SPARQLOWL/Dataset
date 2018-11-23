@@ -1,0 +1,20 @@
+# What are the main types of sensors? 
+
+
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix event: <http://www.demcare.eu/ontologies/event.owl#>
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix exch: <http://www.demcare.eu/ontologies/exchangemodel.owl#>
+
+select distinct *
+where
+{
+?e rdfs:subClassOf exch:Sensor .
+    filter not exists
+    {
+        ?e rdfs:subClassOf ?f .
+        ?f rdfs:subClassOf exch:Sensor.
+        filter(?f != exch:Sensor && ?e != ?f)
+    }
+    filter(?e != exch:Sensor && ?e != owl:Nothing)
+}

@@ -1,0 +1,19 @@
+# What software can read a .cel file?
+
+
+prefix swo: <http://www.ebi.ac.uk/swo/> 
+prefix obo: <http://purl.obolibrary.org/obo/>
+SELECT DISTINCT ?x0 WHERE { 
+?x0 rdfs:subClassOf swo:SWO_0000001 . 
+?x0 rdfs:subClassOf  
+    [ rdf:type owl:Restriction ; 
+       owl:onProperty swo:SWO_0000086 ; 
+       owl:someValuesFrom [ owl:intersectionOf ( obo:IAO_0000027 
+                                                                                         [ rdf:type owl:Restriction ; 
+                                                                                           owl:onProperty swo:SWO_0004002 ; 
+                                                                                           owl:someValuesFrom <http://edamontology.org/format_1638> 
+                                                                                         ] 
+                                                                                     )
+     ] 
+ ] ; 
+} 

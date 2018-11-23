@@ -1,0 +1,17 @@
+# Can [software A] work with data that are output from [software B]?
+
+
+prefix swo: <http://www.ebi.ac.uk/swo/> 
+prefix obo: <http://purl.obolibrary.org/obo/>
+ASK WHERE { $PPx2$ rdfs:subClassOf swo:SWO_0000001,[
+        a owl:Restriction ;
+        owl:onProperty swo:SWO_0000087 ; 
+        owl:someValuesFrom ?format
+    ] .
+$PPx1$ rdfs:subClassOf swo:SWO_0000001,[
+        a owl:Restriction ;
+        owl:onProperty swo:SWO_0000086 ;
+        owl:someValuesFrom ?format
+    ] .
+?format rdfs:subClassOf obo:IAO_0000027 ; 
+filter(?format!=obo:IAO_0000027) }

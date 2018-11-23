@@ -1,0 +1,10 @@
+# Do I need a license key to use [it]?
+
+
+prefix swo: <http://www.ebi.ac.uk/swo/> 
+prefix obo: <http://purl.obolibrary.org/obo/>
+ASK WHERE {$PPx1$ rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty swo:has_license ;
+    owl:someValuesFrom  <http://www.ebi.ac.uk/swo/license/SWO_1000002>
+ ].}

@@ -1,0 +1,12 @@
+# How long has [this software] been around?
+
+
+prefix swo: <http://www.ebi.ac.uk/swo/> 
+prefix obo: <http://purl.obolibrary.org/obo/>
+SELECT ?result WHERE { $PPx1$ rdfs:subClassOf swo:SWO_0000001,[
+    a owl:Restriction ;
+    owl:onProperty <http://www.ebi.ac.uk/swo/maturity/SWO_9000068> ;
+    owl:hasValue ?date
+]
+
+bind(now()-xsd:dateTime(?date) as ?result) }

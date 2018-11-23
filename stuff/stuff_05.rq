@@ -1,0 +1,14 @@
+# Which kind of stuff are [these stuffs]?
+
+
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix : <http://www.meteck.org/files/ontologies/stuff.owl#>
+
+select distinct *
+where
+{
+$PPx1$ rdfs:subClassOf ?kind_of_stuff .
+?kind_of_stuff rdfs:subClassOf :Stuff .
+filter(?kind_of_stuff != :Stuff )
+}

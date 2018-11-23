@@ -1,0 +1,12 @@
+# What type of software is [it]?
+
+
+prefix swo: <http://www.ebi.ac.uk/swo/> 
+prefix obo: <http://purl.obolibrary.org/obo/>
+SELECT ?iface WHERE { $PPx1$ rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty swo:SWO_0004001 ;
+        owl:someValuesFrom ?iface
+        ] , swo:SWO_0000001.
+?iface rdfs:subClassOf swo:SWO_9000050.
+filter(?iface != swo:SWO_9000050) }

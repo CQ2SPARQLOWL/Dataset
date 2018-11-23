@@ -1,0 +1,23 @@
+# Is [it] extensible?
+
+
+prefix swo: <http://www.ebi.ac.uk/swo/> 
+prefix obo: <http://purl.obolibrary.org/obo/>
+ASK WHERE { $PPx1$ rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty swo:has_license ;
+    owl:someValuesFrom [
+        owl:intersectionOf (
+            [
+                a owl:Restriction ;
+                owl:onProperty swo:SWO_9001002 ;
+                owl:someValuesFrom <http://www.ebi.ac.uk/swo/license/SWO_10000038> 
+            ]
+            [
+                a owl:Restriction ;
+                owl:onProperty swo:SWO_9001002 ;
+                owl:someValuesFrom swo:SWO_9000020
+            ]
+        )
+    ]
+ ]. }

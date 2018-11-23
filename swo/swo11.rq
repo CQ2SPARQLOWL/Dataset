@@ -1,0 +1,18 @@
+# Which visualisation software is there for [this data] and what will it cost?
+
+
+prefix swo: <http://www.ebi.ac.uk/swo/> 
+prefix obo: <http://purl.obolibrary.org/obo/>
+SELECT ?sw WHERE { ?sw rdfs:subClassOf swo:SWO_0000001 ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty swo:SWO_0000086 ; 
+        owl:someValuesFrom $PPx1$
+    ] ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty swo:SWO_0040005 ;
+        owl:someValuesFrom <http://www.ebi.ac.uk/efo/swo/SWO_0000724>
+    ] .
+$PPx1$ rdfs:subClassOf obo:IAO_0000027 .
+filter(?sw != owl:Nothing) }

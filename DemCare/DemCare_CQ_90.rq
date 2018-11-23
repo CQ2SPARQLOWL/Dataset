@@ -1,0 +1,18 @@
+# What are the main categories of events?
+
+
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix event: <http://www.demcare.eu/ontologies/event.owl#>
+
+select distinct *
+where
+{
+?e rdfs:subClassOf event:Activity .
+    filter not exists
+    {
+        ?e rdfs:subClassOf ?f .
+        ?f rdfs:subClassOf event:Activity.
+        filter(?f != event:Activity && ?e != ?f)
+    }
+    filter(?e != event:Activity && ?e != owl:Nothing)
+}

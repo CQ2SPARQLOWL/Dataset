@@ -1,0 +1,20 @@
+# What is assessed in the walking and counting backwards task?
+
+
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix event: <http://www.demcare.eu/ontologies/event.owl#>
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix exch: <http://www.demcare.eu/ontologies/exchangemodel.owl#>
+prefix lab: <http://www.demcare.eu/ontologies/lab.owl#>
+
+select distinct *
+where
+{
+    lab:S1_P13_WalkingCountingBackwardsTask rdfs:subClassOf [
+    a owl:Restriction;
+    owl:onProperty lab:measuredData;
+    owl:someValuesFrom ?x
+    ].
+    ?x rdfs:subClassOf lab:MeasuredData.
+    filter(?x != lab:MeasuredData)
+}
