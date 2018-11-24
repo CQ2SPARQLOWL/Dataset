@@ -1,0 +1,253 @@
+{
+    "Are there EC1 in EC2": [],
+    "Are there any EC1 PC1 EC2 PC1": [],
+    "Are there any EC1 for EC2": [],
+    "Are there any EC1 to EC2 EC3 PC1": [],
+    "At what EC1 PC1 EC2 of EC3 PC1": [],
+    "Can we PC1 EC1 of EC2": [],
+    "Do I know EC1 who PC1 EC2 or PC1 EC3": [],
+    "Does EC1 have EC2": [],
+    "Given EC1, what are EC2 for EC3 of EC4": [],
+    "How EC1 PC1 is EC2 for EC3": [],
+    "How EC1 is EC2": [
+        "SELECT * WHERE { ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 . _:b0 <http://www.w3.org/2002/07/owl#onProperty> _:b1 ; <http://www.w3.org/2002/07/owl#someValuesFrom> ?status . ?status <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b2 FILTER isURI(?status) }"
+    ],
+    "How PC1 I PC1 EC1": [
+        "SELECT * WHERE { ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 . _:b0 <http://www.w3.org/2002/07/owl#onProperty> _:b1 ; <http://www.w3.org/2002/07/owl#hasValue> ?doc }"
+    ],
+    "How PC1 I PC1 EC1 PC1 EC2": [],
+    "How PC1 I PC1 EC1 with EC2 PC1": [],
+    "How PC1 I PC1 EC2": [],
+    "How and where PC1 EC1 PC1 in the past": [],
+    "How long PC1 EC1 PC1": [
+        "SELECT * WHERE { ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b1 ; <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 . _:b0 <http://www.w3.org/2002/07/owl#onProperty> _:b2 ; <http://www.w3.org/2002/07/owl#hasValue> ?url }"
+    ],
+    "How many EC1 PC1 I PC1 EC2": [],
+    "How many EC1 PC1 we PC1 EC2 EC3": [],
+    "In what EC1 PC1 EC2 PC2": [
+        "SELECT * WHERE { ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 . _:b0 <http://www.w3.org/2002/07/owl#onProperty> _:b1 ; <http://www.w3.org/2002/07/owl#someValuesFrom> ?lang . ?lang <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b2 FILTER ( ?lang != _:b2 ) }"
+    ],
+    "In what kind of EC1 PC1 EC2 PC1": [],
+    "In which EC1 are EC2 in EC3": [
+        "SELECT * WHERE { ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b2 ; <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 . _:b0 <http://www.w3.org/2002/07/owl#onProperty> _:b3 ; <http://www.w3.org/2002/07/owl#someValuesFrom> _:b1 . _:b1 <http://www.w3.org/2002/07/owl#onProperty> _:b4 ; <http://www.w3.org/2002/07/owl#someValuesFrom> ?format . ?format <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b5 FILTER ( ?format != _:b5 ) }"
+    ],
+    "Is EC1 EC2": [
+        "SELECT * WHERE { ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 . _:b0 <http://www.w3.org/2002/07/owl#onProperty> _:b6 ; <http://www.w3.org/2002/07/owl#someValuesFrom> _:b1 . _:b1 <http://www.w3.org/2002/07/owl#intersectionOf> _:b2 . _:b2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b3 . _:b3 <http://www.w3.org/2002/07/owl#onProperty> _:b7 ; <http://www.w3.org/2002/07/owl#someValuesFrom> _:b8 . _:b2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b4 . _:b4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b5 . _:b5 <http://www.w3.org/2002/07/owl#onProperty> _:b7 ; <http://www.w3.org/2002/07/owl#someValuesFrom> _:b9 . _:b4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> }",
+        "SELECT * WHERE { ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b2 ; <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 . _:b0 <http://www.w3.org/2002/07/owl#onProperty> _:b3 ; <http://www.w3.org/2002/07/owl#someValuesFrom> _:b1 . _:b1 <http://www.w3.org/2002/07/owl#onProperty> _:b4 ; <http://www.w3.org/2002/07/owl#someValuesFrom> _:b5 }",
+        "SELECT * WHERE { ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 ; <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b1 }",
+        "SELECT * WHERE { _:b0 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b1 . _:b1 <http://www.w3.org/2002/07/owl#onProperty> ?p ; <http://www.w3.org/2002/07/owl#someValuesFrom> _:b2 }"
+    ],
+    "Is EC1 EC2 for EC3": [
+        "SELECT * WHERE { ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b1 ; <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 . _:b0 <http://www.w3.org/2002/07/owl#onProperty> _:b2 ; <http://www.w3.org/2002/07/owl#someValuesFrom> ?placeholder_PPx2 . ?placeholder_PPx2 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b3 }"
+    ],
+    "Is EC1 EC2 or EC3": [
+        "SELECT * WHERE { ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> ?class FILTER ( ?class IN (_:b0, _:b1) ) }"
+    ],
+    "Is EC1 EC2 or not": [
+        "SELECT * WHERE { ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 . _:b0 <http://www.w3.org/2002/07/owl#onProperty> _:b2 ; <http://www.w3.org/2002/07/owl#someValuesFrom> _:b1 . _:b1 <http://www.w3.org/2002/07/owl#onProperty> _:b3 ; <http://www.w3.org/2002/07/owl#someValuesFrom> _:b4 }",
+        "SELECT * WHERE { { { ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 . _:b0 <http://www.w3.org/2002/07/owl#onProperty> _:b2 ; <http://www.w3.org/2002/07/owl#someValuesFrom> _:b1 . _:b1 <http://www.w3.org/2002/07/owl#onProperty> _:b3 ; <http://www.w3.org/2002/07/owl#someValuesFrom> _:b4 } UNION { ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b5 . _:b5 <http://www.w3.org/2002/07/owl#onProperty> _:b2 ; <http://www.w3.org/2002/07/owl#someValuesFrom> _:b6 . _:b6 <http://www.w3.org/2002/07/owl#onProperty> _:b3 ; <http://www.w3.org/2002/07/owl#someValuesFrom> _:b7 } } UNION { ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b8 . _:b8 <http://www.w3.org/2002/07/owl#onProperty> _:b2 ; <http://www.w3.org/2002/07/owl#someValuesFrom> _:b9 . _:b9 <http://www.w3.org/2002/07/owl#onProperty> _:b3 ; <http://www.w3.org/2002/07/owl#someValuesFrom> _:b10 } }"
+    ],
+    "Is EC1 of EC2 EC3": [
+        "SELECT * WHERE { ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 . _:b0 <http://www.w3.org/2002/07/owl#onProperty> _:b2 ; <http://www.w3.org/2002/07/owl#someValuesFrom> _:b1 . _:b1 <http://www.w3.org/2002/07/owl#onProperty> _:b3 ; <http://www.w3.org/2002/07/owl#someValuesFrom> ?format . ?format <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b4 FILTER NOT EXISTS { ?subformat <http://www.w3.org/2000/01/rdf-schema#subClassOf> ?format FILTER ( isURI(?subformat) && ( ?subformat != ?format ) ) } FILTER NOT EXISTS { ?os_sw <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b9 ; <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b5 . _:b5 <http://www.w3.org/2002/07/owl#onProperty> _:b2 ; <http://www.w3.org/2002/07/owl#someValuesFrom> _:b6 . _:b6 <http://www.w3.org/2002/07/owl#onProperty> _:b3 ; <http://www.w3.org/2002/07/owl#someValuesFrom> ?format . ?os_sw <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b7 . _:b7 <http://www.w3.org/2002/07/owl#onProperty> _:b10 ; <http://www.w3.org/2002/07/owl#someValuesFrom> _:b8 . _:b8 <http://www.w3.org/2002/07/owl#onProperty> _:b11 ; <http://www.w3.org/2002/07/owl#someValuesFrom> _:b12 FILTER isURI(?os_sw) } }"
+    ],
+    "Is there EC1 for EC2": [],
+    "Is there EC1 with EC2": [
+        "SELECT * WHERE { ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 . _:b0 <http://www.w3.org/2002/07/owl#onProperty> _:b1 ; <http://www.w3.org/2002/07/owl#hasValue> ?doc FILTER strstarts(?doc, \"http://dx.doi.org/\") }"
+    ],
+    "Is there any EC1 for EC2 and where PC1 I PC1 EC3": [
+        "SELECT * WHERE { ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 . _:b0 <http://www.w3.org/2002/07/owl#onProperty> _:b1 ; <http://www.w3.org/2002/07/owl#hasValue> ?doc }"
+    ],
+    "PC1 EC1 PC1 EC2": [],
+    "PC1 EC1 PC1 EC2 that are EC3 from EC4": [
+        "SELECT * WHERE { ?placeholder_PPx2 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b2 ; <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 . _:b0 <http://www.w3.org/2002/07/owl#onProperty> _:b3 ; <http://www.w3.org/2002/07/owl#someValuesFrom> ?format . ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b2 ; <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b1 . _:b1 <http://www.w3.org/2002/07/owl#onProperty> _:b4 ; <http://www.w3.org/2002/07/owl#someValuesFrom> ?format . ?format <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b5 FILTER ( ?format != _:b5 ) }"
+    ],
+    "PC1 EC1 PC1 EC2 to EC3": [
+        "SELECT * WHERE { ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b2 ; <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 . _:b0 <http://www.w3.org/2002/07/owl#onProperty> _:b3 ; <http://www.w3.org/2002/07/owl#someValuesFrom> _:b1 . _:b1 <http://www.w3.org/2002/07/owl#onProperty> _:b4 ; <http://www.w3.org/2002/07/owl#someValuesFrom> _:b5 . ?format <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b6 FILTER ( ?format != _:b6 ) }"
+    ],
+    "PC1 EC1 PC2 EC2": [
+        "SELECT * WHERE { ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 . _:b0 <http://www.w3.org/2002/07/owl#onProperty> _:b1 ; <http://www.w3.org/2002/07/owl#someValuesFrom> _:b2 . ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b3 }"
+    ],
+    "PC1 EC1 and EC2 PC1 EC3": [],
+    "PC1 I PC1 EC1 PC1 EC2": [
+        "SELECT * WHERE { _:b0 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b1 . _:b1 <http://www.w3.org/2002/07/owl#onProperty> ?p ; <http://www.w3.org/2002/07/owl#someValuesFrom> _:b2 }"
+    ],
+    "PC1 I PC1 EC1 if EC2 PC2 EC3": [],
+    "PC1 I PC1 EC1 on EC2": [],
+    "PC1 I PC1 some EC1 of EC2 for EC3": [],
+    "To what extent PC1 EC1 PC1 EC2": [],
+    "What EC1 PC1 EC1 or EC2 that PC2 EC3": [
+        "SELECT * WHERE { ?e <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 FILTER ( ?e != _:b0 ) }"
+    ],
+    "What EC1 PC1 EC2": [
+        "SELECT * WHERE { ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b1 ; <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 . _:b0 <http://www.w3.org/2002/07/owl#onProperty> _:b2 ; <http://www.w3.org/2002/07/owl#someValuesFrom> ?placeholder_PPx2 . ?placeholder_PPx2 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b3 }",
+        "SELECT * WHERE { ?x0 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b5 ; <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 . _:b0 <http://www.w3.org/2002/07/owl#onProperty> _:b6 ; <http://www.w3.org/2002/07/owl#someValuesFrom> _:b1 . _:b1 <http://www.w3.org/2002/07/owl#intersectionOf> _:b2 . _:b2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b7 ; <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b3 . _:b3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b4 . _:b4 <http://www.w3.org/2002/07/owl#onProperty> _:b8 ; <http://www.w3.org/2002/07/owl#someValuesFrom> _:b9 . _:b3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> }",
+        "SELECT * WHERE { ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 . _:b0 <http://www.w3.org/2002/07/owl#onProperty> _:b1 ; <http://www.w3.org/2002/07/owl#someValuesFrom> _:b2 . ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b3 }"
+    ],
+    "What EC1 PC1 EC2 PC1": [],
+    "What EC1 PC1 EC2 given EC3": [],
+    "What EC1 PC1 EC2?": [],
+    "What EC1 PC1 I PC1 EC2": [],
+    "What EC1 PC1 I PC1 EC2 PC1 EC3": [
+        "SELECT * WHERE { ?sw <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b2 ; <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 . _:b0 <http://www.w3.org/2002/07/owl#onProperty> _:b3 ; <http://www.w3.org/2002/07/owl#someValuesFrom> ?placeholder_PPx1 . ?sw <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b1 . _:b1 <http://www.w3.org/2002/07/owl#onProperty> _:b4 ; <http://www.w3.org/2002/07/owl#someValuesFrom> ?placeholder_PPx2 . ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b5 . ?placeholder_PPx2 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b6 }"
+    ],
+    "What EC1 PC1 I PC1 EC2 in EC3": [
+        "SELECT * WHERE { ?sw <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b8 ; <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 . _:b0 <http://www.w3.org/2002/07/owl#onProperty> _:b9 ; <http://www.w3.org/2002/07/owl#someValuesFrom> _:b1 . _:b1 <http://www.w3.org/2002/07/owl#onProperty> _:b10 ; <http://www.w3.org/2002/07/owl#someValuesFrom> ?placeholder_PPx2 . ?sw <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b2 . _:b2 <http://www.w3.org/2002/07/owl#onProperty> _:b11 ; <http://www.w3.org/2002/07/owl#someValuesFrom> _:b3 . _:b3 <http://www.w3.org/2002/07/owl#unionOf> ( _:b12 _:b13 ) . ?sw <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b6 . _:b6 <http://www.w3.org/2002/07/owl#onProperty> _:b14 ; <http://www.w3.org/2002/07/owl#someValuesFrom> _:b7 . _:b7 <http://www.w3.org/2002/07/owl#onProperty> _:b15 ; <http://www.w3.org/2002/07/owl#someValuesFrom> _:b16 }"
+    ],
+    "What EC1 PC1 I PC1 EC2 on EC3": [],
+    "What EC1 are EC2": [],
+    "What EC1 are in EC2 of EC3": [],
+    "What EC1 are of EC2 with respect to EC3": [
+        "SELECT * WHERE { ?e <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 FILTER ( ?e != _:b0 ) }",
+        "SELECT * WHERE { ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 . _:b0 <http://www.w3.org/2002/07/owl#onProperty> _:b1 ; <http://www.w3.org/2002/07/owl#someValuesFrom> _:b2 . ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b3 }"
+    ],
+    "What EC1 does EC2 have, and what is its EC3": [
+        "SELECT * WHERE { { ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 . _:b0 <http://www.w3.org/2002/07/owl#onProperty> _:b2 ; <http://www.w3.org/2002/07/owl#someValuesFrom> ?lic . ?lic <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b1 . _:b1 <http://www.w3.org/2002/07/owl#onProperty> _:b3 ; <http://www.w3.org/2002/07/owl#someValuesFrom> ?clause . ?clause <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b4 FILTER ( ?clause != _:b4 ) } UNION { ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b5 . _:b5 <http://www.w3.org/2002/07/owl#onProperty> _:b2 ; <http://www.w3.org/2002/07/owl#someValuesFrom> ?lic } FILTER NOT EXISTS { ?lic2 <http://www.w3.org/2000/01/rdf-schema#subClassOf> ?lic FILTER ( isURI(?lic2) && ( ?lic2 NOT IN (<http://www.w3.org/2002/07/owl#Nothing>, ?lic) ) ) } }"
+    ],
+    "What EC1 from EC2 PC1 EC3, EC4": [],
+    "What EC1 is of EC2 regarding EC3": [
+        "SELECT * WHERE { ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 . _:b0 <http://www.w3.org/2002/07/owl#onProperty> _:b1 ; <http://www.w3.org/2002/07/owl#someValuesFrom> _:b2 . ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b3 }"
+    ],
+    "What EC1 is of EC2 regarding EC3 and EC4": [
+        "SELECT * WHERE { ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 . _:b0 <http://www.w3.org/2002/07/owl#onProperty> _:b1 ; <http://www.w3.org/2002/07/owl#someValuesFrom> _:b2 . ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b3 }",
+        "SELECT * WHERE { { _:b0 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b2 ; <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b1 . _:b1 <http://www.w3.org/2002/07/owl#onProperty> ?p ; <http://www.w3.org/2002/07/owl#someValuesFrom> _:b3 } UNION { _:b4 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b6 ; <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b5 . _:b5 <http://www.w3.org/2002/07/owl#onProperty> ?p ; <http://www.w3.org/2002/07/owl#someValuesFrom> _:b7 } }"
+    ],
+    "What EC1 to EC2 are there": [
+        "SELECT * WHERE { ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b2 ; <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 . _:b0 <http://www.w3.org/2002/07/owl#onProperty> _:b3 ; <http://www.w3.org/2002/07/owl#someValuesFrom> ?alg . ?sw2 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b2 ; <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b1 . _:b1 <http://www.w3.org/2002/07/owl#onProperty> _:b3 ; <http://www.w3.org/2002/07/owl#someValuesFrom> ?alg . ?alg <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b4 FILTER ( ?alg != _:b4 ) FILTER ( ?sw1 != ?sw2 ) }"
+    ],
+    "What PC1 EC1": [
+        "SELECT * WHERE { ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 . _:b0 <http://www.w3.org/2002/07/owl#onProperty> _:b1 ; <http://www.w3.org/2002/07/owl#someValuesFrom> ?lang . ?lang <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b2 FILTER ( ?lang != _:b2 ) }"
+    ],
+    "What PC1 EC1 of EC2": [
+        "SELECT * WHERE { ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 . _:b0 <http://www.w3.org/2002/07/owl#onProperty> _:b1 ; <http://www.w3.org/2002/07/owl#someValuesFrom> ?lang . ?lang <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b2 FILTER ( ?lang != _:b2 ) }"
+    ],
+    "What are EC1 and EC2 for EC3": [
+        "SELECT * WHERE { ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b10 ; <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 . _:b0 <http://www.w3.org/2002/07/owl#onProperty> _:b11 ; <http://www.w3.org/2002/07/owl#someValuesFrom> _:b1 . _:b1 <http://www.w3.org/2002/07/owl#intersectionOf> _:b2 . _:b2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b12 ; <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b3 . _:b3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b4 . _:b4 <http://www.w3.org/2002/07/owl#onProperty> _:b13 ; <http://www.w3.org/2002/07/owl#someValuesFrom> ?x1 . _:b3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> . ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b5 . _:b5 <http://www.w3.org/2002/07/owl#onProperty> _:b14 ; <http://www.w3.org/2002/07/owl#someValuesFrom> _:b6 . _:b6 <http://www.w3.org/2002/07/owl#intersectionOf> _:b7 . _:b7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b12 ; <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b8 . _:b8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b9 . _:b9 <http://www.w3.org/2002/07/owl#onProperty> _:b13 ; <http://www.w3.org/2002/07/owl#someValuesFrom> ?x2 . _:b8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> }"
+    ],
+    "What are EC1 and EC2 of EC3": [
+        "SELECT * WHERE { ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b10 ; <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 . _:b0 <http://www.w3.org/2002/07/owl#onProperty> _:b11 ; <http://www.w3.org/2002/07/owl#someValuesFrom> _:b1 . _:b1 <http://www.w3.org/2002/07/owl#intersectionOf> _:b2 . _:b2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b12 ; <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b3 . _:b3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b4 . _:b4 <http://www.w3.org/2002/07/owl#onProperty> _:b13 ; <http://www.w3.org/2002/07/owl#someValuesFrom> ?x1 . _:b3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> . ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b5 . _:b5 <http://www.w3.org/2002/07/owl#onProperty> _:b14 ; <http://www.w3.org/2002/07/owl#someValuesFrom> _:b6 . _:b6 <http://www.w3.org/2002/07/owl#intersectionOf> _:b7 . _:b7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b12 ; <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b8 . _:b8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b9 . _:b9 <http://www.w3.org/2002/07/owl#onProperty> _:b13 ; <http://www.w3.org/2002/07/owl#someValuesFrom> ?x2 . _:b8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> }"
+    ],
+    "What are EC1 for EC2": [
+        "SELECT * WHERE { ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b2 ; <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 . _:b0 <http://www.w3.org/2002/07/owl#onProperty> _:b3 ; <http://www.w3.org/2002/07/owl#someValuesFrom> _:b1 . _:b1 <http://www.w3.org/2002/07/owl#onProperty> _:b4 ; <http://www.w3.org/2002/07/owl#someValuesFrom> ?format . ?format <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b5 FILTER ( ?format != _:b5 ) }"
+    ],
+    "What are EC1 that have EC2": [
+        "SELECT * WHERE { ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b2 ; <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 . _:b0 <http://www.w3.org/2002/07/owl#onProperty> _:b3 ; <http://www.w3.org/2002/07/owl#someValuesFrom> ?x1 . ?x1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b1 . _:b1 <http://www.w3.org/2002/07/owl#onProperty> _:b4 ; <http://www.w3.org/2002/07/owl#someValuesFrom> ?x0 . ?x0 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b5 }"
+    ],
+    "What are EC1 to EC2": [
+        "SELECT * WHERE { ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b2 ; <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 . _:b0 <http://www.w3.org/2002/07/owl#onProperty> _:b3 ; <http://www.w3.org/2002/07/owl#someValuesFrom> ?alg . ?sw2 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b2 ; <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b1 . _:b1 <http://www.w3.org/2002/07/owl#onProperty> _:b3 ; <http://www.w3.org/2002/07/owl#someValuesFrom> ?alg . ?alg <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b4 FILTER ( ?alg != _:b4 ) FILTER ( ?sw1 != ?sw2 ) }"
+    ],
+    "What are the differences between EC1 of EC2": [],
+    "What are the main categories of EC1": [
+        "SELECT * WHERE { ?e <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 FILTER NOT EXISTS { ?e <http://www.w3.org/2000/01/rdf-schema#subClassOf> ?f . ?f <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 FILTER ( ( ?f != _:b0 ) && ( ?e != ?f ) ) } FILTER ( ?e != _:b0 ) }"
+    ],
+    "What are the main types of EC1": [
+        "SELECT * WHERE { ?e <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 FILTER ( ?e != _:b0 ) }",
+        "SELECT * WHERE { ?x a _:b0 }",
+        "SELECT * WHERE { ?e <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 FILTER NOT EXISTS { ?e <http://www.w3.org/2000/01/rdf-schema#subClassOf> ?f . ?f <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 FILTER ( ( ?f != _:b0 ) && ( ?e != ?f ) ) } FILTER ( ?e != _:b0 ) }"
+    ],
+    "What are the main types of EC1 EC2 PC1": [
+        "SELECT * WHERE { _:b0 (<http://www.w3.org/2002/07/owl#unionOf>/(<http://www.w3.org/1999/02/22-rdf-syntax-ns#rest>)*)/<http://www.w3.org/1999/02/22-rdf-syntax-ns#first> ?c . _:b1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b2 . _:b2 <http://www.w3.org/2002/07/owl#onProperty> _:b3 ; <http://www.w3.org/2002/07/owl#allValuesFrom> _:b0 }",
+        "SELECT * WHERE { ?e <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 FILTER NOT EXISTS { ?e <http://www.w3.org/2000/01/rdf-schema#subClassOf> ?f . ?f <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 FILTER ( ( ?f != _:b0 ) && ( ?e != ?f ) ) } FILTER ( ?e != _:b0 ) }"
+    ],
+    "What are the possible types of EC1": [
+        "SELECT * WHERE { ?e <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 FILTER ( ?e != _:b0 ) }"
+    ],
+    "What are the types of EC1": [
+        "SELECT * WHERE { ?e <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 FILTER ( ?e != _:b0 ) }",
+        "SELECT * WHERE { ?x a _:b0 }"
+    ],
+    "What do EC1 PC1 EC2 EC3": [],
+    "What is EC1 PC1 EC2": [
+        "SELECT * WHERE { ?sw <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b2 ; <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 . _:b0 <http://www.w3.org/2002/07/owl#onProperty> _:b3 ; <http://www.w3.org/2002/07/owl#someValuesFrom> ?alg . ?sw <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b1 . _:b1 <http://www.w3.org/2002/07/owl#onProperty> _:b4 ; <http://www.w3.org/2002/07/owl#someValuesFrom> ?placeholder_PPx1 . ?alg <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b5 . ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b6 FILTER ( ?alg != _:b5 ) }"
+    ],
+    "What is EC1 for EC2": [
+        "SELECT * WHERE { ?x0 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b5 ; <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 . _:b0 <http://www.w3.org/2002/07/owl#onProperty> _:b6 ; <http://www.w3.org/2002/07/owl#someValuesFrom> _:b1 . _:b1 <http://www.w3.org/2002/07/owl#intersectionOf> _:b2 . _:b2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b7 ; <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b3 . _:b3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b4 . _:b4 <http://www.w3.org/2002/07/owl#onProperty> _:b8 ; <http://www.w3.org/2002/07/owl#someValuesFrom> _:b9 . _:b3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> }",
+        "SELECT * WHERE { ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b1 ; <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 . _:b0 <http://www.w3.org/2002/07/owl#onProperty> _:b2 ; <http://www.w3.org/2002/07/owl#someValuesFrom> ?placeholder_PPx2 . ?placeholder_PPx2 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b3 }"
+    ],
+    "What is EC1 of EC2": [
+        "SELECT * WHERE { ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b1 ; <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 . _:b0 <http://www.w3.org/2002/07/owl#onProperty> _:b2 ; <http://www.w3.org/2002/07/owl#hasValue> ?url }"
+    ],
+    "What is EC1 of EC2 for EC3": [
+        "SELECT * WHERE { ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b2 ; <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 . _:b0 <http://www.w3.org/2002/07/owl#onProperty> _:b3 ; <http://www.w3.org/2002/07/owl#someValuesFrom> ?x1 . ?x1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b1 . _:b1 <http://www.w3.org/2002/07/owl#onProperty> _:b4 ; <http://www.w3.org/2002/07/owl#someValuesFrom> ?x0 . ?x0 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b5 }",
+        "SELECT * WHERE { ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 . _:b0 <http://www.w3.org/2002/07/owl#onProperty> _:b1 ; <http://www.w3.org/2002/07/owl#someValuesFrom> _:b2 . ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b3 }"
+    ],
+    "What is EC1 of EC2 that PC1 EC3": [
+        "SELECT * WHERE { ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b1 ; <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 . _:b0 <http://www.w3.org/2002/07/owl#onProperty> _:b2 ; <http://www.w3.org/2002/07/owl#someValuesFrom> ?placeholder_PPx2 . ?placeholder_PPx2 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b3 }"
+    ],
+    "What is EC1 of EC2 that have EC3": [
+        "SELECT * WHERE { ?x0 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 . _:b0 <http://www.w3.org/2002/07/owl#onProperty> _:b1 ; <http://www.w3.org/2002/07/owl#someValuesFrom> ?placeholder_PPx1 . ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b2 }"
+    ],
+    "What is EC1 of EC2 that have EC3 and EC4": [
+        "SELECT * WHERE { ?x0 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 . _:b0 <http://www.w3.org/2002/07/owl#onProperty> _:b2 ; <http://www.w3.org/2002/07/owl#someValuesFrom> ?placeholder_PPx1 . ?x0 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b1 . _:b1 <http://www.w3.org/2002/07/owl#onProperty> _:b3 ; <http://www.w3.org/2002/07/owl#someValuesFrom> ?placeholder_PPx2 . ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b4 . ?placeholder_PPx2 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b5 }"
+    ],
+    "What is EC1 of EC2 that have EC3 as EC4": [
+        "SELECT * WHERE { ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b1 ; <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 . _:b0 <http://www.w3.org/2002/07/owl#onProperty> _:b2 ; <http://www.w3.org/2002/07/owl#someValuesFrom> ?placeholder_PPx2 . ?placeholder_PPx2 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b3 }"
+    ],
+    "What is the difference between EC1 and EC2": [],
+    "What kind of EC1 is EC2": [
+        "SELECT * WHERE { ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 ; <http://www.w3.org/2000/01/rdf-schema#subClassOf> ?class . ?class <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b1 FILTER ( ( ?class != _:b1 ) && ( ?class != ?placeholder_PPx1 ) ) }",
+        "SELECT * WHERE { ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> ?class . ?class <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 FILTER ( ( ?class != _:b0 ) && ( ?class != ?placeholder_PPx1 ) ) }"
+    ],
+    "What type of EC1 is EC2": [
+        "SELECT * WHERE { ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b1 ; <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 . _:b0 <http://www.w3.org/2002/07/owl#onProperty> _:b2 ; <http://www.w3.org/2002/07/owl#someValuesFrom> ?alg . ?alg <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b3 FILTER ( ?alg != _:b3 ) }"
+    ],
+    "What types of EC1 PC1 EC1": [
+        "SELECT * WHERE { ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 . _:b0 <http://www.w3.org/2002/07/owl#onProperty> _:b1 ; <http://www.w3.org/2002/07/owl#someValuesFrom> _:b2 . ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b3 }"
+    ],
+    "What types of EC1 are EC2": [
+        "SELECT * WHERE { ?e <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 FILTER ( ?e != _:b0 ) }",
+        "SELECT * WHERE { ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 . _:b0 <http://www.w3.org/2002/07/owl#onProperty> _:b1 ; <http://www.w3.org/2002/07/owl#someValuesFrom> _:b2 . ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b3 }",
+        "SELECT * WHERE { _:b0 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b1 . _:b1 <http://www.w3.org/2002/07/owl#onProperty> ?p ; <http://www.w3.org/2002/07/owl#someValuesFrom> _:b2 }"
+    ],
+    "When PC1 EC1 of EC2 PC1": [
+        "SELECT * WHERE { ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 . _:b0 <http://www.w3.org/2002/07/owl#onProperty> _:b2 ; <http://www.w3.org/2002/07/owl#hasValue> \"1.0\" . ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b1 . _:b1 <http://www.w3.org/2002/07/owl#onProperty> _:b3 ; <http://www.w3.org/2002/07/owl#hasValue> ?date }"
+    ],
+    "Where PC1 I PC1 EC1": [
+        "SELECT * WHERE { ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b1 ; <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 . _:b0 <http://www.w3.org/2002/07/owl#onProperty> _:b2 ; <http://www.w3.org/2002/07/owl#hasValue> ?url }"
+    ],
+    "Where PC1 I PC1 EC1 PC1": [],
+    "Where PC1 I PC1 EC1 for EC2": [],
+    "Where do I categorise EC1 like EC2": [
+        "SELECT * WHERE { ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 ; <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b1 }"
+    ],
+    "Where is EC1 of EC2": [
+        "SELECT * WHERE { ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 . _:b0 <http://www.w3.org/2002/07/owl#onProperty> _:b1 ; <http://www.w3.org/2002/07/owl#hasValue> ?doc }"
+    ],
+    "Where's EC1 of EC2": [
+        "SELECT * WHERE { ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 . _:b0 <http://www.w3.org/2002/07/owl#onProperty> _:b1 ; <http://www.w3.org/2002/07/owl#hasValue> ?doc }"
+    ],
+    "Which EC1 PC1 EC2": [
+        "SELECT * WHERE { ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b1 ; <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 . _:b0 <http://www.w3.org/2002/07/owl#onProperty> _:b2 ; <http://www.w3.org/2002/07/owl#someValuesFrom> ?placeholder_PPx2 . ?placeholder_PPx2 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b3 }",
+        "SELECT * WHERE { ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 . _:b0 <http://www.w3.org/2002/07/owl#onProperty> _:b1 ; <http://www.w3.org/2002/07/owl#someValuesFrom> _:b2 . ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b3 }",
+        "SELECT * WHERE { ?eats <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b1 ; <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 . _:b0 <http://www.w3.org/2002/07/owl#onProperty> _:b2 ; <http://www.w3.org/2002/07/owl#someValuesFrom> ?eaten . ?eaten <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b1 }"
+    ],
+    "Which EC1 PC1 EC2 PC1": [],
+    "Which EC1 PC1 I PC1 EC2 PC1": [
+        "SELECT * WHERE { ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 . _:b0 <http://www.w3.org/2002/07/owl#onProperty> _:b1 ; <http://www.w3.org/2002/07/owl#hasValue> ?doc }"
+    ],
+    "Which EC1 PC1 I PC1 to PC2 EC2": [],
+    "Which EC1 are EC2": [],
+    "Which EC1 are EC2 of EC3": [
+        "SELECT * WHERE { ?eats <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b1 ; <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 . _:b0 <http://www.w3.org/2002/07/owl#onProperty> _:b2 ; <http://www.w3.org/2002/07/owl#someValuesFrom> ?eaten . ?eaten <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b1 }"
+    ],
+    "Which EC1 is there for EC2 and what PC1 EC3 PC1": [
+        "SELECT * WHERE { ?sw <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b2 ; <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 . _:b0 <http://www.w3.org/2002/07/owl#onProperty> _:b3 ; <http://www.w3.org/2002/07/owl#someValuesFrom> ?placeholder_PPx1 . ?sw <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b1 . _:b1 <http://www.w3.org/2002/07/owl#onProperty> _:b4 ; <http://www.w3.org/2002/07/owl#someValuesFrom> _:b5 . ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b6 }"
+    ],
+    "Which are EC1": [
+        "SELECT * WHERE { ?e <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 FILTER ( ?e != _:b0 ) }"
+    ],
+    "Which is EC1 PC1 EC2": [],
+    "Which kind of EC1 are EC2": [
+        "SELECT * WHERE { ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> ?kind_of_stuff . ?kind_of_stuff <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 FILTER ( ?kind_of_stuff != _:b0 ) }"
+    ],
+    "Which of the EC1 and EC2 PC1 EC3 PC1": [
+        "SELECT * WHERE { ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b1 ; <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 . _:b0 <http://www.w3.org/2002/07/owl#onProperty> _:b2 ; <http://www.w3.org/2002/07/owl#someValuesFrom> ?alg . ?alg <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b3 FILTER ( ?alg != _:b3 ) }"
+    ],
+    "Who PC1 EC1": [
+        "SELECT * WHERE { ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 . _:b0 <http://www.w3.org/2002/07/owl#onProperty> _:b5 ; <http://www.w3.org/2002/07/owl#someValuesFrom> _:b1 . _:b1 <http://www.w3.org/2002/07/owl#intersectionOf> _:b2 . _:b2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b6 ; <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b3 . _:b3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b4 . _:b4 <http://www.w3.org/2002/07/owl#onProperty> _:b7 ; <http://www.w3.org/2002/07/owl#hasValue> ?holder . _:b3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> }"
+    ],
+    "Who PC1 EC1 for EC2": [
+        "SELECT * WHERE { ?placeholder_PPx1 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b0 . _:b0 <http://www.w3.org/2002/07/owl#onProperty> _:b5 ; <http://www.w3.org/2002/07/owl#someValuesFrom> _:b1 . _:b1 <http://www.w3.org/2002/07/owl#intersectionOf> _:b2 . _:b2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b6 ; <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b3 . _:b3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b4 . _:b4 <http://www.w3.org/2002/07/owl#onProperty> _:b7 ; <http://www.w3.org/2002/07/owl#hasValue> ?holder . _:b3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> }"
+    ],
+    "Who are EC1 of EC2": [],
+    "Who else PC1 EC1 EC2": []
+}
