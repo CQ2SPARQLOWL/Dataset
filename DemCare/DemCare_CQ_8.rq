@@ -1,6 +1,3 @@
-# What are the types of diagnosis?
-
-
 prefix lab: <http://www.demcare.eu/ontologies/lab.owl#>
 
 select distinct *
