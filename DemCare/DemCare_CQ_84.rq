@@ -1,3 +1,6 @@
+# What are the main categories a person may belong to?
+
+
 prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 prefix event: <http://www.demcare.eu/ontologies/event.owl#>
 

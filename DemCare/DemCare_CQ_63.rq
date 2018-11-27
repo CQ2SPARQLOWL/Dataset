@@ -1,3 +1,6 @@
+# What information if of clinical interest regarding a night bathroom visit?
+
+
 prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 prefix event: <http://www.demcare.eu/ontologies/event.owl#>
 prefix owl: <http://www.w3.org/2002/07/owl#>
