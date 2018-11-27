@@ -19,8 +19,8 @@ linguistic pattern lists
 The competency questions were obtained from the following sources:
  * SWO [https://softwareontology.wordpress.com/2011/04/01/user-sourced-competency-questions-for-software/](https://softwareontology.wordpress.com/2011/04/01/user-sourced-competency-questions-for-software/)
  * OntoDT [https://doi.org/10.1016/j.ins.2015.08.006](https://doi.org/10.1016/j.ins.2015.08.006)
- 
- Dem@Care competency questions can be found at [http://www.demcare.eu/results/deliverables/61-semantic-knowledge-structures-and-representation](http://www.demcare.eu/results/deliverables/61-semantic-knowledge-structures-and-representation)
+ * Dem@Care [http://www.demcare.eu/results/deliverables/61-semantic-knowledge-structures-and-representation](http://www.demcare.eu/results/deliverables/61-semantic-knowledge-structures-and-representation)
+ * AWO [https://people.cs.uct.ac.za/~mkeet/OEbook/](https://people.cs.uct.ac.za/~mkeet/OEbook/)
 
 The SPARQL-OWL queries, signatures and patterns are licensed under a [Creative Commons Attribution 3.0 Unported License](https://creativecommons.org/licenses/by/3.0/).
 
