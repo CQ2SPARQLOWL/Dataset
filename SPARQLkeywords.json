@@ -28,11 +28,6 @@
         "Dem@Care"
     ], 
     "FROM": [
-        "SWO", 
-        "Stuff", 
-        "AWO", 
-        "Dem@Care", 
-        "OntoDT"
     ], 
     "FROM NAMED": [], 
     "GRAPH": [], 
