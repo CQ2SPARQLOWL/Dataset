@@ -1,0 +1,8 @@
+Predicate chunk pos-tag based rules:						
+	Three phase extraction:					
+	1. Candidate selection:					
+		sequence of verbs with optional adposition at the end 				
+		sequence of verbs and particles with optional adposition at the end				
+	2. vague predicate rejection:					
+		if selected candidate consists of single: is, are, have, has, had		
+	3. Manual verification of the quality (because of imperfect models the tools use)

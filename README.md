@@ -15,6 +15,11 @@ In case of SPARQL-OWL signature to pattern mapping, there are empty mappings, be
 [linguistic_higher_level_patterns.txt](linguistic_higher_level_patterns.txt): 
 linguistic pattern lists
 * [signatures.json](signatures.json): a list of signatures calculated.
+* [OWLkeywords.json](owlkeywords.json): a list of OWL keywords with listed ontologies against which CQ translation contain given keyword.
+* [SPARQLkeywords.json](sparqlkeywords.json): a list of SPARQL keywords with listed ontologies against which CQ translation contain given keyword.
+* [EC.rules](EC.rules): rules defining Entity Chunk extraction procedure.
+* [PC.rules](PC.rules): rules defining Predicate Chunk extraction procedure.
+
 
 The competency questions were obtained from the following sources:
  * SWO [https://softwareontology.wordpress.com/2011/04/01/user-sourced-competency-questions-for-software/](https://softwareontology.wordpress.com/2011/04/01/user-sourced-competency-questions-for-software/)

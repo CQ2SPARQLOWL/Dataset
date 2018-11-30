@@ -1,0 +1,7 @@
+Entity chunk rules:						
+	Two phase extraction:					
+	1. Candidate selection:					
+		Noun chunks detected by SpaCy: phrases of which the noun is the head of a phrase				
+	2. entities unlikely to be a class/individual name rejection:
+	   if selected candidate contains words: type, kind, category, difference, extent or their plurals
+	3. Manual verification of the quality (because of imperfect models the tools use)
