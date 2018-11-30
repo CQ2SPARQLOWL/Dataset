@@ -1,0 +1,1133 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY home "http://www.demcare.eu/ontologies/home.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY event "http://www.demcare.eu/ontologies/event.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.demcare.eu/ontologies/home.owl#"
+     xml:base="http://www.demcare.eu/ontologies/home.owl"
+     xmlns:home="http://www.demcare.eu/ontologies/home.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:event="http://www.demcare.eu/ontologies/event.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.demcare.eu/ontologies/home.owl">
+        <owl:imports rdf:resource="http://www.w3.org/2006/time"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#highlight -->
+
+    <owl:AnnotationProperty rdf:about="&home;highlight">
+        <rdfs:domain rdf:resource="&event;Event"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#eatingDuration -->
+
+    <owl:ObjectProperty rdf:about="&home;eatingDuration">
+        <rdfs:domain rdf:resource="&home;EatingSummary"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2006/time#hasDurationDescription"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#eatingLocation -->
+
+    <owl:ObjectProperty rdf:about="&home;eatingLocation">
+        <rdfs:domain rdf:resource="&home;EatingSummary"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#exerciseDuration -->
+
+    <owl:ObjectProperty rdf:about="&home;exerciseDuration">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2006/time#hasBeginning"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#exerciseStartTime -->
+
+    <owl:ObjectProperty rdf:about="&home;exerciseStartTime">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2006/time#hasBeginning"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#forPatient -->
+
+    <owl:ObjectProperty rdf:about="&home;forPatient"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#involvementInDiscussion -->
+
+    <owl:ObjectProperty rdf:about="&home;involvementInDiscussion"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#physicalHygiene -->
+
+    <owl:ObjectProperty rdf:about="&home;physicalHygiene"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#possibleContributingFactor -->
+
+    <owl:ObjectProperty rdf:about="&home;possibleContributingFactor"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#hasBeginning -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#hasBeginning"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#hasDurationDescription -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#hasDurationDescription"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#accelerometerCountsPerMinute -->
+
+    <owl:DatatypeProperty rdf:about="&home;accelerometerCountsPerMinute"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#date -->
+
+    <owl:DatatypeProperty rdf:about="&home;date"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#distanceTravelled -->
+
+    <owl:DatatypeProperty rdf:about="&home;distanceTravelled"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#duration -->
+
+    <owl:DatatypeProperty rdf:about="&home;duration"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#endTime -->
+
+    <owl:DatatypeProperty rdf:about="&home;endTime"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#exerciseIntensity -->
+
+    <owl:DatatypeProperty rdf:about="&home;exerciseIntensity"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#hasValue -->
+
+    <owl:DatatypeProperty rdf:about="&home;hasValue"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#heartRate -->
+
+    <owl:DatatypeProperty rdf:about="&home;heartRate"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#highlight -->
+
+    <owl:DatatypeProperty rdf:about="&home;highlight">
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#lightLevel -->
+
+    <owl:DatatypeProperty rdf:about="&home;lightLevel"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#numberOfArousals -->
+
+    <owl:DatatypeProperty rdf:about="&home;numberOfArousals"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#numberOfAwakenings -->
+
+    <owl:DatatypeProperty rdf:about="&home;numberOfAwakenings"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#numberOfBedExits -->
+
+    <owl:DatatypeProperty rdf:about="&home;numberOfBedExits"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#numberOfCommunicativeAttempts -->
+
+    <owl:DatatypeProperty rdf:about="&home;numberOfCommunicativeAttempts"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#numberOfFaceToFaceConversations -->
+
+    <owl:DatatypeProperty rdf:about="&home;numberOfFaceToFaceConversations"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#numberOfNaps -->
+
+    <owl:DatatypeProperty rdf:about="&home;numberOfNaps"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#numberOfPhoneConversations -->
+
+    <owl:DatatypeProperty rdf:about="&home;numberOfPhoneConversations"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#numberOfSocialInteractions -->
+
+    <owl:DatatypeProperty rdf:about="&home;numberOfSocialInteractions"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#sleepBedTime -->
+
+    <owl:DatatypeProperty rdf:about="&home;sleepBedTime"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#sleepEfficiency -->
+
+    <owl:DatatypeProperty rdf:about="&home;sleepEfficiency"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#sleepLatency -->
+
+    <owl:DatatypeProperty rdf:about="&home;sleepLatency"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#sleepMovementIndex -->
+
+    <owl:DatatypeProperty rdf:about="&home;sleepMovementIndex"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#sleepTime -->
+
+    <owl:DatatypeProperty rdf:about="&home;sleepTime"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#startTime -->
+
+    <owl:DatatypeProperty rdf:about="&home;startTime"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#stressLevel -->
+
+    <owl:DatatypeProperty rdf:about="&home;stressLevel"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#strideLength -->
+
+    <owl:DatatypeProperty rdf:about="&home;strideLength"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#totalDurationOfNaps -->
+
+    <owl:DatatypeProperty rdf:about="&home;totalDurationOfNaps"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#wakeUpTime -->
+
+    <owl:DatatypeProperty rdf:about="&home;wakeUpTime"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#walkSpeed -->
+
+    <owl:DatatypeProperty rdf:about="&home;walkSpeed"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#Event -->
+
+    <owl:Class rdf:about="&event;Event"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#LongNap -->
+
+    <owl:Class rdf:about="&event;LongNap">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&home;highlight"/>
+                <owl:hasValue rdf:datatype="&xsd;boolean">true</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#NapAfterLunch -->
+
+    <owl:Class rdf:about="&event;NapAfterLunch">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&home;highlight"/>
+                <owl:hasValue rdf:datatype="&xsd;boolean">true</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#NightKitchenVisit -->
+
+    <owl:Class rdf:about="&event;NightKitchenVisit">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&home;highlight"/>
+                <owl:hasValue rdf:datatype="&xsd;boolean">true</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#NightLivingRoomVisit -->
+
+    <owl:Class rdf:about="&event;NightLivingRoomVisit">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&home;highlight"/>
+                <owl:hasValue rdf:datatype="&xsd;boolean">true</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#Patient -->
+
+    <owl:Class rdf:about="&event;Patient"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#Place -->
+
+    <owl:Class rdf:about="&event;Place"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#ADLProblem -->
+
+    <owl:Class rdf:about="&home;ADLProblem">
+        <rdfs:subClassOf rdf:resource="&home;Problem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#ADLSummary -->
+
+    <owl:Class rdf:about="&home;ADLSummary">
+        <rdfs:subClassOf rdf:resource="&home;DaySummary"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#DaySummary -->
+
+    <owl:Class rdf:about="&home;DaySummary">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&home;date"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&home;forPatient"/>
+                <owl:onClass rdf:resource="&event;Patient"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&home;date"/>
+                <owl:someValuesFrom rdf:resource="&xsd;dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&home;forPatient"/>
+                <owl:someValuesFrom rdf:resource="&event;Patient"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#EatingSummary -->
+
+    <owl:Class rdf:about="&home;EatingSummary">
+        <rdfs:subClassOf rdf:resource="&home;ADLSummary"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&home;eatingLocation"/>
+                <owl:allValuesFrom rdf:resource="&event;Place"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&home;eatingLocation"/>
+                <owl:onClass rdf:resource="&event;Place"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&home;eatingDuration"/>
+                <owl:onClass rdf:resource="http://www.w3.org/2006/time#DurationDescription"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&home;eatingDuration"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2006/time#DurationDescription"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#ExcessiveNapProblem -->
+
+    <owl:Class rdf:about="&home;ExcessiveNapProblem">
+        <rdfs:subClassOf rdf:resource="&home;NappingProblem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#ExerciseProblem -->
+
+    <owl:Class rdf:about="&home;ExerciseProblem">
+        <rdfs:subClassOf rdf:resource="&home;Problem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#ExerciseSummary -->
+
+    <owl:Class rdf:about="&home;ExerciseSummary">
+        <rdfs:subClassOf rdf:resource="&home;DaySummary"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&home;exerciseStartTime"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2006/time#Instant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&home;distanceTravelled"/>
+                <owl:allValuesFrom rdf:resource="&xsd;double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&home;strideLength"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&home;exerciseDuration"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2006/time#DurationDescription"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&home;walkSpeed"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&home;exerciseDuration"/>
+                <owl:onClass rdf:resource="http://www.w3.org/2006/time#DurationDescription"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&home;heartRate"/>
+                <owl:allValuesFrom rdf:resource="&xsd;double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&home;heartRate"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&home;walkSpeed"/>
+                <owl:allValuesFrom rdf:resource="&xsd;double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&home;exerciseIntensity"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&home;exerciseStartTime"/>
+                <owl:onClass rdf:resource="http://www.w3.org/2006/time#Instant"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&home;strideLength"/>
+                <owl:allValuesFrom rdf:resource="&xsd;double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&home;distanceTravelled"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&home;accelerometerCountsPerMinute"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&home;exerciseIntensity"/>
+                <owl:allValuesFrom rdf:resource="&rdfs;Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&home;accelerometerCountsPerMinute"/>
+                <owl:allValuesFrom rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#FailureToPrepareMeal -->
+
+    <owl:Class rdf:about="&home;FailureToPrepareMeal">
+        <rdfs:subClassOf rdf:resource="&home;MealProblem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#FragmentedSleepProblem -->
+
+    <owl:Class rdf:about="&home;FragmentedSleepProblem">
+        <rdfs:subClassOf rdf:resource="&home;InterruptedSleepProblem"/>
+        <rdfs:comment>Sleep fragmentation</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#HighStressLevel -->
+
+    <owl:Class rdf:about="&home;HighStressLevel">
+        <rdfs:subClassOf rdf:resource="&home;MoodProblem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#InappropriateMealDuration -->
+
+    <owl:Class rdf:about="&home;InappropriateMealDuration">
+        <rdfs:subClassOf rdf:resource="&home;MealProblem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#InappropriateMealLocation -->
+
+    <owl:Class rdf:about="&home;InappropriateMealLocation">
+        <rdfs:subClassOf rdf:resource="&home;MealProblem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#InsufficientAccelerometerCounts -->
+
+    <owl:Class rdf:about="&home;InsufficientAccelerometerCounts">
+        <rdfs:subClassOf rdf:resource="&home;ExerciseProblem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#InsufficientFaceToFaceInteraction -->
+
+    <owl:Class rdf:about="&home;InsufficientFaceToFaceInteraction">
+        <rdfs:subClassOf rdf:resource="&home;SocialProblem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#InsufficientTelephoneInteraction -->
+
+    <owl:Class rdf:about="&home;InsufficientTelephoneInteraction">
+        <rdfs:subClassOf rdf:resource="&home;SocialProblem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#InterruptedMeal -->
+
+    <owl:Class rdf:about="&home;InterruptedMeal">
+        <rdfs:subClassOf rdf:resource="&home;MealProblem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#InterruptedSleepProblem -->
+
+    <owl:Class rdf:about="&home;InterruptedSleepProblem">
+        <rdfs:subClassOf rdf:resource="&home;SleepProblem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#MealProblem -->
+
+    <owl:Class rdf:about="&home;MealProblem">
+        <rdfs:subClassOf rdf:resource="&home;ADLProblem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#MissedMeal -->
+
+    <owl:Class rdf:about="&home;MissedMeal">
+        <rdfs:subClassOf rdf:resource="&home;MealProblem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#MoodProblem -->
+
+    <owl:Class rdf:about="&home;MoodProblem">
+        <rdfs:subClassOf rdf:resource="&home;Problem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#MoodQuestionnaire -->
+
+    <owl:Class rdf:about="&home;MoodQuestionnaire">
+        <rdfs:subClassOf rdf:resource="&home;Questionnaire"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#MoodSummary -->
+
+    <owl:Class rdf:about="&home;MoodSummary">
+        <rdfs:subClassOf rdf:resource="&home;DaySummary"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&home;stressLevel"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&home;physicalHygiene"/>
+                <owl:someValuesFrom rdf:resource="&owl;Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&home;numberOfSocialInteractions"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&home;numberOfSocialInteractions"/>
+                <owl:allValuesFrom rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&home;stressLevel"/>
+                <owl:allValuesFrom rdf:resource="&rdfs;Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&home;involvementInDiscussion"/>
+                <owl:someValuesFrom rdf:resource="&owl;Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#NappingProblem -->
+
+    <owl:Class rdf:about="&home;NappingProblem">
+        <rdfs:subClassOf rdf:resource="&home;SleepProblem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#Nocturia -->
+
+    <owl:Class rdf:about="&home;Nocturia">
+        <rdfs:subClassOf rdf:resource="&home;InterruptedSleepProblem"/>
+        <rdfs:comment>If the individual visits the bathroom more than twice during the night</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#PeriodicLimbMovement -->
+
+    <owl:Class rdf:about="&home;PeriodicLimbMovement">
+        <rdfs:subClassOf rdf:resource="&home;SleepProblem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#Problem -->
+
+    <owl:Class rdf:about="&home;Problem">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&home;possibleContributingFactor"/>
+                <owl:someValuesFrom rdf:resource="&event;Event"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#Questionnaire -->
+
+    <owl:Class rdf:about="&home;Questionnaire"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#SelfReportedLowMood -->
+
+    <owl:Class rdf:about="&home;SelfReportedLowMood">
+        <rdfs:subClassOf rdf:resource="&home;MoodProblem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#ShortStrideLength -->
+
+    <owl:Class rdf:about="&home;ShortStrideLength">
+        <rdfs:subClassOf rdf:resource="&home;ExerciseProblem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#SleepDurationProblem -->
+
+    <owl:Class rdf:about="&home;SleepDurationProblem">
+        <rdfs:subClassOf rdf:resource="&home;SleepProblem"/>
+        <rdfs:comment>Sleep duration is less than 7 hours. </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#SleepEfficiencyProblem -->
+
+    <owl:Class rdf:about="&home;SleepEfficiencyProblem">
+        <rdfs:subClassOf rdf:resource="&home;SleepProblem"/>
+        <rdfs:comment>Sleep efficiency is less than 85%.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#SleepLatencyProblem -->
+
+    <owl:Class rdf:about="&home;SleepLatencyProblem">
+        <rdfs:subClassOf rdf:resource="&home;SleepProblem"/>
+        <rdfs:comment>Sleep latency over 30 minutes.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#SleepProblem -->
+
+    <owl:Class rdf:about="&home;SleepProblem">
+        <rdfs:subClassOf rdf:resource="&home;Problem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#SleepQuestionnaire -->
+
+    <owl:Class rdf:about="&home;SleepQuestionnaire">
+        <rdfs:subClassOf rdf:resource="&home;Questionnaire"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#SleepSummary -->
+
+    <owl:Class rdf:about="&home;SleepSummary">
+        <rdfs:subClassOf rdf:resource="&home;DaySummary"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&home;totalDurationOfNaps"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&home;sleepBedTime"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&home;duration"/>
+                <owl:allValuesFrom rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&home;sleepEfficiency"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&home;sleepMovementIndex"/>
+                <owl:allValuesFrom rdf:resource="&xsd;double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&home;duration"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&home;sleepMovementIndex"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&home;numberOfNaps"/>
+                <owl:allValuesFrom rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&home;totalDurationOfNaps"/>
+                <owl:allValuesFrom rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&home;numberOfNaps"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&home;numberOfArousals"/>
+                <owl:allValuesFrom rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&home;numberOfAwakenings"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&home;wakeUpTime"/>
+                <owl:allValuesFrom rdf:resource="&xsd;dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&home;numberOfBedExits"/>
+                <owl:allValuesFrom rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&home;lightLevel"/>
+                <owl:allValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&home;sleepTime"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&home;sleepBedTime"/>
+                <owl:allValuesFrom rdf:resource="&xsd;dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&home;numberOfAwakenings"/>
+                <owl:allValuesFrom rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&home;lightLevel"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&home;numberOfBedExits"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&home;sleepLatency"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&home;sleepEfficiency"/>
+                <owl:allValuesFrom rdf:resource="&xsd;double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&home;sleepLatency"/>
+                <owl:allValuesFrom rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&home;numberOfArousals"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&home;sleepTime"/>
+                <owl:allValuesFrom rdf:resource="&xsd;dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&home;wakeUpTime"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#SlowWalkSpeed -->
+
+    <owl:Class rdf:about="&home;SlowWalkSpeed">
+        <rdfs:subClassOf rdf:resource="&home;ExerciseProblem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#SocialProblem -->
+
+    <owl:Class rdf:about="&home;SocialProblem">
+        <rdfs:subClassOf rdf:resource="&home;Problem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/home.owl#SocialSummary -->
+
+    <owl:Class rdf:about="&home;SocialSummary">
+        <rdfs:subClassOf rdf:resource="&home;DaySummary"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&home;numberOfSocialInteractions"/>
+                <owl:allValuesFrom rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&home;numberOfFaceToFaceConversations"/>
+                <owl:allValuesFrom rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&home;numberOfPhoneConversations"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&home;numberOfCommunicativeAttempts"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&home;numberOfCommunicativeAttempts"/>
+                <owl:allValuesFrom rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&home;numberOfSocialInteractions"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&home;numberOfPhoneConversations"/>
+                <owl:allValuesFrom rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&home;numberOfFaceToFaceConversations"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#DurationDescription -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#DurationDescription"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Instant -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#Instant"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

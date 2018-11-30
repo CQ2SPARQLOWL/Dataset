@@ -1,0 +1,2319 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY lab "http://www.demcare.eu/ontologies/lab.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.demcare.eu/ontologies/lab.owl#"
+     xml:base="http://www.demcare.eu/ontologies/lab.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:lab="http://www.demcare.eu/ontologies/lab.owl#">
+    <owl:Ontology rdf:about="http://www.demcare.eu/ontologies/lab.owl">
+        <owl:imports rdf:resource="http://www.demcare.eu/ontologies/event.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#before -->
+
+    <owl:ObjectProperty rdf:about="&lab;before"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#containedInContext -->
+
+    <owl:ObjectProperty rdf:about="&lab;containedInContext"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#containsAssessment -->
+
+    <owl:ObjectProperty rdf:about="&lab;containsAssessment"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#countingType -->
+
+    <owl:ObjectProperty rdf:about="&lab;countingType"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#endTime -->
+
+    <owl:ObjectProperty rdf:about="&lab;endTime"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#gender -->
+
+    <owl:ObjectProperty rdf:about="&lab;gender"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#handTrajectory -->
+
+    <owl:ObjectProperty rdf:about="&lab;handTrajectory"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#hasClinicalDiagnosis -->
+
+    <owl:ObjectProperty rdf:about="&lab;hasClinicalDiagnosis">
+        <rdfs:subPropertyOf rdf:resource="&lab;hasDiagnosis"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#hasDiagnosis -->
+
+    <owl:ObjectProperty rdf:about="&lab;hasDiagnosis"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#hasExperimentalDiagnosis -->
+
+    <owl:ObjectProperty rdf:about="&lab;hasExperimentalDiagnosis">
+        <rdfs:subPropertyOf rdf:resource="&lab;hasDiagnosis"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#hasParticipant -->
+
+    <owl:ObjectProperty rdf:about="&lab;hasParticipant"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#hasRecord -->
+
+    <owl:ObjectProperty rdf:about="&lab;hasRecord"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#involvesTask -->
+
+    <owl:ObjectProperty rdf:about="&lab;involvesTask"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#laterality -->
+
+    <owl:ObjectProperty rdf:about="&lab;laterality"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#measuredData -->
+
+    <owl:ObjectProperty rdf:about="&lab;measuredData"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#participates -->
+
+    <owl:ObjectProperty rdf:about="&lab;participates">
+        <owl:inverseOf rdf:resource="&lab;hasParticipant"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#protocolStep -->
+
+    <owl:ObjectProperty rdf:about="&lab;protocolStep"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#startTime -->
+
+    <owl:ObjectProperty rdf:about="&lab;startTime"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#status -->
+
+    <owl:ObjectProperty rdf:about="&lab;status"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#taskDuration -->
+
+    <owl:ObjectProperty rdf:about="&lab;taskDuration"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#apathyInventory -->
+
+    <owl:DatatypeProperty rdf:about="&lab;apathyInventory">
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#areasOfInterestExplored -->
+
+    <owl:DatatypeProperty rdf:about="&lab;areasOfInterestExplored">
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#areasOfNoInterestExplored -->
+
+    <owl:DatatypeProperty rdf:about="&lab;areasOfNoInterestExplored">
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#compliantInstructionsOrder -->
+
+    <owl:DatatypeProperty rdf:about="&lab;compliantInstructionsOrder">
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#date -->
+
+    <owl:DatatypeProperty rdf:about="&lab;date"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#dateOfBirth -->
+
+    <owl:DatatypeProperty rdf:about="&lab;dateOfBirth"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#distanceWalked -->
+
+    <owl:DatatypeProperty rdf:about="&lab;distanceWalked"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#dsm_ivDepressionCriteria -->
+
+    <owl:DatatypeProperty rdf:about="&lab;dsm_ivDepressionCriteria"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#dynamicBalance -->
+
+    <owl:DatatypeProperty rdf:about="&lab;dynamicBalance"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#educationLevel -->
+
+    <owl:DatatypeProperty rdf:about="&lab;educationLevel"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#fabScore -->
+
+    <owl:DatatypeProperty rdf:about="&lab;fabScore"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#freeAndCuedRemindingAssessment -->
+
+    <owl:DatatypeProperty rdf:about="&lab;freeAndCuedRemindingAssessment"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#hasDualTaskScore -->
+
+    <owl:DatatypeProperty rdf:about="&lab;hasDualTaskScore">
+        <rdfs:subPropertyOf rdf:resource="&lab;hasScore"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#hasMMSEScore -->
+
+    <owl:DatatypeProperty rdf:about="&lab;hasMMSEScore"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#hasMonoTaskScore -->
+
+    <owl:DatatypeProperty rdf:about="&lab;hasMonoTaskScore">
+        <rdfs:subPropertyOf rdf:resource="&lab;hasScore"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#hasScore -->
+
+    <owl:DatatypeProperty rdf:about="&lab;hasScore"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#hasUPDRSScore -->
+
+    <owl:DatatypeProperty rdf:about="&lab;hasUPDRSScore"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#iadl_e -->
+
+    <owl:DatatypeProperty rdf:about="&lab;iadl_e"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#latency -->
+
+    <owl:DatatypeProperty rdf:about="&lab;latency"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#npi -->
+
+    <owl:DatatypeProperty rdf:about="&lab;npi"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#repetitions -->
+
+    <owl:DatatypeProperty rdf:about="&lab;repetitions"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#shortCognitiveBatteryAssessment -->
+
+    <owl:DatatypeProperty rdf:about="&lab;shortCognitiveBatteryAssessment"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#size -->
+
+    <owl:DatatypeProperty rdf:about="&lab;size"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#stepLength -->
+
+    <owl:DatatypeProperty rdf:about="&lab;stepLength">
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#stoppingDisplacement -->
+
+    <owl:DatatypeProperty rdf:about="&lab;stoppingDisplacement"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#stressLevel -->
+
+    <owl:DatatypeProperty rdf:about="&lab;stressLevel"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#trailMakingTest -->
+
+    <owl:DatatypeProperty rdf:about="&lab;trailMakingTest"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#verbalReactionSpontaneity -->
+
+    <owl:DatatypeProperty rdf:about="&lab;verbalReactionSpontaneity"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#walkingSpeed -->
+
+    <owl:DatatypeProperty rdf:about="&lab;walkingSpeed"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#walkingSpeedInstantaneous -->
+
+    <owl:DatatypeProperty rdf:about="&lab;walkingSpeedInstantaneous"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#Patient -->
+
+    <owl:Class rdf:about="http://www.demcare.eu/ontologies/event.owl#Patient"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#Person -->
+
+    <owl:Class rdf:about="http://www.demcare.eu/ontologies/event.owl#Person"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#AbilityToOrganiseAssessment -->
+
+    <owl:Class rdf:about="&lab;AbilityToOrganiseAssessment">
+        <rdfs:subClassOf rdf:resource="&lab;ExperimentalAssessment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#ActivityStatusType -->
+
+    <owl:Class rdf:about="&lab;ActivityStatusType">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&lab;omitted"/>
+                    <rdf:Description rdf:about="&lab;completed"/>
+                    <rdf:Description rdf:about="&lab;incomplete"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&lab;Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#AnswerPhoneTask -->
+
+    <owl:Class rdf:about="&lab;AnswerPhoneTask">
+        <rdfs:subClassOf rdf:resource="&lab;SemiDirectedTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#ApathyAssessment -->
+
+    <owl:Class rdf:about="&lab;ApathyAssessment">
+        <rdfs:subClassOf rdf:resource="&lab;ExperimentalAssessment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#AutonomyAssessment -->
+
+    <owl:Class rdf:about="&lab;AutonomyAssessment">
+        <rdfs:subClassOf rdf:resource="&lab;ClinicalAssessment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;iadl_e"/>
+                <owl:allValuesFrom rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;iadl_e"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#CallPsychologistTask -->
+
+    <owl:Class rdf:about="&lab;CallPsychologistTask">
+        <rdfs:subClassOf rdf:resource="&lab;SemiDirectedTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#ClinicalAssessment -->
+
+    <owl:Class rdf:about="&lab;ClinicalAssessment"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#ClinicalRecord -->
+
+    <owl:Class rdf:about="&lab;ClinicalRecord">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;containsAssessment"/>
+                <owl:onClass rdf:resource="&lab;AutonomyAssessment"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;containsAssessment"/>
+                <owl:onClass rdf:resource="&lab;MotricityAbilitiesAssessment"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;containsAssessment"/>
+                <owl:onClass rdf:resource="&lab;CognitiveAbilitiesAssessment"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;containsAssessment"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&lab;AutonomyAssessment"/>
+                            <rdf:Description rdf:about="&lab;CognitiveAbilitiesAssessment"/>
+                            <rdf:Description rdf:about="&lab;DiagnosisAssessment"/>
+                            <rdf:Description rdf:about="&lab;MotricityAbilitiesAssessment"/>
+                            <rdf:Description rdf:about="&lab;NeuropsychiatricAndMoodAssessment"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;containsAssessment"/>
+                <owl:onClass rdf:resource="&lab;DiagnosisAssessment"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#CognitiveAbilitiesAssessment -->
+
+    <owl:Class rdf:about="&lab;CognitiveAbilitiesAssessment">
+        <rdfs:subClassOf rdf:resource="&lab;ClinicalAssessment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;fabScore"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;freeAndCuedRemindingAssessment"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;hasMMSEScore"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;trailMakingTest"/>
+                <owl:allValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;trailMakingTest"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;shortCognitiveBatteryAssessment"/>
+                <owl:allValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;freeAndCuedRemindingAssessment"/>
+                <owl:allValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;hasMMSEScore"/>
+                <owl:allValuesFrom rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;shortCognitiveBatteryAssessment"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;fabScore"/>
+                <owl:allValuesFrom rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#CognitiveAbilitiesData -->
+
+    <owl:Class rdf:about="&lab;CognitiveAbilitiesData">
+        <rdfs:subClassOf rdf:resource="&lab;MeasuredData"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;status"/>
+                <owl:onClass rdf:resource="&lab;ActivityStatusType"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;repetitions"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;repetitions"/>
+                <owl:allValuesFrom rdf:resource="&rdfs;Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;compliantInstructionsOrder"/>
+                <owl:allValuesFrom rdf:resource="&xsd;boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;compliantInstructionsOrder"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;taskDuration"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2006/time#DurationDescription"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;taskDuration"/>
+                <owl:onClass rdf:resource="http://www.w3.org/2006/time#DurationDescription"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;status"/>
+                <owl:allValuesFrom rdf:resource="&lab;ActivityStatusType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#CognitiveLoadAssessment -->
+
+    <owl:Class rdf:about="&lab;CognitiveLoadAssessment">
+        <rdfs:subClassOf rdf:resource="&lab;ExperimentalAssessment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;hasDualTaskScore"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;hasMonoTaskScore"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;hasMonoTaskScore"/>
+                <owl:allValuesFrom rdf:resource="&rdfs;Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;hasDualTaskScore"/>
+                <owl:allValuesFrom rdf:resource="&rdfs;Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#CountingType -->
+
+    <owl:Class rdf:about="&lab;CountingType">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&lab;_20_0"/>
+                    <rdf:Description rdf:about="&lab;_305_285"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&lab;Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#DemographicCharacteristicsRecord -->
+
+    <owl:Class rdf:about="&lab;DemographicCharacteristicsRecord">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;dateOfBirth"/>
+                <owl:allValuesFrom rdf:resource="&xsd;dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;gender"/>
+                <owl:allValuesFrom rdf:resource="&lab;GenderType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;laterality"/>
+                <owl:allValuesFrom rdf:resource="&lab;LateralityType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;size"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;educationLevel"/>
+                <owl:allValuesFrom rdf:resource="&rdfs;Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;educationLevel"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;gender"/>
+                <owl:onClass rdf:resource="&lab;GenderType"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;size"/>
+                <owl:allValuesFrom rdf:resource="&rdfs;Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;dateOfBirth"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#DiagnosisAssessment -->
+
+    <owl:Class rdf:about="&lab;DiagnosisAssessment">
+        <rdfs:subClassOf rdf:resource="&lab;ClinicalAssessment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;hasClinicalDiagnosis"/>
+                <owl:allValuesFrom rdf:resource="&lab;DiagnosisType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;hasClinicalDiagnosis"/>
+                <owl:onClass rdf:resource="&lab;DiagnosisType"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#DiagnosisType -->
+
+    <owl:Class rdf:about="&lab;DiagnosisType">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&lab;predementia"/>
+                    <rdf:Description rdf:about="&lab;dementia"/>
+                    <rdf:Description rdf:about="&lab;healthy"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&lab;Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#DirectedDiscussionTask -->
+
+    <owl:Class rdf:about="&lab;DirectedDiscussionTask">
+        <rdfs:subClassOf rdf:resource="&lab;DiscussionTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#DirectedTask -->
+
+    <owl:Class rdf:about="&lab;DirectedTask">
+        <rdfs:subClassOf rdf:resource="&lab;Task"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#DiscussionInvolvementData -->
+
+    <owl:Class rdf:about="&lab;DiscussionInvolvementData">
+        <rdfs:subClassOf rdf:resource="&lab;MeasuredData"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;verbalReactionSpontaneity"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;verbalReactionSpontaneity"/>
+                <owl:allValuesFrom rdf:resource="&rdfs;Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#DiscussionTask -->
+
+    <owl:Class rdf:about="&lab;DiscussionTask">
+        <rdfs:subClassOf rdf:resource="&lab;Task"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;measuredData"/>
+                <owl:someValuesFrom rdf:resource="&lab;StressData"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;measuredData"/>
+                <owl:someValuesFrom rdf:resource="&lab;MoodVoiceData"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;measuredData"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&lab;MoodVoiceData"/>
+                            <rdf:Description rdf:about="&lab;StressData"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#EstablishAccountBalanceTask -->
+
+    <owl:Class rdf:about="&lab;EstablishAccountBalanceTask">
+        <rdfs:subClassOf rdf:resource="&lab;SemiDirectedTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#ExperimentalAssessment -->
+
+    <owl:Class rdf:about="&lab;ExperimentalAssessment">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;hasScore"/>
+                <owl:allValuesFrom rdf:resource="&rdfs;Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;hasScore"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#ExperimentalDiagnosisAssessment -->
+
+    <owl:Class rdf:about="&lab;ExperimentalDiagnosisAssessment">
+        <rdfs:subClassOf rdf:resource="&lab;ExperimentalAssessment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;hasExperimentalDiagnosis"/>
+                <owl:allValuesFrom rdf:resource="&lab;DiagnosisType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#ExperimentalRecord -->
+
+    <owl:Class rdf:about="&lab;ExperimentalRecord">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;containsAssessment"/>
+                <owl:onClass rdf:resource="&lab;ExperimentalDiagnosisAssessment"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;containsAssessment"/>
+                <owl:onClass rdf:resource="&lab;CognitiveLoadAssessment"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;containsAssessment"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&lab;AbilityToOrganiseAssessment"/>
+                            <rdf:Description rdf:about="&lab;ApathyAssessment"/>
+                            <rdf:Description rdf:about="&lab;CognitiveLoadAssessment"/>
+                            <rdf:Description rdf:about="&lab;ExperimentalDiagnosisAssessment"/>
+                            <rdf:Description rdf:about="&lab;FunctionalAbilityAssessment"/>
+                            <rdf:Description rdf:about="&lab;GaitAssessment"/>
+                            <rdf:Description rdf:about="&lab;MemorySelfAppraisalAssessment"/>
+                            <rdf:Description rdf:about="&lab;StressAssessment"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;containsAssessment"/>
+                <owl:onClass rdf:resource="&lab;AbilityToOrganiseAssessment"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;containsAssessment"/>
+                <owl:onClass rdf:resource="&lab;FunctionalAbilityAssessment"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;containsAssessment"/>
+                <owl:onClass rdf:resource="&lab;MemorySelfAppraisalAssessment"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;containsAssessment"/>
+                <owl:onClass rdf:resource="&lab;GaitAssessment"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;containsAssessment"/>
+                <owl:onClass rdf:resource="&lab;ApathyAssessment"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;containsAssessment"/>
+                <owl:onClass rdf:resource="&lab;StressAssessment"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#FindBusLineOnMapTask -->
+
+    <owl:Class rdf:about="&lab;FindBusLineOnMapTask">
+        <rdfs:subClassOf rdf:resource="&lab;SemiDirectedTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#FreeDiscussionTask -->
+
+    <owl:Class rdf:about="&lab;FreeDiscussionTask">
+        <rdfs:subClassOf rdf:resource="&lab;DiscussionTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#FunctionalAbilitiesData -->
+
+    <owl:Class rdf:about="&lab;FunctionalAbilitiesData">
+        <rdfs:subClassOf rdf:resource="&lab;MeasuredData"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;handTrajectory"/>
+                <owl:onClass rdf:resource="&lab;HandTrajectoryType"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;handTrajectory"/>
+                <owl:allValuesFrom rdf:resource="&lab;HandTrajectoryType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#FunctionalAbilityAssessment -->
+
+    <owl:Class rdf:about="&lab;FunctionalAbilityAssessment">
+        <rdfs:subClassOf rdf:resource="&lab;ExperimentalAssessment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#GaitAssessment -->
+
+    <owl:Class rdf:about="&lab;GaitAssessment">
+        <rdfs:subClassOf rdf:resource="&lab;ExperimentalAssessment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;hasMonoTaskScore"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;hasMonoTaskScore"/>
+                <owl:allValuesFrom rdf:resource="&rdfs;Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;hasDualTaskScore"/>
+                <owl:allValuesFrom rdf:resource="&rdfs;Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;hasDualTaskScore"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#GaitData -->
+
+    <owl:Class rdf:about="&lab;GaitData">
+        <rdfs:subClassOf rdf:resource="&lab;MeasuredData"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;walkingSpeedInstantaneous"/>
+                <owl:allValuesFrom rdf:resource="&rdfs;Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;walkingSpeed"/>
+                <owl:allValuesFrom rdf:resource="&rdfs;Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;stepLength"/>
+                <owl:allValuesFrom rdf:resource="&rdfs;Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;dynamicBalance"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;walkingSpeedInstantaneous"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;walkingSpeed"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;stoppingDisplacement"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;stepLength"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;dynamicBalance"/>
+                <owl:allValuesFrom rdf:resource="&rdfs;Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;stoppingDisplacement"/>
+                <owl:allValuesFrom rdf:resource="&xsd;boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#GenderType -->
+
+    <owl:Class rdf:about="&lab;GenderType">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&lab;male"/>
+                    <rdf:Description rdf:about="&lab;female"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&lab;Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#HandTrajectoryType -->
+
+    <owl:Class rdf:about="&lab;HandTrajectoryType">
+        <rdfs:subClassOf rdf:resource="&lab;Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#HealthyControlParticipant -->
+
+    <owl:Class rdf:about="&lab;HealthyControlParticipant">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;hasRecord"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&lab;ClinicalRecord"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&lab;containsAssessment"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="&lab;DiagnosisAssessment"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="&lab;hasClinicalDiagnosis"/>
+                                                <owl:someValuesFrom>
+                                                    <owl:Class>
+                                                        <owl:oneOf rdf:parseType="Collection">
+                                                            <rdf:Description rdf:about="&lab;healthy"/>
+                                                        </owl:oneOf>
+                                                    </owl:Class>
+                                                </owl:someValuesFrom>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&lab;Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#LatencyData -->
+
+    <owl:Class rdf:about="&lab;LatencyData">
+        <rdfs:subClassOf rdf:resource="&lab;MeasuredData"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;latency"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;latency"/>
+                <owl:allValuesFrom rdf:resource="&rdfs;Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#LateralityType -->
+
+    <owl:Class rdf:about="&lab;LateralityType">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&lab;left_handed"/>
+                    <rdf:Description rdf:about="&lab;right_handed"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&lab;Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#LeaveRoomTask -->
+
+    <owl:Class rdf:about="&lab;LeaveRoomTask">
+        <rdfs:subClassOf rdf:resource="&lab;SemiDirectedTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#MeasuredData -->
+
+    <owl:Class rdf:about="&lab;MeasuredData"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#MemorySelfAppraisalAssessment -->
+
+    <owl:Class rdf:about="&lab;MemorySelfAppraisalAssessment">
+        <rdfs:subClassOf rdf:resource="&lab;ExperimentalAssessment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#MoodVoiceData -->
+
+    <owl:Class rdf:about="&lab;MoodVoiceData">
+        <rdfs:subClassOf rdf:resource="&lab;MeasuredData"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#MotricityAbilitiesAssessment -->
+
+    <owl:Class rdf:about="&lab;MotricityAbilitiesAssessment">
+        <rdfs:subClassOf rdf:resource="&lab;ClinicalAssessment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;hasUPDRSScore"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;hasUPDRSScore"/>
+                <owl:allValuesFrom rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#NeuropsychiatricAndMoodAssessment -->
+
+    <owl:Class rdf:about="&lab;NeuropsychiatricAndMoodAssessment">
+        <rdfs:subClassOf rdf:resource="&lab;ClinicalAssessment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;npi"/>
+                <owl:allValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;npi"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;dsm_ivDepressionCriteria"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;apathyInventory"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;dsm_ivDepressionCriteria"/>
+                <owl:allValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;apathyInventory"/>
+                <owl:allValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#OrganisationEfficiencyData -->
+
+    <owl:Class rdf:about="&lab;OrganisationEfficiencyData">
+        <rdfs:subClassOf rdf:resource="&lab;MeasuredData"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;distanceWalked"/>
+                <owl:allValuesFrom rdf:resource="&rdfs;Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;areasOfInterestExplored"/>
+                <owl:allValuesFrom rdf:resource="&rdfs;Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;areasOfNoInterestExplored"/>
+                <owl:allValuesFrom rdf:resource="&rdfs;Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;areasOfNoInterestExplored"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;areasOfInterestExplored"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;distanceWalked"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#PayBillTask -->
+
+    <owl:Class rdf:about="&lab;PayBillTask">
+        <rdfs:subClassOf rdf:resource="&lab;SemiDirectedTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#Person -->
+
+    <owl:Class rdf:about="&lab;Person">
+        <rdfs:subClassOf rdf:resource="http://www.demcare.eu/ontologies/event.owl#Person"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;participates"/>
+                <owl:someValuesFrom rdf:resource="&lab;Protocol"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;hasRecord"/>
+                <owl:someValuesFrom rdf:resource="&lab;ClinicalRecord"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;hasRecord"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&lab;ClinicalRecord"/>
+                            <rdf:Description rdf:about="&lab;DemographicCharacteristicsRecord"/>
+                            <rdf:Description rdf:about="&lab;ExperimentalRecord"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;hasRecord"/>
+                <owl:someValuesFrom rdf:resource="&lab;ExperimentalRecord"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;hasRecord"/>
+                <owl:someValuesFrom rdf:resource="&lab;DemographicCharacteristicsRecord"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;participates"/>
+                <owl:allValuesFrom rdf:resource="&lab;Protocol"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#PersonWithDementia -->
+
+    <owl:Class rdf:about="&lab;PersonWithDementia">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;hasRecord"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&lab;ClinicalRecord"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&lab;containsAssessment"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="&lab;DiagnosisAssessment"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="&lab;hasClinicalDiagnosis"/>
+                                                <owl:someValuesFrom>
+                                                    <owl:Class>
+                                                        <owl:oneOf rdf:parseType="Collection">
+                                                            <rdf:Description rdf:about="&lab;dementia"/>
+                                                        </owl:oneOf>
+                                                    </owl:Class>
+                                                </owl:someValuesFrom>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&lab;Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#PersonWithPredementia -->
+
+    <owl:Class rdf:about="&lab;PersonWithPredementia">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;hasRecord"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&lab;ClinicalRecord"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&lab;containsAssessment"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="&lab;DiagnosisAssessment"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="&lab;hasClinicalDiagnosis"/>
+                                                <owl:someValuesFrom>
+                                                    <owl:Class>
+                                                        <owl:oneOf rdf:parseType="Collection">
+                                                            <rdf:Description rdf:about="&lab;predementia"/>
+                                                        </owl:oneOf>
+                                                    </owl:Class>
+                                                </owl:someValuesFrom>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&lab;Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#PrepareDrugBoxTask -->
+
+    <owl:Class rdf:about="&lab;PrepareDrugBoxTask">
+        <rdfs:subClassOf rdf:resource="&lab;SemiDirectedTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#PrepareHotTeaTask -->
+
+    <owl:Class rdf:about="&lab;PrepareHotTeaTask">
+        <rdfs:subClassOf rdf:resource="&lab;SemiDirectedTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#Protocol -->
+
+    <owl:Class rdf:about="&lab;Protocol">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;protocolStep"/>
+                <owl:someValuesFrom rdf:resource="&lab;ProtocolStep"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;protocolStep"/>
+                <owl:allValuesFrom rdf:resource="&lab;ProtocolStep"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;date"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;hasParticipant"/>
+                <owl:onClass rdf:resource="&lab;Person"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;hasParticipant"/>
+                <owl:allValuesFrom rdf:resource="&lab;Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;date"/>
+                <owl:allValuesFrom rdf:resource="&xsd;dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#ProtocolStep -->
+
+    <owl:Class rdf:about="&lab;ProtocolStep">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;involvesTask"/>
+                <owl:someValuesFrom rdf:resource="&lab;Task"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;endTime"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2006/time#Instant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;startTime"/>
+                <owl:onClass rdf:resource="http://www.w3.org/2006/time#Instant"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;startTime"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2006/time#Instant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;endTime"/>
+                <owl:onClass rdf:resource="http://www.w3.org/2006/time#Instant"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;involvesTask"/>
+                <owl:allValuesFrom rdf:resource="&lab;Task"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#ReadArticleTask -->
+
+    <owl:Class rdf:about="&lab;ReadArticleTask">
+        <rdfs:subClassOf rdf:resource="&lab;SemiDirectedTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#S1_DirectedActivitiesStep -->
+
+    <owl:Class rdf:about="&lab;S1_DirectedActivitiesStep">
+        <rdfs:subClassOf rdf:resource="&lab;ProtocolStep"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;involvesTask"/>
+                <owl:onClass rdf:resource="&lab;S1_P11_WalkingTask"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;involvesTask"/>
+                <owl:onClass rdf:resource="&lab;S1_P13_WalkingCountingBackwardsTask"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;involvesTask"/>
+                <owl:onClass rdf:resource="&lab;S1_P21_SentenceRepeatingTask"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;involvesTask"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&lab;S1_P11_WalkingTask"/>
+                            <rdf:Description rdf:about="&lab;S1_P12_CountingBackwardsTask"/>
+                            <rdf:Description rdf:about="&lab;S1_P13_WalkingCountingBackwardsTask"/>
+                            <rdf:Description rdf:about="&lab;S1_P21_SentenceRepeatingTask"/>
+                            <rdf:Description rdf:about="&lab;S1_P22_ArticulationControlTask"/>
+                            <rdf:Description rdf:about="&lab;Task"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;involvesTask"/>
+                <owl:onClass rdf:resource="&lab;S1_P22_ArticulationControlTask"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;involvesTask"/>
+                <owl:onClass rdf:resource="&lab;S1_P12_CountingBackwardsTask"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#S1_P11_WalkingTask -->
+
+    <owl:Class rdf:about="&lab;S1_P11_WalkingTask">
+        <rdfs:subClassOf rdf:resource="&lab;DirectedTask"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;measuredData"/>
+                <owl:someValuesFrom rdf:resource="&lab;LatencyData"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;measuredData"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&lab;GaitData"/>
+                            <rdf:Description rdf:about="&lab;LatencyData"/>
+                            <rdf:Description rdf:about="&lab;StressData"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;measuredData"/>
+                <owl:someValuesFrom rdf:resource="&lab;GaitData"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#S1_P12_CountingBackwardsTask -->
+
+    <owl:Class rdf:about="&lab;S1_P12_CountingBackwardsTask">
+        <rdfs:subClassOf rdf:resource="&lab;DirectedTask"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;measuredData"/>
+                <owl:someValuesFrom rdf:resource="&lab;LatencyData"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;measuredData"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&lab;LatencyData"/>
+                            <rdf:Description rdf:about="&lab;MoodVoiceData"/>
+                            <rdf:Description rdf:about="&lab;StressData"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;countingType"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&lab;_20_0"/>
+                            <rdf:Description rdf:about="&lab;_305_285"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;measuredData"/>
+                <owl:someValuesFrom rdf:resource="&lab;MoodVoiceData"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#S1_P13_WalkingCountingBackwardsTask -->
+
+    <owl:Class rdf:about="&lab;S1_P13_WalkingCountingBackwardsTask">
+        <rdfs:subClassOf rdf:resource="&lab;DirectedTask"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;measuredData"/>
+                <owl:someValuesFrom rdf:resource="&lab;MoodVoiceData"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;countingType"/>
+                <owl:allValuesFrom rdf:resource="&lab;CountingType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;measuredData"/>
+                <owl:someValuesFrom rdf:resource="&lab;LatencyData"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;measuredData"/>
+                <owl:someValuesFrom rdf:resource="&lab;GaitData"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;countingType"/>
+                <owl:someValuesFrom rdf:resource="&lab;CountingType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;measuredData"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&lab;GaitData"/>
+                            <rdf:Description rdf:about="&lab;LatencyData"/>
+                            <rdf:Description rdf:about="&lab;MoodVoiceData"/>
+                            <rdf:Description rdf:about="&lab;StressData"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#S1_P21_SentenceRepeatingTask -->
+
+    <owl:Class rdf:about="&lab;S1_P21_SentenceRepeatingTask">
+        <rdfs:subClassOf rdf:resource="&lab;DirectedTask"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;measuredData"/>
+                <owl:someValuesFrom rdf:resource="&lab;MoodVoiceData"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;measuredData"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&lab;LatencyData"/>
+                            <rdf:Description rdf:about="&lab;MoodVoiceData"/>
+                            <rdf:Description rdf:about="&lab;StressData"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;measuredData"/>
+                <owl:someValuesFrom rdf:resource="&lab;LatencyData"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#S1_P22_ArticulationControlTask -->
+
+    <owl:Class rdf:about="&lab;S1_P22_ArticulationControlTask">
+        <rdfs:subClassOf rdf:resource="&lab;DirectedTask"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;measuredData"/>
+                <owl:someValuesFrom rdf:resource="&lab;LatencyData"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;measuredData"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&lab;LatencyData"/>
+                            <rdf:Description rdf:about="&lab;StressData"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#S2_SemiDirectedActivitiesStep -->
+
+    <owl:Class rdf:about="&lab;S2_SemiDirectedActivitiesStep">
+        <rdfs:subClassOf rdf:resource="&lab;ProtocolStep"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;involvesTask"/>
+                <owl:onClass rdf:resource="&lab;TurnOnTVTask"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;involvesTask"/>
+                <owl:onClass rdf:resource="&lab;WaterPlantTask"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;involvesTask"/>
+                <owl:onClass rdf:resource="&lab;PrepareHotTeaTask"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;involvesTask"/>
+                <owl:onClass rdf:resource="&lab;CallPsychologistTask"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;involvesTask"/>
+                <owl:onClass rdf:resource="&lab;AnswerPhoneTask"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;involvesTask"/>
+                <owl:onClass rdf:resource="&lab;FindBusLineOnMapTask"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;involvesTask"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&lab;AnswerPhoneTask"/>
+                            <rdf:Description rdf:about="&lab;CallPsychologistTask"/>
+                            <rdf:Description rdf:about="&lab;EstablishAccountBalanceTask"/>
+                            <rdf:Description rdf:about="&lab;FindBusLineOnMapTask"/>
+                            <rdf:Description rdf:about="&lab;LeaveRoomTask"/>
+                            <rdf:Description rdf:about="&lab;PayBillTask"/>
+                            <rdf:Description rdf:about="&lab;PrepareDrugBoxTask"/>
+                            <rdf:Description rdf:about="&lab;PrepareHotTeaTask"/>
+                            <rdf:Description rdf:about="&lab;Task"/>
+                            <rdf:Description rdf:about="&lab;TurnOnTVTask"/>
+                            <rdf:Description rdf:about="&lab;WaterPlantTask"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;involvesTask"/>
+                <owl:onClass rdf:resource="&lab;PayBillTask"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;involvesTask"/>
+                <owl:onClass rdf:resource="&lab;EstablishAccountBalanceTask"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;involvesTask"/>
+                <owl:onClass rdf:resource="&lab;LeaveRoomTask"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;involvesTask"/>
+                <owl:onClass rdf:resource="&lab;PrepareDrugBoxTask"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#S3_DiscussionWithClinicianStep -->
+
+    <owl:Class rdf:about="&lab;S3_DiscussionWithClinicianStep">
+        <rdfs:subClassOf rdf:resource="&lab;ProtocolStep"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;involvesTask"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&lab;S3_P1_DirectedExpressionTask"/>
+                            <rdf:Description rdf:about="&lab;S3_P21_PictureDescriptionTask"/>
+                            <rdf:Description rdf:about="&lab;Task"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;involvesTask"/>
+                <owl:onClass rdf:resource="&lab;S3_P1_DirectedExpressionTask"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;involvesTask"/>
+                <owl:onClass rdf:resource="&lab;S3_P21_PictureDescriptionTask"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#S3_P1_DirectedExpressionTask -->
+
+    <owl:Class rdf:about="&lab;S3_P1_DirectedExpressionTask">
+        <rdfs:subClassOf rdf:resource="&lab;DirectedDiscussionTask"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;measuredData"/>
+                <owl:someValuesFrom rdf:resource="&lab;MoodVoiceData"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;measuredData"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&lab;MoodVoiceData"/>
+                            <rdf:Description rdf:about="&lab;StressData"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#S3_P21_PictureDescriptionTask -->
+
+    <owl:Class rdf:about="&lab;S3_P21_PictureDescriptionTask">
+        <rdfs:subClassOf rdf:resource="&lab;FreeDiscussionTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#S3_P22_PictureDiscussionTask -->
+
+    <owl:Class rdf:about="&lab;S3_P22_PictureDiscussionTask">
+        <rdfs:subClassOf rdf:resource="&lab;FreeDiscussionTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#SemiDirectedTask -->
+
+    <owl:Class rdf:about="&lab;SemiDirectedTask">
+        <rdfs:subClassOf rdf:resource="&lab;Task"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;measuredData"/>
+                <owl:someValuesFrom rdf:resource="&lab;FunctionalAbilitiesData"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;measuredData"/>
+                <owl:someValuesFrom rdf:resource="&lab;CognitiveAbilitiesData"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;measuredData"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&lab;CognitiveAbilitiesData"/>
+                            <rdf:Description rdf:about="&lab;FunctionalAbilitiesData"/>
+                            <rdf:Description rdf:about="&lab;StressData"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#StressAssessment -->
+
+    <owl:Class rdf:about="&lab;StressAssessment">
+        <rdfs:subClassOf rdf:resource="&lab;ExperimentalAssessment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#StressData -->
+
+    <owl:Class rdf:about="&lab;StressData">
+        <rdfs:subClassOf rdf:resource="&lab;MeasuredData"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;stressLevel"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;stressLevel"/>
+                <owl:allValuesFrom rdf:resource="&rdfs;Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#Task -->
+
+    <owl:Class rdf:about="&lab;Task">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;startTime"/>
+                <owl:onClass rdf:resource="http://www.w3.org/2006/time#Instant"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;measuredData"/>
+                <owl:someValuesFrom rdf:resource="&lab;StressData"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;startTime"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2006/time#Instant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;endTime"/>
+                <owl:onClass rdf:resource="http://www.w3.org/2006/time#Instant"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;endTime"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2006/time#Instant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lab;measuredData"/>
+                <owl:allValuesFrom rdf:resource="&lab;StressData"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#TurnOnTVTask -->
+
+    <owl:Class rdf:about="&lab;TurnOnTVTask">
+        <rdfs:subClassOf rdf:resource="&lab;SemiDirectedTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#Type -->
+
+    <owl:Class rdf:about="&lab;Type"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#WaterPlantTask -->
+
+    <owl:Class rdf:about="&lab;WaterPlantTask">
+        <rdfs:subClassOf rdf:resource="&lab;SemiDirectedTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#DurationDescription -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#DurationDescription"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Instant -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#Instant"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#_20_0 -->
+
+    <owl:NamedIndividual rdf:about="&lab;_20_0">
+        <rdf:type rdf:resource="&lab;CountingType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#_305_285 -->
+
+    <owl:NamedIndividual rdf:about="&lab;_305_285">
+        <rdf:type rdf:resource="&lab;CountingType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#completed -->
+
+    <owl:NamedIndividual rdf:about="&lab;completed">
+        <rdf:type rdf:resource="&lab;ActivityStatusType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#dementia -->
+
+    <owl:NamedIndividual rdf:about="&lab;dementia">
+        <rdf:type rdf:resource="&lab;DiagnosisType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#female -->
+
+    <owl:NamedIndividual rdf:about="&lab;female">
+        <rdf:type rdf:resource="&lab;GenderType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#healthy -->
+
+    <owl:NamedIndividual rdf:about="&lab;healthy">
+        <rdf:type rdf:resource="&lab;DiagnosisType"/>
+        <hasClinicalDiagnosis rdf:resource="&lab;dementia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#incomplete -->
+
+    <owl:NamedIndividual rdf:about="&lab;incomplete">
+        <rdf:type rdf:resource="&lab;ActivityStatusType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#left_handed -->
+
+    <owl:NamedIndividual rdf:about="&lab;left_handed">
+        <rdf:type rdf:resource="&lab;LateralityType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#male -->
+
+    <owl:NamedIndividual rdf:about="&lab;male">
+        <rdf:type rdf:resource="&lab;GenderType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#omitted -->
+
+    <owl:NamedIndividual rdf:about="&lab;omitted">
+        <rdf:type rdf:resource="&lab;ActivityStatusType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#predementia -->
+
+    <owl:NamedIndividual rdf:about="&lab;predementia">
+        <rdf:type rdf:resource="&lab;DiagnosisType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/lab.owl#right_handed -->
+
+    <owl:NamedIndividual rdf:about="&lab;right_handed">
+        <rdf:type rdf:resource="&lab;LateralityType"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

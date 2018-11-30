@@ -1,0 +1,1408 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY time "http://www.w3.org/2006/time#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY event "http://www.demcare.eu/ontologies/event.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.demcare.eu/ontologies/event.owl#"
+     xml:base="http://www.demcare.eu/ontologies/event.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:time="http://www.w3.org/2006/time#"
+     xmlns:event="http://www.demcare.eu/ontologies/event.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.demcare.eu/ontologies/event.owl">
+        <owl:imports rdf:resource="http://www.w3.org/2006/time"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#duration -->
+
+    <owl:ObjectProperty rdf:about="&event;duration"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#hasAgent -->
+
+    <owl:ObjectProperty rdf:about="&event;hasAgent">
+        <owl:inverseOf rdf:resource="&event;isAgentIn"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#hasQuality -->
+
+    <owl:ObjectProperty rdf:about="&event;hasQuality"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#isAgentIn -->
+
+    <owl:ObjectProperty rdf:about="&event;isAgentIn">
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#objectLocalisation -->
+
+    <owl:ObjectProperty rdf:about="&event;objectLocalisation"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#refersTo -->
+
+    <owl:ObjectProperty rdf:about="&event;refersTo"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#roomLocalisation -->
+
+    <owl:ObjectProperty rdf:about="&event;roomLocalisation"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#startTime -->
+
+    <owl:ObjectProperty rdf:about="&event;startTime"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#hasConductivity -->
+
+    <owl:DatatypeProperty rdf:about="&event;hasConductivity">
+        <rdfs:subPropertyOf rdf:resource="&event;hasValue"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#hasLightLevel -->
+
+    <owl:DatatypeProperty rdf:about="&event;hasLightLevel">
+        <rdfs:subPropertyOf rdf:resource="&event;hasValue"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#hasNoiseLevel -->
+
+    <owl:DatatypeProperty rdf:about="&event;hasNoiseLevel">
+        <rdfs:subPropertyOf rdf:resource="&event;hasValue"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#hasRate -->
+
+    <owl:DatatypeProperty rdf:about="&event;hasRate">
+        <rdfs:subPropertyOf rdf:resource="&event;hasValue"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#hasTemperature -->
+
+    <owl:DatatypeProperty rdf:about="&event;hasTemperature">
+        <rdfs:subPropertyOf rdf:resource="&event;hasValue"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#hasValue -->
+
+    <owl:DatatypeProperty rdf:about="&event;hasValue"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#Active -->
+
+    <owl:Class rdf:about="&event;Active">
+        <rdfs:subClassOf rdf:resource="&event;State"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#Activity -->
+
+    <owl:Class rdf:about="&event;Activity">
+        <rdfs:subClassOf rdf:resource="&event;Event"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&event;hasAgent"/>
+                <owl:onClass rdf:resource="&event;Person"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&event;hasAgent"/>
+                <owl:someValuesFrom rdf:resource="&event;Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#AlarmClock -->
+
+    <owl:Class rdf:about="&event;AlarmClock">
+        <rdfs:subClassOf rdf:resource="&event;Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#AlarmClockRinging -->
+
+    <owl:Class rdf:about="&event;AlarmClockRinging">
+        <rdfs:subClassOf rdf:resource="&event;Ringing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&event;hasAgent"/>
+                <owl:someValuesFrom rdf:resource="&event;AlarmClock"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#AmbientMeasurement -->
+
+    <owl:Class rdf:about="&event;AmbientMeasurement">
+        <rdfs:subClassOf rdf:resource="&event;Measurement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&event;refersTo"/>
+                <owl:allValuesFrom rdf:resource="&event;Room"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#AnswerPhoneCall -->
+
+    <owl:Class rdf:about="&event;AnswerPhoneCall">
+        <rdfs:subClassOf rdf:resource="&event;TelephoneInteraction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#Apnea -->
+
+    <owl:Class rdf:about="&event;Apnea">
+        <rdfs:subClassOf rdf:resource="&event;State"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#Appliance -->
+
+    <owl:Class rdf:about="&event;Appliance">
+        <rdfs:subClassOf rdf:resource="&event;Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#Arousal -->
+
+    <owl:Class rdf:about="&event;Arousal">
+        <rdfs:subClassOf rdf:resource="&event;State"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#AtomicActivity -->
+
+    <owl:Class rdf:about="&event;AtomicActivity">
+        <rdfs:subClassOf rdf:resource="&event;Activity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#Bathroom -->
+
+    <owl:Class rdf:about="&event;Bathroom">
+        <rdfs:subClassOf rdf:resource="&event;Room"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#Bed -->
+
+    <owl:Class rdf:about="&event;Bed">
+        <rdfs:subClassOf rdf:resource="&event;Furniture"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#BedExit -->
+
+    <owl:Class rdf:about="&event;BedExit">
+        <rdfs:subClassOf rdf:resource="&event;ComplexActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#Bedroom -->
+
+    <owl:Class rdf:about="&event;Bedroom">
+        <rdfs:subClassOf rdf:resource="&event;Room"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#Book -->
+
+    <owl:Class rdf:about="&event;Book">
+        <rdfs:subClassOf rdf:resource="&event;Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#Bucket -->
+
+    <owl:Class rdf:about="&event;Bucket">
+        <rdfs:subClassOf rdf:resource="&event;Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#Carer -->
+
+    <owl:Class rdf:about="&event;Carer">
+        <rdfs:subClassOf rdf:resource="&event;Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#Chair -->
+
+    <owl:Class rdf:about="&event;Chair">
+        <rdfs:subClassOf rdf:resource="&event;Furniture"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#ChangeOrientation -->
+
+    <owl:Class rdf:about="&event;ChangeOrientation">
+        <rdfs:subClassOf rdf:resource="&event;AtomicActivity"/>
+        <rdfs:comment>WIMU</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#ChangePosture -->
+
+    <owl:Class rdf:about="&event;ChangePosture">
+        <rdfs:subClassOf rdf:resource="&event;AtomicActivity"/>
+        <rdfs:comment>WIMU</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#Clinician -->
+
+    <owl:Class rdf:about="&event;Clinician">
+        <rdfs:subClassOf rdf:resource="&event;Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#Closed -->
+
+    <owl:Class rdf:about="&event;Closed">
+        <rdfs:subClassOf rdf:resource="&event;ObjectEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#ComplexActivity -->
+
+    <owl:Class rdf:about="&event;ComplexActivity">
+        <rdfs:subClassOf rdf:resource="&event;Activity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#Cooker -->
+
+    <owl:Class rdf:about="&event;Cooker">
+        <rdfs:subClassOf rdf:resource="&event;Appliance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#Couch -->
+
+    <owl:Class rdf:about="&event;Couch">
+        <rdfs:subClassOf rdf:resource="&event;Furniture"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#Cup -->
+
+    <owl:Class rdf:about="&event;Cup">
+        <rdfs:subClassOf rdf:resource="&event;Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#Cuttlery -->
+
+    <owl:Class rdf:about="&event;Cuttlery">
+        <rdfs:subClassOf rdf:resource="&event;Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#Cycling -->
+
+    <owl:Class rdf:about="&event;Cycling">
+        <rdfs:subClassOf rdf:resource="&event;OutdoorPhysicalActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#DangerousBedExit -->
+
+    <owl:Class rdf:about="&event;DangerousBedExit">
+        <rdfs:subClassOf rdf:resource="&event;BedExit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#DialNumber -->
+
+    <owl:Class rdf:about="&event;DialNumber">
+        <rdfs:subClassOf rdf:resource="&event;AtomicActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#Door -->
+
+    <owl:Class rdf:about="&event;Door">
+        <rdfs:subClassOf rdf:resource="&event;Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#DoorBell -->
+
+    <owl:Class rdf:about="&event;DoorBell">
+        <rdfs:subClassOf rdf:resource="&event;Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#DoorClosed -->
+
+    <owl:Class rdf:about="&event;DoorClosed">
+        <rdfs:subClassOf rdf:resource="&event;Closed"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&event;hasAgent"/>
+                <owl:someValuesFrom rdf:resource="&event;Door"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#DoorOpen -->
+
+    <owl:Class rdf:about="&event;DoorOpen">
+        <rdfs:subClassOf rdf:resource="&event;Open"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&event;hasAgent"/>
+                <owl:someValuesFrom rdf:resource="&event;Door"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#Drink -->
+
+    <owl:Class rdf:about="&event;Drink">
+        <rdfs:subClassOf rdf:resource="&event;AtomicActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#Eat -->
+
+    <owl:Class rdf:about="&event;Eat">
+        <rdfs:subClassOf rdf:resource="&event;AtomicActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#Entity -->
+
+    <owl:Class rdf:about="&event;Entity"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#Event -->
+
+    <owl:Class rdf:about="&event;Event">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&event;startTime"/>
+                <owl:allValuesFrom rdf:resource="&time;Instant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&event;duration"/>
+                <owl:allValuesFrom rdf:resource="&time;DurationDescription"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&event;startTime"/>
+                <owl:onClass rdf:resource="&time;Instant"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&event;duration"/>
+                <owl:onClass rdf:resource="&time;DurationDescription"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#FaceToFaceInteraction -->
+
+    <owl:Class rdf:about="&event;FaceToFaceInteraction">
+        <rdfs:subClassOf rdf:resource="&event;SocialInteraction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#Fall -->
+
+    <owl:Class rdf:about="&event;Fall">
+        <rdfs:subClassOf rdf:resource="&event;ComplexActivity"/>
+        <rdfs:comment>if not supported by LCS</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#FoodAndDrinkConsumption -->
+
+    <owl:Class rdf:about="&event;FoodAndDrinkConsumption">
+        <rdfs:subClassOf rdf:resource="&event;ComplexActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#Fridge -->
+
+    <owl:Class rdf:about="&event;Fridge">
+        <rdfs:subClassOf rdf:resource="&event;Appliance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#Furniture -->
+
+    <owl:Class rdf:about="&event;Furniture">
+        <rdfs:subClassOf rdf:resource="&event;Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#Glass -->
+
+    <owl:Class rdf:about="&event;Glass">
+        <rdfs:subClassOf rdf:resource="&event;Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#HaveBreakfast -->
+
+    <owl:Class rdf:about="&event;HaveBreakfast">
+        <rdfs:subClassOf rdf:resource="&event;HaveMeal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#HaveDinner -->
+
+    <owl:Class rdf:about="&event;HaveDinner">
+        <rdfs:subClassOf rdf:resource="&event;HaveMeal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#HaveDrink -->
+
+    <owl:Class rdf:about="&event;HaveDrink">
+        <rdfs:subClassOf rdf:resource="&event;FoodAndDrinkConsumption"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#HaveLunch -->
+
+    <owl:Class rdf:about="&event;HaveLunch">
+        <rdfs:subClassOf rdf:resource="&event;HaveMeal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#HaveMeal -->
+
+    <owl:Class rdf:about="&event;HaveMeal">
+        <rdfs:subClassOf rdf:resource="&event;FoodAndDrinkConsumption"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#HaveSnack -->
+
+    <owl:Class rdf:about="&event;HaveSnack">
+        <rdfs:subClassOf rdf:resource="&event;FoodAndDrinkConsumption"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#HeartRate -->
+
+    <owl:Class rdf:about="&event;HeartRate">
+        <rdfs:subClassOf rdf:resource="&event;PhysiologicalMeasurement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&event;hasRate"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&event;hasRate"/>
+                <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>DTI-2</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#InLocation -->
+
+    <owl:Class rdf:about="&event;InLocation">
+        <rdfs:subClassOf rdf:resource="&event;AtomicActivity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&event;roomLocalisation"/>
+                <owl:someValuesFrom rdf:resource="&event;Room"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#InRoom -->
+
+    <owl:Class rdf:about="&event;InRoom">
+        <rdfs:subClassOf rdf:resource="&event;InLocation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&event;roomLocalisation"/>
+                <owl:someValuesFrom rdf:resource="&event;Place"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#IndoorPhysicalActivity -->
+
+    <owl:Class rdf:about="&event;IndoorPhysicalActivity">
+        <rdfs:subClassOf rdf:resource="&event;PhysicalActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#Kettle -->
+
+    <owl:Class rdf:about="&event;Kettle">
+        <rdfs:subClassOf rdf:resource="&event;Appliance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#KettleOff -->
+
+    <owl:Class rdf:about="&event;KettleOff">
+        <rdfs:subClassOf rdf:resource="&event;Off"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&event;hasAgent"/>
+                <owl:someValuesFrom rdf:resource="&event;Kettle"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#KettleOn -->
+
+    <owl:Class rdf:about="&event;KettleOn">
+        <rdfs:subClassOf rdf:resource="&event;On"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&event;hasAgent"/>
+                <owl:someValuesFrom rdf:resource="&event;Kettle"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#Kitchen -->
+
+    <owl:Class rdf:about="&event;Kitchen">
+        <rdfs:subClassOf rdf:resource="&event;Room"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#KitchenPress -->
+
+    <owl:Class rdf:about="&event;KitchenPress">
+        <rdfs:subClassOf rdf:resource="&event;Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#LightLevel -->
+
+    <owl:Class rdf:about="&event;LightLevel">
+        <rdfs:subClassOf rdf:resource="&event;AmbientMeasurement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&event;hasLightLevel"/>
+                <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&event;hasLightLevel"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#LivingRoom -->
+
+    <owl:Class rdf:about="&event;LivingRoom">
+        <rdfs:subClassOf rdf:resource="&event;Room"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#LongBedExit -->
+
+    <owl:Class rdf:about="&event;LongBedExit">
+        <rdfs:subClassOf rdf:resource="&event;BedExit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#LongNap -->
+
+    <owl:Class rdf:about="&event;LongNap">
+        <rdfs:subClassOf rdf:resource="&event;Nap"/>
+        <rdfs:comment>duration of longer than 30 minutes</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#LongTableExit -->
+
+    <owl:Class rdf:about="&event;LongTableExit">
+        <rdfs:subClassOf rdf:resource="&event;TableExit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#Lying -->
+
+    <owl:Class rdf:about="&event;Lying">
+        <rdfs:subClassOf rdf:resource="&event;Posture"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&event;objectLocalisation"/>
+                <owl:someValuesFrom rdf:resource="&event;Furniture"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#MakePhoneCall -->
+
+    <owl:Class rdf:about="&event;MakePhoneCall">
+        <rdfs:subClassOf rdf:resource="&event;TelephoneInteraction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#Measurement -->
+
+    <owl:Class rdf:about="&event;Measurement">
+        <rdfs:subClassOf rdf:resource="&event;Event"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&event;hasQuality"/>
+                <owl:allValuesFrom rdf:resource="&event;PhysicalQuality"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&event;refersTo"/>
+                <owl:onClass rdf:resource="&event;Entity"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&event;hasValue"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&event;hasValue"/>
+                <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&event;hasQuality"/>
+                <owl:onClass rdf:resource="&event;PhysicalQuality"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&event;refersTo"/>
+                <owl:allValuesFrom rdf:resource="&event;Entity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#Mop -->
+
+    <owl:Class rdf:about="&event;Mop">
+        <rdfs:subClassOf rdf:resource="&event;Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#MoveLimb -->
+
+    <owl:Class rdf:about="&event;MoveLimb">
+        <rdfs:subClassOf rdf:resource="&event;State"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#Moving -->
+
+    <owl:Class rdf:about="&event;Moving">
+        <rdfs:subClassOf rdf:resource="&event;Active"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#Nap -->
+
+    <owl:Class rdf:about="&event;Nap">
+        <rdfs:subClassOf rdf:resource="&event;ComplexActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#NapAfterLunch -->
+
+    <owl:Class rdf:about="&event;NapAfterLunch">
+        <rdfs:subClassOf rdf:resource="&event;Nap"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#NearObject -->
+
+    <owl:Class rdf:about="&event;NearObject">
+        <rdfs:subClassOf rdf:resource="&event;InLocation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&event;objectLocalisation"/>
+                <owl:someValuesFrom rdf:resource="&event;Object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#NightBathroomVisit -->
+
+    <owl:Class rdf:about="&event;NightBathroomVisit">
+        <rdfs:subClassOf rdf:resource="&event;NightRoomVisit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#NightKitchenVisit -->
+
+    <owl:Class rdf:about="&event;NightKitchenVisit">
+        <rdfs:subClassOf rdf:resource="&event;NightRoomVisit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#NightLivingRoomVisit -->
+
+    <owl:Class rdf:about="&event;NightLivingRoomVisit">
+        <rdfs:subClassOf rdf:resource="&event;NightRoomVisit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#NightRoomVisit -->
+
+    <owl:Class rdf:about="&event;NightRoomVisit">
+        <rdfs:subClassOf rdf:resource="&event;BedExit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#NightSleep -->
+
+    <owl:Class rdf:about="&event;NightSleep">
+        <rdfs:subClassOf rdf:resource="&event;ComplexActivity"/>
+        <rdfs:comment>The entire sleep (including relevant inferences during the sleep)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#NoiseLevel -->
+
+    <owl:Class rdf:about="&event;NoiseLevel">
+        <rdfs:subClassOf rdf:resource="&event;AmbientMeasurement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&event;hasNoiseLevel"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&event;hasNoiseLevel"/>
+                <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#Object -->
+
+    <owl:Class rdf:about="&event;Object">
+        <rdfs:subClassOf rdf:resource="&event;Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#ObjectEvent -->
+
+    <owl:Class rdf:about="&event;ObjectEvent">
+        <rdfs:subClassOf rdf:resource="&event;Event"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&event;hasAgent"/>
+                <owl:onClass rdf:resource="&event;Object"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&event;hasAgent"/>
+                <owl:someValuesFrom rdf:resource="&event;Object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#Off -->
+
+    <owl:Class rdf:about="&event;Off">
+        <rdfs:subClassOf rdf:resource="&event;ObjectEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#On -->
+
+    <owl:Class rdf:about="&event;On">
+        <rdfs:subClassOf rdf:resource="&event;ObjectEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#Open -->
+
+    <owl:Class rdf:about="&event;Open">
+        <rdfs:subClassOf rdf:resource="&event;ObjectEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#OutdoorPhysicalActivity -->
+
+    <owl:Class rdf:about="&event;OutdoorPhysicalActivity">
+        <rdfs:subClassOf rdf:resource="&event;PhysicalActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#Outdoors -->
+
+    <owl:Class rdf:about="&event;Outdoors">
+        <rdfs:subClassOf rdf:resource="&event;InLocation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#Patient -->
+
+    <owl:Class rdf:about="&event;Patient">
+        <rdfs:subClassOf rdf:resource="&event;Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#Person -->
+
+    <owl:Class rdf:about="&event;Person">
+        <rdfs:subClassOf rdf:resource="&event;Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#PhoneRinging -->
+
+    <owl:Class rdf:about="&event;PhoneRinging">
+        <rdfs:subClassOf rdf:resource="&event;Ringing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&event;hasAgent"/>
+                <owl:someValuesFrom rdf:resource="&event;Telephone"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#PhysicalActivity -->
+
+    <owl:Class rdf:about="&event;PhysicalActivity">
+        <rdfs:subClassOf rdf:resource="&event;AtomicActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#PhysicalQuality -->
+
+    <owl:Class rdf:about="&event;PhysicalQuality"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#PhysiologicalMeasurement -->
+
+    <owl:Class rdf:about="&event;PhysiologicalMeasurement">
+        <rdfs:subClassOf rdf:resource="&event;Measurement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&event;refersTo"/>
+                <owl:allValuesFrom rdf:resource="&event;Patient"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#PickUpPhone -->
+
+    <owl:Class rdf:about="&event;PickUpPhone">
+        <rdfs:subClassOf rdf:resource="&event;AtomicActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#Place -->
+
+    <owl:Class rdf:about="&event;Place">
+        <rdfs:subClassOf rdf:resource="&event;Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#Plate -->
+
+    <owl:Class rdf:about="&event;Plate">
+        <rdfs:subClassOf rdf:resource="&event;Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#Posture -->
+
+    <owl:Class rdf:about="&event;Posture">
+        <rdfs:subClassOf rdf:resource="&event;State"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#PrepareDrink -->
+
+    <owl:Class rdf:about="&event;PrepareDrink">
+        <rdfs:subClassOf rdf:resource="&event;ComplexActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#PrepareHotTea -->
+
+    <owl:Class rdf:about="&event;PrepareHotTea">
+        <rdfs:subClassOf rdf:resource="&event;PrepareDrink"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#PrepareMeal -->
+
+    <owl:Class rdf:about="&event;PrepareMeal">
+        <rdfs:subClassOf rdf:resource="&event;ComplexActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#RemoteControl -->
+
+    <owl:Class rdf:about="&event;RemoteControl">
+        <rdfs:subClassOf rdf:resource="&event;Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#Rest -->
+
+    <owl:Class rdf:about="&event;Rest">
+        <rdfs:subClassOf rdf:resource="&event;State"/>
+        <rdfs:comment>DTI-2</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#Ringing -->
+
+    <owl:Class rdf:about="&event;Ringing">
+        <rdfs:subClassOf rdf:resource="&event;ObjectEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#Room -->
+
+    <owl:Class rdf:about="&event;Room">
+        <rdfs:subClassOf rdf:resource="&event;Place"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#Running -->
+
+    <owl:Class rdf:about="&event;Running">
+        <rdfs:subClassOf rdf:resource="&event;OutdoorPhysicalActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#Sitting -->
+
+    <owl:Class rdf:about="&event;Sitting">
+        <rdfs:subClassOf rdf:resource="&event;Posture"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&event;objectLocalisation"/>
+                <owl:someValuesFrom rdf:resource="&event;Furniture"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#SittingToStanding -->
+
+    <owl:Class rdf:about="&event;SittingToStanding">
+        <rdfs:subClassOf rdf:resource="&event;ChangePosture"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#SkinConductivity -->
+
+    <owl:Class rdf:about="&event;SkinConductivity">
+        <rdfs:subClassOf rdf:resource="&event;PhysiologicalMeasurement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&event;hasConductivity"/>
+                <owl:allValuesFrom rdf:resource="&rdfs;Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&event;hasConductivity"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#SkinTemperature -->
+
+    <owl:Class rdf:about="&event;SkinTemperature">
+        <rdfs:subClassOf rdf:resource="&event;PhysiologicalMeasurement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&event;hasTemperature"/>
+                <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&event;hasTemperature"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#Sleep -->
+
+    <owl:Class rdf:about="&event;Sleep">
+        <rdfs:subClassOf rdf:resource="&event;AtomicActivity"/>
+        <rdfs:comment>Gear 4 / DTI-2</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#SocialInteraction -->
+
+    <owl:Class rdf:about="&event;SocialInteraction">
+        <rdfs:subClassOf rdf:resource="&event;ComplexActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#Speak -->
+
+    <owl:Class rdf:about="&event;Speak">
+        <rdfs:subClassOf rdf:resource="&event;AtomicActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#StandingToSitting -->
+
+    <owl:Class rdf:about="&event;StandingToSitting">
+        <rdfs:subClassOf rdf:resource="&event;ChangePosture"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#State -->
+
+    <owl:Class rdf:about="&event;State">
+        <rdfs:subClassOf rdf:resource="&event;AtomicActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#StepCounting -->
+
+    <owl:Class rdf:about="&event;StepCounting">
+        <rdfs:subClassOf rdf:resource="&event;AtomicActivity"/>
+        <rdfs:comment>WIMU</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#TV -->
+
+    <owl:Class rdf:about="&event;TV">
+        <rdfs:subClassOf rdf:resource="&event;Appliance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#Table -->
+
+    <owl:Class rdf:about="&event;Table">
+        <rdfs:subClassOf rdf:resource="&event;Furniture"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#TableExit -->
+
+    <owl:Class rdf:about="&event;TableExit">
+        <rdfs:subClassOf rdf:resource="&event;ComplexActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#Telephone -->
+
+    <owl:Class rdf:about="&event;Telephone">
+        <rdfs:subClassOf rdf:resource="&event;Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#TelephoneInteraction -->
+
+    <owl:Class rdf:about="&event;TelephoneInteraction">
+        <rdfs:subClassOf rdf:resource="&event;SocialInteraction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#UseObject -->
+
+    <owl:Class rdf:about="&event;UseObject">
+        <rdfs:subClassOf rdf:resource="&event;AtomicActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#Walk -->
+
+    <owl:Class rdf:about="&event;Walk">
+        <rdfs:subClassOf rdf:resource="&event;AtomicActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#WashingMachine -->
+
+    <owl:Class rdf:about="&event;WashingMachine">
+        <rdfs:subClassOf rdf:resource="&event;Appliance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#WaterCan -->
+
+    <owl:Class rdf:about="&event;WaterCan">
+        <rdfs:subClassOf rdf:resource="&event;Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/event.owl#Window -->
+
+    <owl:Class rdf:about="&event;Window">
+        <rdfs:subClassOf rdf:resource="&event;Object"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.3.1957) http://owlapi.sourceforge.net -->
+

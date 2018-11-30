@@ -1,0 +1,590 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY time "http://www.w3.org/2006/time#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY lab "http://www.demcare.eu/ontologies/lab.owl#" >
+    <!ENTITY home "http://www.demcare.eu/ontologies/home.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY event "http://www.demcare.eu/ontologies/event.owl#" >
+    <!ENTITY entity "http://www.demcare.eu/ontologies/entity.owl#" >
+    <!ENTITY exch "http://www.demcare.eu/ontologies/exchangemodel.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.demcare.eu/ontologies/exchangemodel.owl#"
+     xml:base="http://www.demcare.eu/ontologies/exchangemodel.owl"
+     xmlns:home="http://www.demcare.eu/ontologies/home.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:time="http://www.w3.org/2006/time#"
+     xmlns:event="http://www.demcare.eu/ontologies/event.owl#"
+     xmlns:entity="http://www.demcare.eu/ontologies/entity.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:lab="http://www.demcare.eu/ontologies/lab.owl#"
+     xmlns:exch="http://www.demcare.eu/ontologies/exchangemodel.owl#">
+    <owl:Ontology rdf:about="http://www.demcare.eu/ontologies/exchangemodel.owl">
+        <owl:imports rdf:resource="http://www.demcare.eu/ontologies/event.owl"/>
+        <owl:imports rdf:resource="http://www.demcare.eu/ontologies/home.owl"/>
+        <owl:imports rdf:resource="http://www.demcare.eu/ontologies/lab.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/exchangemodel.owl#attachedTo -->
+
+    <owl:ObjectProperty rdf:about="&exch;attachedTo"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/exchangemodel.owl#describes -->
+
+    <owl:ObjectProperty rdf:about="&exch;describes"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/exchangemodel.owl#duration -->
+
+    <owl:ObjectProperty rdf:about="&exch;duration"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/exchangemodel.owl#hasAgent -->
+
+    <owl:ObjectProperty rdf:about="&exch;hasAgent"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/exchangemodel.owl#hasParticipant -->
+
+    <owl:ObjectProperty rdf:about="&exch;hasParticipant"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/exchangemodel.owl#hasQuality -->
+
+    <owl:ObjectProperty rdf:about="&exch;hasQuality"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/exchangemodel.owl#hasReportingTime -->
+
+    <owl:ObjectProperty rdf:about="&exch;hasReportingTime"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/exchangemodel.owl#providedBy -->
+
+    <owl:ObjectProperty rdf:about="&exch;providedBy"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/exchangemodel.owl#refersTo -->
+
+    <owl:ObjectProperty rdf:about="&exch;refersTo"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/exchangemodel.owl#roomLocalisation -->
+
+    <owl:ObjectProperty rdf:about="&exch;roomLocalisation"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/exchangemodel.owl#startTime -->
+
+    <owl:ObjectProperty rdf:about="&exch;startTime"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/exchangemodel.owl#hasPlausibilityMetric -->
+
+    <owl:DatatypeProperty rdf:about="&exch;hasPlausibilityMetric"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/exchangemodel.owl#Accelerometer -->
+
+    <owl:Class rdf:about="&exch;Accelerometer">
+        <rdfs:subClassOf rdf:resource="&exch;WearableSensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/exchangemodel.owl#Alert -->
+
+    <owl:Class rdf:about="&exch;Alert">
+        <rdfs:subClassOf rdf:resource="&exch;Feedback"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/exchangemodel.owl#Ambient2DVideoCamera -->
+
+    <owl:Class rdf:about="&exch;Ambient2DVideoCamera">
+        <rdfs:subClassOf rdf:resource="&exch;FixedSensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/exchangemodel.owl#DTI-2 -->
+
+    <owl:Class rdf:about="&exch;DTI-2">
+        <rdfs:subClassOf rdf:resource="&exch;WearableSensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/exchangemodel.owl#Detection -->
+
+    <owl:Class rdf:about="&exch;Detection">
+        <rdfs:subClassOf rdf:resource="&exch;Observation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&exch;describes"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&event;AtomicActivity"/>
+                            <rdf:Description rdf:about="&event;ObjectEvent"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&exch;providedBy"/>
+                <owl:allValuesFrom rdf:resource="&exch;ProcessingComponent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/exchangemodel.owl#Feedback -->
+
+    <owl:Class rdf:about="&exch;Feedback"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/exchangemodel.owl#FixedSensor -->
+
+    <owl:Class rdf:about="&exch;FixedSensor">
+        <rdfs:subClassOf rdf:resource="&exch;Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/exchangemodel.owl#Measurement -->
+
+    <owl:Class rdf:about="&exch;Measurement">
+        <rdfs:subClassOf rdf:resource="&exch;Observation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&exch;describes"/>
+                <owl:allValuesFrom rdf:resource="&event;Measurement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&exch;providedBy"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&event;Person"/>
+                            <rdf:Description rdf:about="&exch;Sensor"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/exchangemodel.owl#Observation -->
+
+    <owl:Class rdf:about="&exch;Observation">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&exch;describes"/>
+                <owl:allValuesFrom rdf:resource="&event;Event"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&exch;providedBy"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&event;Person"/>
+                            <rdf:Description rdf:about="&exch;ProcessingComponent"/>
+                            <rdf:Description rdf:about="&exch;Sensor"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&exch;providedBy"/>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&event;Person"/>
+                            <rdf:Description rdf:about="&exch;ProcessingComponent"/>
+                            <rdf:Description rdf:about="&exch;Sensor"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:onClass>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&exch;describes"/>
+                <owl:onClass rdf:resource="&event;Event"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&exch;hasPlausibilityMetric"/>
+                <owl:allValuesFrom rdf:resource="&xsd;double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&exch;hasReportingTime"/>
+                <owl:allValuesFrom rdf:resource="&time;Instant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&exch;hasReportingTime"/>
+                <owl:onClass rdf:resource="&time;Instant"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&exch;hasPlausibilityMetric"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/exchangemodel.owl#ProcessingComponent -->
+
+    <owl:Class rdf:about="&exch;ProcessingComponent"/>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/exchangemodel.owl#Recognition -->
+
+    <owl:Class rdf:about="&exch;Recognition">
+        <rdfs:subClassOf rdf:resource="&exch;Observation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&exch;describes"/>
+                <owl:allValuesFrom rdf:resource="&event;ComplexActivity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&exch;providedBy"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&event;Person"/>
+                            <rdf:Description rdf:about="&exch;ProcessingComponent"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/exchangemodel.owl#Report -->
+
+    <owl:Class rdf:about="&exch;Report">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&exch;hasPlausibilityMetric"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&exch;hasPlausibilityMetric"/>
+                <owl:allValuesFrom rdf:resource="&xsd;double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&exch;describes"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&home;Questionnaire"/>
+                            <rdf:Description rdf:about="&lab;ClinicalRecord"/>
+                            <rdf:Description rdf:about="&lab;DemographicCharacteristicsRecord"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&exch;providedBy"/>
+                <owl:onClass rdf:resource="&event;Person"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&exch;hasReportingTime"/>
+                <owl:onClass rdf:resource="&time;Instant"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&exch;providedBy"/>
+                <owl:allValuesFrom rdf:resource="&event;Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&exch;hasReportingTime"/>
+                <owl:allValuesFrom rdf:resource="&time;Instant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&exch;describes"/>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&home;Questionnaire"/>
+                            <rdf:Description rdf:about="&lab;ClinicalRecord"/>
+                            <rdf:Description rdf:about="&lab;DemographicCharacteristicsRecord"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:onClass>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/exchangemodel.owl#Result -->
+
+    <owl:Class rdf:about="&exch;Result">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&exch;providedBy"/>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&event;Person"/>
+                            <rdf:Description rdf:about="&exch;ProcessingComponent"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:onClass>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&exch;hasReportingTime"/>
+                <owl:onClass rdf:resource="&time;Instant"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&exch;hasReportingTime"/>
+                <owl:allValuesFrom rdf:resource="&time;Instant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&exch;describes"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&home;DaySummary"/>
+                            <rdf:Description rdf:about="&home;Problem"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&exch;hasPlausibilityMetric"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&exch;providedBy"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&event;Person"/>
+                            <rdf:Description rdf:about="&exch;ProcessingComponent"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&exch;hasPlausibilityMetric"/>
+                <owl:allValuesFrom rdf:resource="&xsd;double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&exch;describes"/>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&home;DaySummary"/>
+                            <rdf:Description rdf:about="&home;Problem"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:onClass>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/exchangemodel.owl#Sensor -->
+
+    <owl:Class rdf:about="&exch;Sensor">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&exch;attachedTo"/>
+                <owl:onClass rdf:resource="&event;Entity"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&exch;attachedTo"/>
+                <owl:allValuesFrom rdf:resource="&event;Entity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/exchangemodel.owl#WearableMicrophone -->
+
+    <owl:Class rdf:about="&exch;WearableMicrophone">
+        <rdfs:subClassOf rdf:resource="&exch;WearableSensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/exchangemodel.owl#WearableSensor -->
+
+    <owl:Class rdf:about="&exch;WearableSensor">
+        <rdfs:subClassOf rdf:resource="&exch;Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/exchangemodel.owl#WearableVideoCamera -->
+
+    <owl:Class rdf:about="&exch;WearableVideoCamera">
+        <rdfs:subClassOf rdf:resource="&exch;WearableSensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/exchangemodel.owl#_3DVideoCamera -->
+
+    <owl:Class rdf:about="&exch;_3DVideoCamera">
+        <rdfs:subClassOf rdf:resource="&exch;FixedSensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#DurationDescription -->
+
+    <owl:Class rdf:about="&time;DurationDescription"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Instant -->
+
+    <owl:Class rdf:about="&time;Instant"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.3.1957) http://owlapi.sourceforge.net -->
+

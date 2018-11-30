@@ -1,0 +1,2297 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.meteck.org/files/ontologies/stuff.owl#"
+     xml:base="http://www.meteck.org/files/ontologies/stuff.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.meteck.org/files/ontologies/stuff-example.owl">
+        <rdfs:comment xml:lang="en">This is the second version of an ontology about stuffkinds (v1.0, d.d. 11-04-2012, v1.5, d.d. 25-6-2014), developed by C. Maria Keet. A paper describing details is submitted.
+For questions and comments, please write an email to mkeet@cs.uct.ac.za.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#colloidFormingRelation -->
+
+    <owl:ObjectProperty rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#colloidFormingRelation">
+        <rdfs:comment>this one is for the colloids, which also takes care of the surface tension etc. (and does not necessarily involve a chemical reaction like with the solutions)</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#ContinuousMedium"/>
+        <rdfs:range rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#DispersedPhase"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#stuffFormingRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#containedPortionOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#containedPortionOf">
+        <rdfs:comment>see annotation scatteredPortionOf and piecePortionOf.
+difference: the container.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#scatteredPortionOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#hasGranuleType -->
+
+    <owl:ObjectProperty rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#hasGranuleType">
+        <rdfs:comment>terms like &apos;has grain&apos; and &apos;has granular part&apos; tend to be used for this relation as well. but lots of stuffs use bases that are not of one single type/grain/level of granularity (i.e., not only atoms or only molecules or only multi-molecular object). What one does do, is define the basis for analysis, with an implict &apos;we don&apos;t look any more fine-grained than that, and this is out level of analysis&apos;, like, say, the H2O molecules water is composed of, not the p-orbitals or neutrons of those water molecules.
+then there&apos;s one thing with asserting &apos;we go as far as the molecules, not below&apos; for some kind/category of stuff and another one to assert that SugaryWater is composed of (or has component) water and sugar, which is asserting the composition at the molecule level and as macroscopic stuffs, and based on that analysis at that level, it is a solution.</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#PhysicalObject"/>
+        <rdfs:domain rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Stuff"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#hasPart -->
+
+    <owl:ObjectProperty rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#hasPart">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#hasQuale -->
+
+    <owl:ObjectProperty rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#hasQuale">
+        <rdfs:range rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Abstract"/>
+        <rdfs:domain rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Quality"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#hasQuality -->
+
+    <owl:ObjectProperty rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#hasQuality">
+        <rdfs:range rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Quality"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Endurant"/>
+                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Perdurant"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#hasState -->
+
+    <owl:ObjectProperty rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#hasState">
+        <rdfs:domain rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#PhysicalEndurant"/>
+        <rdfs:range rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#State"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#hasStuffDistribution -->
+
+    <owl:ObjectProperty rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#hasStuffDistribution"/>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#hasSubStuff -->
+
+    <owl:ObjectProperty rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#hasSubStuff">
+        <rdfs:comment>concerning hasComponent and composedOf: is hasComponent == composedOf? Somehow, the composedOf seem &apos;essential&apos;, whereas an hasComponent less so, but I can&apos;t nail it down. vodka has component alcohol, but it is not composed of alcohol. One is an object-centred view with a &apos;z happens to have x and y as components&apos;, the other a process-centred view with an &apos;we put x and y together to obtain z&apos;. Example: wine happens to have alcohol thanks to the fermentation, but for whipped cream, we put air and cream together. This deserves closer scrutiny.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Stuff"/>
+        <rdfs:range rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Stuff"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasPart"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#inheresIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#inheresIn">
+        <rdfs:range rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#PhysicalEndurant"/>
+        <rdfs:domain rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Role"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#piecePortionOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#piecePortionOf">
+        <rdfs:comment xml:lang="en">a part that is of the same stuffkind as its whole, &apos;scattered&apos;, and they have designated terms for it. 
+Example: the slice of bread was part of the loaf of bread. but the whole is a countable object, not a stuffkind, unless one considers &apos;bread&apos; as a stuffkind, not as loaf of bread. English langauge is a bit awkward with this example: one can count one brood, two broden in Dutch, which does not have a quantity designator like &apos;loaf&apos; of bread, and is more alike the pie and piece of the pie  and counting one pie, two pies in English.
+How this is different from scattered portion? differentiate between named pieces and &apos;natural&apos; contiguous portion</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#scatteredPortionOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#portionOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#portionOf">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:comment>Note that the domain and range are not simply Stuff: with HomogenousMixedStuff one can take portions up to some minimal amout that maintains the existence of that stuffFormingRelation and still have portions of the same kind of stuff. For PureStuff, that goes down to the BasisType. On the other hand, with HeterogenousMixedStuff, one cannot guarantee that the portion taken is of the same stuffkind as the whole amount; e.g., a piece of wood, and making a portion of the floem, which is different, or settled suspensions (like the yeast at the bottom of the  bottle of witbier) that would have to be homogenised before talking of portions. Note that we still can talk about subquantities of that, but not &apos;portion&apos; in the strict sense.
+
+Note that, when any of the portions, or portions of the portions, loses some molecules due to some reaction or radioactive degradation (not due to phase change), then the original quantity ceases to exist. according to philosphers. Given that that happens pretty much continuously, then in the strict sense, there isn&apos;t much point in talking of portions. Practically, they are useful though (&apos;naive chemistry&apos;, if you will)</rdfs:comment>
+        <rdfs:comment xml:lang="en">a part that is of the same stuffkind as its whole. (not reflected as such in the OWL ontology, due to expressiveness limtations)
+Example: the top-half of the wine in my glass and the bottom-half are portions of the whole amount of wine in my wine glass (assume this is instantaneous division [recolelction motin of molecules]), the wine in the wineglass was/is a portion of the amount that was in the wine bottle, etc.
+</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#subQuantityOf"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#HomogeneousMixture"/>
+                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#PureStuff"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#HomogeneousMixture"/>
+                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#PureStuff"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#scatteredPortionOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#scatteredPortionOf">
+        <rdfs:comment xml:lang="en">like portion, but then the temporal aspect to it: some portion x of y was a  contiguous part of y at time t and that portion x is now on the moon at time t&apos; (with t&apos;&gt;t). Mundane example: the wine in the wine glass you just poured from the wine in the wine bottle, the slice of bread that you just sliced from the loaf of bread.
+For the modelling, it might perhaps be useful to have two subproperties: one for  (sub)portions that each come with its container, and one that does not. It&apos;s one thing to talk of lumps, puddles, slices etc. that merely give a vague indication of the amount and are &apos;selfstanding&apos; amounts, and another that needs to have the container recorded with it, like a silo of grain, cup of tea, sachet of sugar. </rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#solutionFormingRelation -->
+
+    <owl:ObjectProperty rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#solutionFormingRelation">
+        <rdfs:comment>this one is for chemically dissolving one stuff in another</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Solute"/>
+        <rdfs:domain rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Solvent"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#stuffFormingRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#srInheresIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#srInheresIn">
+        <rdfs:range rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Stuff"/>
+        <rdfs:domain rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#StuffRole"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#inheresIn"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#stuffFormingRelation -->
+
+    <owl:ObjectProperty rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#stuffFormingRelation">
+        <rdfs:comment>the stuffFormingRelation is now (over?)loaded with the semantics of representing the notions that there is a relation forming between the objects in the stuff, like, surface tension of the particles in the colloid, H-bond, and so on, and the ratio as regards to how things are mixed (e.g., we only have lemonade when we have them in a mixture of  water:sugar:lemonjuice in the ratio of, say, 8:1:1, that is, proportional amounts in ml, grams, whatever). </rdfs:comment>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#ContinuousMedium"/>
+                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#DispersedPhase"/>
+                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Solute"/>
+                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Solvent"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#ContinuousMedium"/>
+                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#DispersedPhase"/>
+                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Solute"/>
+                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Solvent"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#subQuantityOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#subQuantityOf">
+        <rdfs:comment>used in, in particular, the conceptual data modelling literature. See its subproperties for comments</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Stuff"/>
+        <rdfs:domain rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Stuff"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#hasDataValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#hasDataValue">
+        <rdfs:comment>the range should be &apos;any data type&apos;, but it doesn&apos;t allow that anymore, in the sense that when I specilfy elsewhere in an axiom that it is, say, string, then it gives me an error, though theoretically [conceptually, if you will] it shouldn&apos;t. tried literal, tried anyType (rejected outright) and tried anyURI.
+workaround: removed range specification. </rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Abstract"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#hasNrOfPhase -->
+
+    <owl:DatatypeProperty rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#hasNrOfPhase">
+        <rdfs:domain rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Stuff"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff-example.owl#HasMin4Substuff -->
+
+    <owl:Class rdf:about="http://www.meteck.org/files/ontologies/stuff-example.owl#HasMin4Substuff">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasSubStuff"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">4</owl:minCardinality>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff-example.owl#HasMin6Substuff -->
+
+    <owl:Class rdf:about="http://www.meteck.org/files/ontologies/stuff-example.owl#HasMin6Substuff">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasSubStuff"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">6</owl:minCardinality>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#Abstract -->
+
+    <owl:Class rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Abstract"/>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#AbstractRegion -->
+
+    <owl:Class rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#AbstractRegion">
+        <rdfs:subClassOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Abstract"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#AssociationalColloid -->
+
+    <owl:Class rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#AssociationalColloid">
+        <rdfs:subClassOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Colloid"/>
+        <rdfs:comment>like hydrophibic/hydrophilic.
+micellar colloids, like soap.
+Optionally, one can add properties like the aggregation number (amount of molecules in the micels), which is normally a range, due to the critical micelle concentration adn so on.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#Atom -->
+
+    <owl:Class rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Atom">
+        <rdfs:subClassOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#PhysicalObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#Bulk -->
+
+    <owl:Class rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Bulk">
+        <rdfs:subClassOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Stuff"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasGranuleType"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:unionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Molecule"/>
+                                            <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#MultiMoleculeParticle"/>
+                                        </owl:unionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasSubStuff"/>
+                                <owl:someValuesFrom rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Stuff"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasGranuleType"/>
+                                <owl:allValuesFrom>
+                                    <owl:Class>
+                                        <owl:unionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Molecule"/>
+                                            <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#MultiMoleculeParticle"/>
+                                        </owl:unionOf>
+                                    </owl:Class>
+                                </owl:allValuesFrom>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasSubStuff"/>
+                                <owl:allValuesFrom rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Stuff"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#MixedStuff"/>
+                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#StructuredPureStuff"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Bulk goods, like (a silo of) soy beans, coffee, nuts, pet food, tea, whole grains, sugar. This term is typically used in the food industry. Flour and honey are indeed kinds of stuff, but, on the face of it, one can count each nut and cookie. However, the latter are, in that context, meant to go only in amounts, not individual nuts or cookies; e.g., a bag of nuts, a packet of cookies. This is just a matter of scale: the basis type of the latter is the nut or cookie instead of the countable molecule, and it goes in quantities, like a bag of peanuts or packet of cookies. In addition, bulk can come as StructuredPureStuff (sugar), HomogenousMixedStuff (the processed peanut butter with the stabilizer and possibly also sugar, not the ones from the health shop that settle and separate in peanut paste and oil on top), and HeterogenousMixedStuff, like pet food and breakfast cereals. Actually, it can be anything, except UnstructuredPureStuff</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#Colloid -->
+
+    <owl:Class rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Colloid">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#HomogeneousMixture"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasSubStuff"/>
+                        <owl:onClass>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Stuff"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasState"/>
+                                        <owl:someValuesFrom rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#StuffState"/>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty>
+                                            <rdf:Description>
+                                                <owl:inverseOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#srInheresIn"/>
+                                            </rdf:Description>
+                                        </owl:onProperty>
+                                        <owl:someValuesFrom rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#ContinuousMedium"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:onClass>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasSubStuff"/>
+                        <owl:onClass>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Stuff"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasState"/>
+                                        <owl:someValuesFrom rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#StuffState"/>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty>
+                                            <rdf:Description>
+                                                <owl:inverseOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#srInheresIn"/>
+                                            </rdf:Description>
+                                        </owl:onProperty>
+                                        <owl:someValuesFrom rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#DispersedPhase"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:onClass>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasNrOfPhase"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="&xsd;integer">2</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#HomogeneousMixture"/>
+        <rdfs:comment>one can nag about the surfactants and stabilizers and enhancers. For instance, for whipping cream in homebaking, one can add the powder to keep the whipped cream stiff for longer (i.e., stabilise the colloid). </rdfs:comment>
+        <rdfs:comment xml:lang="en">homogenous mixture with intermediate particle size. One stuff, the so-called &apos;dispersed medium&apos;, is microscopically dispersed evenly throughout another stuff, called the &apos;continuous medium&apos; (note: there&apos;s &gt;1 phase, whereas a solution has =1 phase; because of that, we cannot have colloid isa solution). Examples: milk, mayonaise, agar, fog
+
+Colloids can be distinguished from solutions using the Tyndall effect. (A beam of light passing through a true solution is not visible, but light passing through a colloid will be reflected by the larger particles and the light beam will be visible.) 
+
+it should be noted that the two stuffs are in a colloidFormingRelation. This is done separately over at the ContinuousMedium and DispersedPhase classes, because it is not inherent in the stuffs themselves.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#ContinuousMedium -->
+
+    <owl:Class rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#ContinuousMedium">
+        <rdfs:subClassOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#StuffRole"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#colloidFormingRelation"/>
+                <owl:someValuesFrom rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#DispersedPhase"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#DispersedPhase"/>
+        <rdfs:comment>also called dispersion medium</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#DispersedPhase -->
+
+    <owl:Class rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#DispersedPhase">
+        <rdfs:subClassOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#StuffRole"/>
+        <rdfs:comment>the colloidFormingRelation is between the DispersedPhase and the ContinuousMedium and not their respective bearers (stuffs), because if you put the stuffs together just like that, you won&apos;t get the colloid; put differently, they have to be mixed in a particular way for it to become a homogenous mixture. E.g., opening a cup of cream and exposing it to an amount of air won&apos;t get you whipped cream, and putting the right amount of egg yolk and oil in the mixing bowl does not instantly become mayonnaise. It only work if the stuff that plays the role of dispersed phase is added gradually to the continuous medium in order to become a stable colloid. The same stuff can play eitehr role, depending on the colloid to be formed</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#DispersionColloid -->
+
+    <owl:Class rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#DispersionColloid">
+        <rdfs:subClassOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Colloid"/>
+        <rdfs:comment>the most common type of colloids (cf. the other two)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#Distribution -->
+
+    <owl:Class rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Distribution">
+        <rdfs:subClassOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Quality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasQuale"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#EvenDistribution"/>
+                            <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#UnevenDistribution"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#EggYolk -->
+
+    <owl:Class rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#EggYolk">
+        <rdfs:subClassOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#HomogeneousMixture"/>
+        <rdfs:subClassOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#TestingStuffInferences"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#Emulsion -->
+
+    <owl:Class rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Emulsion">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#DispersionColloid"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasSubStuff"/>
+                        <owl:onClass>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Stuff"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasState"/>
+                                        <owl:someValuesFrom rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Liquid"/>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty>
+                                            <rdf:Description>
+                                                <owl:inverseOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#srInheresIn"/>
+                                            </rdf:Description>
+                                        </owl:onProperty>
+                                        <owl:someValuesFrom rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#ContinuousMedium"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:onClass>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasSubStuff"/>
+                        <owl:onClass>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Stuff"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasState"/>
+                                        <owl:someValuesFrom rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Liquid"/>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty>
+                                            <rdf:Description>
+                                                <owl:inverseOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#srInheresIn"/>
+                                            </rdf:Description>
+                                        </owl:onProperty>
+                                        <owl:someValuesFrom rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#DispersedPhase"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:onClass>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#DispersionColloid"/>
+        <rdfs:comment xml:lang="en">continuous medium: liquid
+dispersed phase: liquid
+Examples: milk, mayonnaise, hand cream
+http://en.wikipedia.org/wiki/Colloid</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#Endurant -->
+
+    <owl:Class rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Endurant">
+        <owl:disjointWith rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Perdurant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#EvenDistribution -->
+
+    <owl:Class rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#EvenDistribution">
+        <rdfs:subClassOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#AbstractRegion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#Foam -->
+
+    <owl:Class rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Foam">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#DispersionColloid"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasSubStuff"/>
+                        <owl:onClass>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Stuff"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasState"/>
+                                        <owl:someValuesFrom rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Gas"/>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty>
+                                            <rdf:Description>
+                                                <owl:inverseOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#srInheresIn"/>
+                                            </rdf:Description>
+                                        </owl:onProperty>
+                                        <owl:someValuesFrom rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#DispersedPhase"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:onClass>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasSubStuff"/>
+                        <owl:onClass>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Stuff"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasState"/>
+                                        <owl:someValuesFrom rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Liquid"/>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty>
+                                            <rdf:Description>
+                                                <owl:inverseOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#srInheresIn"/>
+                                            </rdf:Description>
+                                        </owl:onProperty>
+                                        <owl:someValuesFrom rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#ContinuousMedium"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:onClass>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#DispersionColloid"/>
+        <rdfs:comment xml:lang="en">continuous medium: liquid
+dispersed phase: gas
+Examples: whipped cream, shaving cream
+http://en.wikipedia.org/wiki/Colloid</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#Gas -->
+
+    <owl:Class rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Gas">
+        <rdfs:subClassOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#StuffState"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#Gel -->
+
+    <owl:Class rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Gel">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#DispersionColloid"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasSubStuff"/>
+                        <owl:onClass>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Stuff"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasState"/>
+                                        <owl:someValuesFrom rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Liquid"/>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty>
+                                            <rdf:Description>
+                                                <owl:inverseOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#srInheresIn"/>
+                                            </rdf:Description>
+                                        </owl:onProperty>
+                                        <owl:someValuesFrom rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#DispersedPhase"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:onClass>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasSubStuff"/>
+                        <owl:onClass>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Stuff"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasState"/>
+                                        <owl:someValuesFrom rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Solid"/>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty>
+                                            <rdf:Description>
+                                                <owl:inverseOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#srInheresIn"/>
+                                            </rdf:Description>
+                                        </owl:onProperty>
+                                        <owl:someValuesFrom rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#ContinuousMedium"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:onClass>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#DispersionColloid"/>
+        <rdfs:comment xml:lang="en">continuous medium: solid
+dispersed phase: liquid
+Examples: agar, gelatin, jelly
+http://en.wikipedia.org/wiki/Colloid </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#Gold -->
+
+    <owl:Class rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Gold">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#PureStuff"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasSubStuff"/>
+                        <owl:allValuesFrom rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Gold"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasGranuleType"/>
+                        <owl:onClass>
+                            <owl:Class>
+                                <owl:oneOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Au"/>
+                                </owl:oneOf>
+                            </owl:Class>
+                        </owl:onClass>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#TestingStuffInferences"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#HeterogeneousMixture -->
+
+    <owl:Class rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#HeterogeneousMixture">
+        <rdfs:subClassOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#MixedStuff"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasGranuleType"/>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Molecule"/>
+                            <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#MultiMoleculeParticle"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:onClass>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:minQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasSubStuff"/>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#MixedStuff"/>
+                            <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#PureStuff"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:onClass>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:minQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasStuffDistribution"/>
+                <owl:onClass rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#UnevenDistribution"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#HomogeneousMixture"/>
+        <rdfs:comment xml:lang="en">Combination of different stuffs (of which at least one with a fairly large particle size) that don&apos;t react, and can be separated by purely physical means (filtration, etc). Contrast with homogenously mixed stuffs like colloids and solutions where its components are evenly distributed across the stuff. portion in the sense of taking a &apos;part&apos;/section of this heterogenous stuff, then it generally is the case that the subquantity is not of the same stuffkind as the whole quantity, only when the portion is carefully constructed and the so-called stuff-forming relation still holds.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#HomogeneousMixture -->
+
+    <owl:Class rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#HomogeneousMixture">
+        <rdfs:subClassOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#MixedStuff"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasStuffDistribution"/>
+                <owl:onClass rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#EvenDistribution"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasGranuleType"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Atom"/>
+                            <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Ion"/>
+                            <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Molecule"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>the mixed stuffs are evenly distributed across the amount of matter (macroscopic sameness). Some would call only a solution a homogeneous mixture, not colloids, because solutions have one phase only, whereas colloids have at least 2. We take an inclusive approach here, and refine further in the two subclasses.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#Ion -->
+
+    <owl:Class rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Ion">
+        <rdfs:subClassOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#PhysicalObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#Liquid -->
+
+    <owl:Class rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Liquid">
+        <rdfs:subClassOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#StuffState"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#LiquidAerosol -->
+
+    <owl:Class rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#LiquidAerosol">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#DispersionColloid"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasSubStuff"/>
+                        <owl:onClass>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Stuff"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasState"/>
+                                        <owl:someValuesFrom rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Gas"/>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty>
+                                            <rdf:Description>
+                                                <owl:inverseOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#srInheresIn"/>
+                                            </rdf:Description>
+                                        </owl:onProperty>
+                                        <owl:someValuesFrom rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#ContinuousMedium"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:onClass>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasSubStuff"/>
+                        <owl:onClass>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Stuff"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasState"/>
+                                        <owl:someValuesFrom rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Liquid"/>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty>
+                                            <rdf:Description>
+                                                <owl:inverseOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#srInheresIn"/>
+                                            </rdf:Description>
+                                        </owl:onProperty>
+                                        <owl:someValuesFrom rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#DispersedPhase"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:onClass>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#DispersionColloid"/>
+        <rdfs:comment xml:lang="en">continuous medium: gas
+dispersed phase: liquid
+Examples: fog mist, hair sprays
+http://en.wikipedia.org/wiki/Colloid</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#Mayonnaise -->
+
+    <owl:Class rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Mayonnaise">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#DispersionColloid"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasSubStuff"/>
+                        <owl:onClass>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#EggYolk"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasState"/>
+                                        <owl:someValuesFrom rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Liquid"/>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty>
+                                            <rdf:Description>
+                                                <owl:inverseOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#srInheresIn"/>
+                                            </rdf:Description>
+                                        </owl:onProperty>
+                                        <owl:someValuesFrom rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#ContinuousMedium"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:onClass>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasSubStuff"/>
+                        <owl:onClass>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Oil"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasState"/>
+                                        <owl:someValuesFrom rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Liquid"/>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty>
+                                            <rdf:Description>
+                                                <owl:inverseOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#srInheresIn"/>
+                                            </rdf:Description>
+                                        </owl:onProperty>
+                                        <owl:someValuesFrom rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#DispersedPhase"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:onClass>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasNrOfPhase"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="&xsd;integer">2</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#TestingStuffInferences"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasSubStuff"/>
+                <owl:onClass rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#SoybeanBulk"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasSubStuff"/>
+                <owl:onClass rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Gold"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasSubStuff"/>
+                <owl:onClass rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Sand"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#MicellarColloid -->
+
+    <owl:Class rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#MicellarColloid">
+        <rdfs:subClassOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#AssociationalColloid"/>
+        <rdfs:comment>A careful reader will observe tehre is no distinction between this and the Associational colloid. The distinction is largely due to terminology in food physics and physics &amp; colloid chemistry.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#MixedStuff -->
+
+    <owl:Class rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#MixedStuff">
+        <rdfs:subClassOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Stuff"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Stuff"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasSubStuff"/>
+                        <owl:onClass rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Stuff"/>
+                        <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:minQualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#PureStuff"/>
+        <rdfs:comment>Note: categorisation according to components, with their role. We do not include &apos;phase mixtures&apos;, like having an ice cube (solid water) in a glass of liquid water; in that case, it is still the pure stuff water. 
+For colloids, one does have to take into account the state of the stuff to define different kinds of colloids, but the point is that they are composed of different kinds of stuff. </rdfs:comment>
+        <rdfs:comment>Core differences between mixtures and compouds: the proportions of the components may vary, the individual components are observable, and the components can be separated by physical means. [Silberberg, 4th ed, p73]</rdfs:comment>
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#HeterogeneousMixture"/>
+            <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#HomogeneousMixture"/>
+        </owl:disjointUnionOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#MolecularColloid -->
+
+    <owl:Class rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#MolecularColloid">
+        <rdfs:subClassOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Colloid"/>
+        <rdfs:comment>Colloid where the molecules are so big they have the behaviour of that of the intermediate particle size in the other colloids.
+Example: latex (and other starchy things, with big polymers)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#Molecule -->
+
+    <owl:Class rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Molecule">
+        <rdfs:subClassOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#PhysicalObject"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasPart"/>
+                <owl:someValuesFrom rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Atom"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">The instances of this class are sort of a hack so as to stay within first order logc. Strictly speaking, the molecues that are here included as example are classes, not individuals (an individual H2O molecule in your body is), but typically we do not care about one individual such molecule. also, putting them as indivisuals in the ontology, when we have, say, hasConstituent =1 Molecule, we&apos;re actually talking of type of molecule, not an individual one. but pushing everything one level down, we get the desired behaviour of the reasoner....</rdfs:comment>
+        <rdfs:comment>has as part two or more chemically bonded atoms (but if I say &gt;=2 in the axiom, then it&apos;s not simple anymore, adn have to give up transitivity, which I don&apos;t want to)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#Mud -->
+
+    <owl:Class rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Mud">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#HeterogeneousMixture"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasSubStuff"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Sand"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasState"/>
+                                        <owl:someValuesFrom rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Solid"/>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty>
+                                            <rdf:Description>
+                                                <owl:inverseOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#srInheresIn"/>
+                                            </rdf:Description>
+                                        </owl:onProperty>
+                                        <owl:someValuesFrom rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#DispersedPhase"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasSubStuff"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Water"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasState"/>
+                                        <owl:someValuesFrom rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Liquid"/>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty>
+                                            <rdf:Description>
+                                                <owl:inverseOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#srInheresIn"/>
+                                            </rdf:Description>
+                                        </owl:onProperty>
+                                        <owl:someValuesFrom rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#ContinuousMedium"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#TestingStuffInferences"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#MultiMoleculeParticle -->
+
+    <owl:Class rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#MultiMoleculeParticle">
+        <rdfs:subClassOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#PhysicalObject"/>
+        <rdfs:comment>Multi-molecular particle, like those in a suspension, the droplets in a colloid (i.e, not the sub-atomic particles)</rdfs:comment>
+        <rdfs:comment xml:lang="en">see annotation to Molecule that this class&apos; instances is a bit of a hack.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#NumberOfPhases -->
+
+    <owl:Class rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#NumberOfPhases">
+        <rdfs:subClassOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#AbstractRegion"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasDataValue"/>
+                <owl:someValuesFrom rdf:resource="&xsd;nonNegativeInteger"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>alternative way of modelling the number of phases, the other one being with the data type</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#Oil -->
+
+    <owl:Class rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Oil">
+        <rdfs:subClassOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#StructuredPureStuff"/>
+        <rdfs:subClassOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#TestingStuffInferences"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#Paste -->
+
+    <owl:Class rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Paste">
+        <rdfs:subClassOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Suspension"/>
+        <rdfs:comment>suspension with less dispersion medium and the dispersed phase is connected</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#Perdurant -->
+
+    <owl:Class rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Perdurant"/>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#PhysicalEndurant -->
+
+    <owl:Class rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#PhysicalEndurant">
+        <rdfs:subClassOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Endurant"/>
+        <owl:disjointWith rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#PhysicalObject -->
+
+    <owl:Class rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#PhysicalObject">
+        <rdfs:subClassOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#PhysicalEndurant"/>
+        <owl:disjointWith rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Stuff"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#PureBulk -->
+
+    <owl:Class rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#PureBulk">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#PureStuff"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasGranuleType"/>
+                        <owl:allValuesFrom rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#MultiMoleculeParticle"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasGranuleType"/>
+                        <owl:onClass rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#MultiMoleculeParticle"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#PureStuff"/>
+        <rdfs:comment>difference with StructuredPureStuff and UnstructuredPureStuff: basis type, which is a multi-molecular object/particle.
+Examples: a silo of soy beans, a packet of tea biscuits, a bag of cashew nuts</rdfs:comment>
+        <rdfs:comment>there should be a &apos;has basis type exactly *one type of* multimoleculeparticle&apos; , not just one single individual multimoleculeparticle.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#PureStuff -->
+
+    <owl:Class rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#PureStuff">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Stuff"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasGranuleType"/>
+                        <owl:onClass>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Atom"/>
+                                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Molecule"/>
+                                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#MultiMoleculeParticle"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:onClass>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasStuffDistribution"/>
+                        <owl:onClass rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#EvenDistribution"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasSubStuff"/>
+                        <owl:onClass>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#PureBulk"/>
+                                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#StructuredPureStuff"/>
+                                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#UnstructuredPureStuff"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:onClass>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Stuff"/>
+        <rdfs:comment xml:lang="en">Called &apos;Unstructed stuff&apos; in Donnelly &amp; Bittner, Phil Stud, 2009, and &apos;discrete stuff&apos; by Barnett, Phil Rev, 2004. They are refined here.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Composed of the same kind of molecules. For instance, Water, which consists of H2O molecules only, Alcohol, consisting of ethanol molecules only, etc, manganese and likewise for the other elements. 
+This primarily serves as a useful theoretical category, i.e., it is an idealised case, as in reality the &apos;pure stuffs&apos; are only pure with respect to the measuring device with which one would be able to detect an impurity.</rdfs:comment>
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#PureBulk"/>
+            <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#StructuredPureStuff"/>
+            <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#UnstructuredPureStuff"/>
+        </owl:disjointUnionOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#Quality -->
+
+    <owl:Class rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Quality"/>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#Role -->
+
+    <owl:Class rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Role">
+        <rdfs:subClassOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Endurant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#Sand -->
+
+    <owl:Class rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Sand">
+        <rdfs:subClassOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#TestingStuffInferences"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#Sol -->
+
+    <owl:Class rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Sol">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#DispersionColloid"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasSubStuff"/>
+                        <owl:onClass>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Stuff"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasState"/>
+                                        <owl:someValuesFrom rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Liquid"/>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty>
+                                            <rdf:Description>
+                                                <owl:inverseOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#srInheresIn"/>
+                                            </rdf:Description>
+                                        </owl:onProperty>
+                                        <owl:someValuesFrom rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#ContinuousMedium"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:onClass>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasSubStuff"/>
+                        <owl:onClass>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Stuff"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasState"/>
+                                        <owl:someValuesFrom rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Solid"/>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty>
+                                            <rdf:Description>
+                                                <owl:inverseOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#srInheresIn"/>
+                                            </rdf:Description>
+                                        </owl:onProperty>
+                                        <owl:someValuesFrom rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#DispersedPhase"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:onClass>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#DispersionColloid"/>
+        <rdfs:comment xml:lang="en">continuous medium: liquid
+dispersed phase: solid
+Examples: pigmented ink, blood
+http://en.wikipedia.org/wiki/Colloid</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#Solid -->
+
+    <owl:Class rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Solid">
+        <rdfs:subClassOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#StuffState"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#SolidAerosol -->
+
+    <owl:Class rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#SolidAerosol">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#DispersionColloid"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasSubStuff"/>
+                        <owl:onClass>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Stuff"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasState"/>
+                                        <owl:someValuesFrom rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Gas"/>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty>
+                                            <rdf:Description>
+                                                <owl:inverseOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#srInheresIn"/>
+                                            </rdf:Description>
+                                        </owl:onProperty>
+                                        <owl:someValuesFrom rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#ContinuousMedium"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:onClass>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasSubStuff"/>
+                        <owl:onClass>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Stuff"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasState"/>
+                                        <owl:someValuesFrom rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Solid"/>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty>
+                                            <rdf:Description>
+                                                <owl:inverseOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#srInheresIn"/>
+                                            </rdf:Description>
+                                        </owl:onProperty>
+                                        <owl:someValuesFrom rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#DispersedPhase"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:onClass>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#DispersionColloid"/>
+        <rdfs:comment xml:lang="en">continuous medium: gas
+dispersed phase: solid
+Examples: smoke, cloud, solid particulates
+http://en.wikipedia.org/wiki/Colloid</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#SolidFoam -->
+
+    <owl:Class rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#SolidFoam">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#DispersionColloid"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasSubStuff"/>
+                        <owl:onClass>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Stuff"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasState"/>
+                                        <owl:someValuesFrom rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Gas"/>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty>
+                                            <rdf:Description>
+                                                <owl:inverseOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#srInheresIn"/>
+                                            </rdf:Description>
+                                        </owl:onProperty>
+                                        <owl:someValuesFrom rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#DispersedPhase"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:onClass>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasSubStuff"/>
+                        <owl:onClass>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Stuff"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasState"/>
+                                        <owl:someValuesFrom rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Solid"/>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty>
+                                            <rdf:Description>
+                                                <owl:inverseOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#srInheresIn"/>
+                                            </rdf:Description>
+                                        </owl:onProperty>
+                                        <owl:someValuesFrom rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#ContinuousMedium"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:onClass>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#DispersionColloid"/>
+        <rdfs:comment xml:lang="en">continuous medium: solid
+dispersed phase: gas
+Examples: aerogel, styrofoam
+http://en.wikipedia.org/wiki/Colloid</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#SolidHeterogeneousMixture -->
+
+    <owl:Class rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#SolidHeterogeneousMixture">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#HeterogeneousMixture"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasSubStuff"/>
+                        <owl:onClass>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Stuff"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasState"/>
+                                        <owl:someValuesFrom rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Solid"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:onClass>
+                        <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:minQualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#HeterogeneousMixture"/>
+        <rdfs:comment xml:lang="en">the solid version of a suspension (heterogenous mixture, not homogenised).
+Example: wood has a compartmentalisation of the components (cellulose, hemicellulose, ligning, and other stuffs called &apos;extractives&apos; [plant hormone, waxes, terpenes, etc.]).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#SolidSol -->
+
+    <owl:Class rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#SolidSol">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#DispersionColloid"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasSubStuff"/>
+                        <owl:onClass>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Stuff"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasState"/>
+                                        <owl:someValuesFrom rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Solid"/>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty>
+                                            <rdf:Description>
+                                                <owl:inverseOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#srInheresIn"/>
+                                            </rdf:Description>
+                                        </owl:onProperty>
+                                        <owl:someValuesFrom rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#ContinuousMedium"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:onClass>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasSubStuff"/>
+                        <owl:onClass>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Stuff"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasState"/>
+                                        <owl:someValuesFrom rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Solid"/>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty>
+                                            <rdf:Description>
+                                                <owl:inverseOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#srInheresIn"/>
+                                            </rdf:Description>
+                                        </owl:onProperty>
+                                        <owl:someValuesFrom rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#DispersedPhase"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:onClass>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#DispersionColloid"/>
+        <rdfs:comment xml:lang="en">continuous medium: solid
+dispersed phase: solid
+Examples: cranberry glass
+http://en.wikipedia.org/wiki/Colloid</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#Solute -->
+
+    <owl:Class rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Solute">
+        <rdfs:subClassOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#StuffRole"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#solutionFormingRelation"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Solvent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Solvent"/>
+        <rdfs:comment>A substance dissolved in another substance (the solvent)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#Solution -->
+
+    <owl:Class rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Solution">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#HomogeneousMixture"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasSubStuff"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Stuff"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty>
+                                            <rdf:Description>
+                                                <owl:inverseOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#srInheresIn"/>
+                                            </rdf:Description>
+                                        </owl:onProperty>
+                                        <owl:someValuesFrom rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Solute"/>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasGranuleType"/>
+                                        <owl:allValuesFrom>
+                                            <owl:Class>
+                                                <owl:unionOf rdf:parseType="Collection">
+                                                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Atom"/>
+                                                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Ion"/>
+                                                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Molecule"/>
+                                                </owl:unionOf>
+                                            </owl:Class>
+                                        </owl:allValuesFrom>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasSubStuff"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Stuff"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty>
+                                            <rdf:Description>
+                                                <owl:inverseOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#srInheresIn"/>
+                                            </rdf:Description>
+                                        </owl:onProperty>
+                                        <owl:someValuesFrom rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Solvent"/>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasGranuleType"/>
+                                        <owl:allValuesFrom>
+                                            <owl:Class>
+                                                <owl:unionOf rdf:parseType="Collection">
+                                                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Atom"/>
+                                                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Ion"/>
+                                                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Molecule"/>
+                                                </owl:unionOf>
+                                            </owl:Class>
+                                        </owl:allValuesFrom>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasNrOfPhase"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="&xsd;integer">1</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#HomogeneousMixture"/>
+        <rdfs:comment xml:lang="en">Combination of at least two stuffs where the mixing occurs at the molecular level (i.e., involves some chemical reaction), and therewith may form a new substance (a compound). a solution&apos;s composition is uniform. note that solutions can exist in all three physical states (i.e., not just in the liquid state, as it is used in the vernacular).
+We ignore here the &apos;dilute solution&apos; [http://goldbook.iupac.org/D01739.html] which has a non-crisp cut-off point (&quot;sum of amount fractions of all the solutes is small compared to 1&quot;, according to the GoldBook)</rdfs:comment>
+        <rdfs:comment xml:lang="en">The two subclasses are divided according to what happens in the chemical reaction when putting the solute and solvent together</rdfs:comment>
+        <rdfs:comment>the &quot;and hasNrOfPhase some integer[&gt; &quot;0&quot;^^integer]&quot; and &quot;and hasNrOfPhase some integer[&lt; &quot;2&quot;^^integer]&quot; id because the interface didn&apos;t accept =1</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#Solvent -->
+
+    <owl:Class rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Solvent">
+        <rdfs:subClassOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#StuffRole"/>
+        <rdfs:comment>A substance in which another substance (the solute) is dissolved</rdfs:comment>
+        <rdfs:comment>The solutionFormingRelation is a bit of a catch-all for the chemical reactions that occur when te solute is dissolved in the solvent</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#SoybeanBulk -->
+
+    <owl:Class rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#SoybeanBulk">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#PureStuff"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasSubStuff"/>
+                        <owl:allValuesFrom rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#PureBulk"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasGranuleType"/>
+                        <owl:onClass>
+                            <owl:Class>
+                                <owl:oneOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#soybean"/>
+                                </owl:oneOf>
+                            </owl:Class>
+                        </owl:onClass>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#TestingStuffInferences"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#State -->
+
+    <owl:Class rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#State">
+        <rdfs:subClassOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Perdurant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#StructuredPureStuff -->
+
+    <owl:Class rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#StructuredPureStuff">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#PureStuff"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasGranuleType"/>
+                        <owl:allValuesFrom rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Molecule"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasGranuleType"/>
+                        <owl:onClass rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Molecule"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#PureStuff"/>
+        <owl:disjointWith rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#UnstructuredPureStuff"/>
+        <rdfs:comment xml:lang="en">Stuff that consists of the same kind of molecules (give or take the finer-grained conformation changes, temporary dissociations of, say, H, the occasional D in the &apos;H2O&apos; etc.).
+Examples: an amount of water (H2O), an amount of tablesugar (glucose-fructose), silica/silicon dioxide (SiO2), vitamin A, etc.</rdfs:comment>
+        <rdfs:comment>synonym: Compound</rdfs:comment>
+        <rdfs:comment xml:lang="en">there should be a &apos;has basis type exactly *one type of* molecule&apos; (ok, we ignore the minor impurities here), not just one single individual molecule.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#Stuff -->
+
+    <owl:Class rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Stuff">
+        <rdfs:subClassOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#PhysicalEndurant"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasState"/>
+                <owl:allValuesFrom rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#StuffState"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasState"/>
+                <owl:onClass rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#StuffState"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">3</owl:maxQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Synonym: Amount of Matter</rdfs:comment>
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#MixedStuff"/>
+            <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#PureStuff"/>
+        </owl:disjointUnionOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#StuffRole -->
+
+    <owl:Class rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#StuffRole">
+        <rdfs:subClassOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#srInheresIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Stuff"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The role a stuff plays in a mixture.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#StuffState -->
+
+    <owl:Class rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#StuffState">
+        <rdfs:subClassOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#State"/>
+        <rdfs:comment xml:lang="en">This should be refined. 
+On the one hand, we can have, say, water in the solid state, in the liquid state and in the gaseous state. 
+On the other hand, when considering colloids, then one of the two stuffs is in one state and the other either in the same state or in another state, regardless the actual stuff type (like whether it is liquid sunflower oil or lineseed oil, or CO2 gas or air). That is, for colloids, the state the stuff is in when mixing is the defining characteristics. Here, with the stuffs, we are interested in the state in general, not the state of a stuff.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#Sucrose -->
+
+    <owl:Class rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Sucrose">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#PureStuff"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasSubStuff"/>
+                        <owl:allValuesFrom rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#PureStuff"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasGranuleType"/>
+                        <owl:onClass>
+                            <owl:Class>
+                                <owl:oneOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#C12H22O11"/>
+                                </owl:oneOf>
+                            </owl:Class>
+                        </owl:onClass>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#TestingStuffInferences"/>
+        <rdfs:comment>table sugar</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#SugaryWater -->
+
+    <owl:Class rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#SugaryWater">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#HomogeneousMixture"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasSubStuff"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Sucrose"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty>
+                                            <rdf:Description>
+                                                <owl:inverseOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#srInheresIn"/>
+                                            </rdf:Description>
+                                        </owl:onProperty>
+                                        <owl:someValuesFrom rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Solvent"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasSubStuff"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Water"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty>
+                                            <rdf:Description>
+                                                <owl:inverseOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#srInheresIn"/>
+                                            </rdf:Description>
+                                        </owl:onProperty>
+                                        <owl:someValuesFrom rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Solute"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasNrOfPhase"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="&xsd;integer">1</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#TestingStuffInferences"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#Suspension -->
+
+    <owl:Class rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Suspension">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#HeterogeneousMixture"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasSubStuff"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Stuff"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasState"/>
+                                        <owl:someValuesFrom rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Liquid"/>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty>
+                                            <rdf:Description>
+                                                <owl:inverseOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#srInheresIn"/>
+                                            </rdf:Description>
+                                        </owl:onProperty>
+                                        <owl:someValuesFrom rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#ContinuousMedium"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasSubStuff"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Stuff"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasState"/>
+                                        <owl:someValuesFrom rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Solid"/>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty>
+                                            <rdf:Description>
+                                                <owl:inverseOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#srInheresIn"/>
+                                            </rdf:Description>
+                                        </owl:onProperty>
+                                        <owl:someValuesFrom rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#DispersedPhase"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#HeterogeneousMixture"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasGranuleType"/>
+                        <owl:someValuesFrom rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Molecule"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasGranuleType"/>
+                        <owl:someValuesFrom rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#MultiMoleculeParticle"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">heterogenous mixture of larger particles in a liquid, and that substance naturally separates (i.e., separation due to sedimentation, creaming, flocculation, or coalescence, unless &apos;stabilized&apos; and &apos;homogenised&apos; [as regularly happens in the production process]). E.g. tomato juice, mud.
+TBA: the particle size of the solid is usually &gt;1 micron</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#TestingStuffInferences -->
+
+    <owl:Class rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#TestingStuffInferences"/>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#UnevenDistribution -->
+
+    <owl:Class rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#UnevenDistribution">
+        <rdfs:subClassOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#AbstractRegion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#UnstructuredPureStuff -->
+
+    <owl:Class rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#UnstructuredPureStuff">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#PureStuff"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasGranuleType"/>
+                        <owl:allValuesFrom rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Atom"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasGranuleType"/>
+                        <owl:onClass rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Atom"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#PureStuff"/>
+        <rdfs:comment>synonym: Element</rdfs:comment>
+        <rdfs:comment xml:lang="en">Stuff that consists of the same kind of atoms.
+Examples: an amount of helium, an amount of gold
+Realistically, there may well be undetectable impurities, and so on, but we don&apos;t care about that here</rdfs:comment>
+        <rdfs:comment xml:lang="en">this definition is actually meant as &apos;has basis type exactly *one type of* atom&apos;, not just one single individual atom.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#Water -->
+
+    <owl:Class rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Water">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#PureStuff"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasSubStuff"/>
+                        <owl:allValuesFrom rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#PureStuff"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasGranuleType"/>
+                        <owl:onClass>
+                            <owl:Class>
+                                <owl:oneOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#H2O"/>
+                                </owl:oneOf>
+                            </owl:Class>
+                        </owl:onClass>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#TestingStuffInferences"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#WrongWaterSolution -->
+
+    <owl:Class rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#WrongWaterSolution">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#HomogeneousMixture"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasSubStuff"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#SoybeanBulk"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty>
+                                            <rdf:Description>
+                                                <owl:inverseOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#srInheresIn"/>
+                                            </rdf:Description>
+                                        </owl:onProperty>
+                                        <owl:someValuesFrom rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Solute"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasSubStuff"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Water"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty>
+                                            <rdf:Description>
+                                                <owl:inverseOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#srInheresIn"/>
+                                            </rdf:Description>
+                                        </owl:onProperty>
+                                        <owl:someValuesFrom rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Solvent"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#hasNrOfPhase"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="&xsd;integer">1</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#TestingStuffInferences"/>
+        <rdfs:comment>This one is just to test to be sure that soyabeans in water are not a solution. it isn&apos;t because soybean is an MMP. it shouldn&apos;t be classified as a homogeneous mixture either</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#Au -->
+
+    <owl:NamedIndividual rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Au">
+        <rdf:type rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Atom"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#C12H22O11 -->
+
+    <owl:NamedIndividual rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#C12H22O11">
+        <rdf:type rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Molecule"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#H2O -->
+
+    <owl:NamedIndividual rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#H2O">
+        <rdf:type rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#Molecule"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.meteck.org/files/ontologies/stuff.owl#soybean -->
+
+    <owl:NamedIndividual rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#soybean">
+        <rdf:type rdf:resource="http://www.meteck.org/files/ontologies/stuff.owl#MultiMoleculeParticle"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Atom"/>
+            <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Ion"/>
+            <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Molecule"/>
+            <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#MultiMoleculeParticle"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#AssociationalColloid"/>
+            <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#DispersionColloid"/>
+            <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#MolecularColloid"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Gas"/>
+            <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Liquid"/>
+            <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Solid"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Abstract"/>
+            <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Endurant"/>
+            <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Perdurant"/>
+            <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Quality"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Emulsion"/>
+            <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Foam"/>
+            <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Gel"/>
+            <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#LiquidAerosol"/>
+            <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#Sol"/>
+            <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#SolidAerosol"/>
+            <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#SolidFoam"/>
+            <rdf:Description rdf:about="http://www.meteck.org/files/ontologies/stuff.owl#SolidSol"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+

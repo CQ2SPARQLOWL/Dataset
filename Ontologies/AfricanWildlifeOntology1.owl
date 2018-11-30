@@ -1,0 +1,595 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY owl2 "http://www.w3.org/2006/12/owl2#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY AfricanWildlifeOntology1 "http://www.meteck.org/teaching/ontologies/AfricanWildlifeOntology1.owl#" >
+]>
+
+
+<rdf:RDF xmlns="xml:base#"
+     xml:base="xml:base"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2="http://www.w3.org/2006/12/owl2#"
+     xmlns:AfricanWildlifeOntology1="http://www.meteck.org/teaching/ontologies/AfricanWildlifeOntology1.owl#">
+    <owl:Ontology rdf:about="http://www.meteck.org/teaching/ontologies/AfricanWildlifeOntology1.owl">
+        <rdfs:comment>AfricanWildlifeOntology0.owl was then modified by Maria Keet (classes and object properties added, more comments added, updated the uri etc) and renamed into AfricanWildlifeOntology1.owl. 
+This is still an ontology just for tutorial purposes, so take it with a grain of salt</rdfs:comment>
+        <rdfs:comment>MK downloaded this file from http://www.iro.umontreal.ca/~lapalme/ift6281/OWL/AfricanWildlifeOntology.xml, changed the extension to .owl and appended the name with Web. That ontology give a load error in protege due to the use of Collection in the definition of Herbivore, so the AfricanWildlifeOntology0.owl has that piece removed.</rdfs:comment>
+        <rdfs:comment>African Wildlide Ontology, Semantic Web Primer, 4.3.1 pages 119-133</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#comment -->
+
+    <owl:AnnotationProperty rdf:about="&rdfs;comment"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.meteck.org/teaching/ontologies/AfricanWildlifeOntology1.owl#eaten-by -->
+
+    <owl:ObjectProperty rdf:about="&AfricanWildlifeOntology1;eaten-by">
+        <owl:inverseOf rdf:resource="&AfricanWildlifeOntology1;eats"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.meteck.org/teaching/ontologies/AfricanWildlifeOntology1.owl#eats -->
+
+    <owl:ObjectProperty rdf:about="&AfricanWildlifeOntology1;eats">
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&AfricanWildlifeOntology1;animal"/>
+                    <rdf:Description rdf:about="&AfricanWildlifeOntology1;plant"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&AfricanWildlifeOntology1;is-part-of"/>
+                        <owl:someValuesFrom rdf:resource="&AfricanWildlifeOntology1;animal"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&AfricanWildlifeOntology1;is-part-of"/>
+                        <owl:someValuesFrom rdf:resource="&AfricanWildlifeOntology1;plant"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.meteck.org/teaching/ontologies/AfricanWildlifeOntology1.owl#has-part -->
+
+    <owl:ObjectProperty rdf:about="&AfricanWildlifeOntology1;has-part">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <owl:inverseOf rdf:resource="&AfricanWildlifeOntology1;is-part-of"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.meteck.org/teaching/ontologies/AfricanWildlifeOntology1.owl#is-part-of -->
+
+    <owl:ObjectProperty rdf:about="&AfricanWildlifeOntology1;is-part-of">
+        <rdf:type rdf:resource="&owl;ReflexiveProperty"/>
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.meteck.org/teaching/ontologies/AfricanWildlifeOntology1.owl#is-proper-part-of -->
+
+    <owl:ObjectProperty rdf:about="&AfricanWildlifeOntology1;is-proper-part-of">
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&AfricanWildlifeOntology1;is-part-of"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.meteck.org/teaching/ontologies/AfricanWildlifeOntology1.owl#Berry -->
+
+    <owl:Class rdf:about="&AfricanWildlifeOntology1;Berry">
+        <rdfs:subClassOf rdf:resource="&AfricanWildlifeOntology1;FruitingBody"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/teaching/ontologies/AfricanWildlifeOntology1.owl#CarnivorousPlant -->
+
+    <owl:Class rdf:about="&AfricanWildlifeOntology1;CarnivorousPlant">
+        <rdfs:subClassOf rdf:resource="&AfricanWildlifeOntology1;plant"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&AfricanWildlifeOntology1;eats"/>
+                <owl:someValuesFrom rdf:resource="&AfricanWildlifeOntology1;animal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/teaching/ontologies/AfricanWildlifeOntology1.owl#Elephant -->
+
+    <owl:Class rdf:about="&AfricanWildlifeOntology1;Elephant">
+        <rdfs:subClassOf rdf:resource="&AfricanWildlifeOntology1;herbivore"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/teaching/ontologies/AfricanWildlifeOntology1.owl#FruitingBody -->
+
+    <owl:Class rdf:about="&AfricanWildlifeOntology1;FruitingBody">
+        <rdfs:subClassOf rdf:resource="&AfricanWildlifeOntology1;PlantParts"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/teaching/ontologies/AfricanWildlifeOntology1.owl#Grass -->
+
+    <owl:Class rdf:about="&AfricanWildlifeOntology1;Grass">
+        <rdfs:subClassOf rdf:resource="&AfricanWildlifeOntology1;plant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/teaching/ontologies/AfricanWildlifeOntology1.owl#Impala -->
+
+    <owl:Class rdf:about="&AfricanWildlifeOntology1;Impala">
+        <rdfs:subClassOf rdf:resource="&AfricanWildlifeOntology1;animal"/>
+        <rdfs:comment>An african antelope http://en.wikipedia.org/wiki/Impala</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/teaching/ontologies/AfricanWildlifeOntology1.owl#Omnivore -->
+
+    <owl:Class rdf:about="&AfricanWildlifeOntology1;Omnivore">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&AfricanWildlifeOntology1;eats"/>
+                        <owl:someValuesFrom rdf:resource="&AfricanWildlifeOntology1;animal"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&AfricanWildlifeOntology1;eats"/>
+                        <owl:someValuesFrom rdf:resource="&AfricanWildlifeOntology1;plant"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&AfricanWildlifeOntology1;eats"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="&AfricanWildlifeOntology1;is-part-of"/>
+                                        <owl:someValuesFrom rdf:resource="&AfricanWildlifeOntology1;animal"/>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="&AfricanWildlifeOntology1;is-part-of"/>
+                                        <owl:someValuesFrom rdf:resource="&AfricanWildlifeOntology1;plant"/>
+                                    </owl:Restriction>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&AfricanWildlifeOntology1;animal"/>
+        <owl:disjointWith rdf:resource="&AfricanWildlifeOntology1;carnivore"/>
+        <owl:disjointWith rdf:resource="&AfricanWildlifeOntology1;herbivore"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/teaching/ontologies/AfricanWildlifeOntology1.owl#Palmtree -->
+
+    <owl:Class rdf:about="&AfricanWildlifeOntology1;Palmtree">
+        <rdfs:subClassOf rdf:resource="&AfricanWildlifeOntology1;plant"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&AfricanWildlifeOntology1;has-part"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="&AfricanWildlifeOntology1;branch"/>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="&AfricanWildlifeOntology1;tree"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/teaching/ontologies/AfricanWildlifeOntology1.owl#Phloem -->
+
+    <owl:Class rdf:about="&AfricanWildlifeOntology1;Phloem">
+        <rdfs:subClassOf rdf:resource="&AfricanWildlifeOntology1;PlantParts"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&AfricanWildlifeOntology1;is-proper-part-of"/>
+                <owl:someValuesFrom rdf:resource="&AfricanWildlifeOntology1;Stem"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/teaching/ontologies/AfricanWildlifeOntology1.owl#PlantParts -->
+
+    <owl:Class rdf:about="&AfricanWildlifeOntology1;PlantParts">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&AfricanWildlifeOntology1;is-proper-part-of"/>
+                <owl:someValuesFrom rdf:resource="&AfricanWildlifeOntology1;plant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/teaching/ontologies/AfricanWildlifeOntology1.owl#RockDassie -->
+
+    <owl:Class rdf:about="&AfricanWildlifeOntology1;RockDassie">
+        <rdfs:subClassOf rdf:resource="&AfricanWildlifeOntology1;animal"/>
+        <rdfs:comment>They eat grasses and broad-leafed plants</rdfs:comment>
+        <rdfs:comment>http://en.wikipedia.org/wiki/Rock_Hyrax</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/teaching/ontologies/AfricanWildlifeOntology1.owl#Root -->
+
+    <owl:Class rdf:about="&AfricanWildlifeOntology1;Root">
+        <rdfs:subClassOf rdf:resource="&AfricanWildlifeOntology1;PlantParts"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/teaching/ontologies/AfricanWildlifeOntology1.owl#Stem -->
+
+    <owl:Class rdf:about="&AfricanWildlifeOntology1;Stem">
+        <rdfs:subClassOf rdf:resource="&AfricanWildlifeOntology1;PlantParts"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/teaching/ontologies/AfricanWildlifeOntology1.owl#Twig -->
+
+    <owl:Class rdf:about="&AfricanWildlifeOntology1;Twig">
+        <rdfs:subClassOf rdf:resource="&AfricanWildlifeOntology1;PlantParts"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/teaching/ontologies/AfricanWildlifeOntology1.owl#Warthog -->
+
+    <owl:Class rdf:about="&AfricanWildlifeOntology1;Warthog">
+        <rdfs:subClassOf rdf:resource="&AfricanWildlifeOntology1;animal"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&AfricanWildlifeOntology1;eats"/>
+                        <owl:someValuesFrom rdf:resource="&AfricanWildlifeOntology1;FruitingBody"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&AfricanWildlifeOntology1;eats"/>
+                        <owl:someValuesFrom rdf:resource="&AfricanWildlifeOntology1;Grass"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&AfricanWildlifeOntology1;eats"/>
+                        <owl:someValuesFrom rdf:resource="&AfricanWildlifeOntology1;Root"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&AfricanWildlifeOntology1;eats"/>
+                        <owl:someValuesFrom rdf:resource="&AfricanWildlifeOntology1;animal"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment>Warthogs are Omnivorous http://en.wikipedia.org/wiki/Warthog</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/teaching/ontologies/AfricanWildlifeOntology1.owl#Xylem -->
+
+    <owl:Class rdf:about="&AfricanWildlifeOntology1;Xylem">
+        <rdfs:subClassOf rdf:resource="&AfricanWildlifeOntology1;PlantParts"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&AfricanWildlifeOntology1;is-proper-part-of"/>
+                <owl:someValuesFrom rdf:resource="&AfricanWildlifeOntology1;Stem"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/teaching/ontologies/AfricanWildlifeOntology1.owl#animal -->
+
+    <owl:Class rdf:about="&AfricanWildlifeOntology1;animal">
+        <owl:disjointWith rdf:resource="&AfricanWildlifeOntology1;plant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/teaching/ontologies/AfricanWildlifeOntology1.owl#branch -->
+
+    <owl:Class rdf:about="&AfricanWildlifeOntology1;branch">
+        <rdfs:subClassOf rdf:resource="&AfricanWildlifeOntology1;PlantParts"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&AfricanWildlifeOntology1;is-part-of"/>
+                <owl:someValuesFrom rdf:resource="&AfricanWildlifeOntology1;tree"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Branches are parts of trees.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/teaching/ontologies/AfricanWildlifeOntology1.owl#carnivore -->
+
+    <owl:Class rdf:about="&AfricanWildlifeOntology1;carnivore">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&AfricanWildlifeOntology1;eats"/>
+                        <owl:allValuesFrom rdf:resource="&AfricanWildlifeOntology1;animal"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&AfricanWildlifeOntology1;eats"/>
+                        <owl:allValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&AfricanWildlifeOntology1;is-part-of"/>
+                                <owl:someValuesFrom rdf:resource="&AfricanWildlifeOntology1;animal"/>
+                            </owl:Restriction>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&AfricanWildlifeOntology1;animal"/>
+        <owl:disjointWith rdf:resource="&AfricanWildlifeOntology1;herbivore"/>
+        <rdfs:comment>Carnivores are exactly those animals that eat only animals.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/teaching/ontologies/AfricanWildlifeOntology1.owl#giraffe -->
+
+    <owl:Class rdf:about="&AfricanWildlifeOntology1;giraffe">
+        <rdfs:subClassOf rdf:resource="&AfricanWildlifeOntology1;animal"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&AfricanWildlifeOntology1;eats"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&AfricanWildlifeOntology1;Twig"/>
+                            <rdf:Description rdf:about="&AfricanWildlifeOntology1;leaf"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="&AfricanWildlifeOntology1;lion"/>
+        <rdfs:comment>Giraffes are herbivores, and they eat only leaves.</rdfs:comment>
+        <rdfs:comment>they also eat twigs</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/teaching/ontologies/AfricanWildlifeOntology1.owl#herbivore -->
+
+    <owl:Class rdf:about="&AfricanWildlifeOntology1;herbivore">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&AfricanWildlifeOntology1;eats"/>
+                        <owl:allValuesFrom rdf:resource="&AfricanWildlifeOntology1;plant"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&AfricanWildlifeOntology1;eats"/>
+                        <owl:allValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&AfricanWildlifeOntology1;is-part-of"/>
+                                <owl:someValuesFrom rdf:resource="&AfricanWildlifeOntology1;plant"/>
+                            </owl:Restriction>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&AfricanWildlifeOntology1;animal"/>
+        <rdfs:comment>Herbivores are exactly those animals that eat only plants or parts of plants </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/teaching/ontologies/AfricanWildlifeOntology1.owl#leaf -->
+
+    <owl:Class rdf:about="&AfricanWildlifeOntology1;leaf">
+        <rdfs:subClassOf rdf:resource="&AfricanWildlifeOntology1;PlantParts"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&AfricanWildlifeOntology1;is-part-of"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&AfricanWildlifeOntology1;Twig"/>
+                            <rdf:Description rdf:about="&AfricanWildlifeOntology1;branch"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Leaves are parts of branches.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/teaching/ontologies/AfricanWildlifeOntology1.owl#lion -->
+
+    <owl:Class rdf:about="&AfricanWildlifeOntology1;lion">
+        <rdfs:subClassOf rdf:resource="&AfricanWildlifeOntology1;animal"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&AfricanWildlifeOntology1;eats"/>
+                <owl:allValuesFrom rdf:resource="&AfricanWildlifeOntology1;herbivore"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&AfricanWildlifeOntology1;eats"/>
+                <owl:someValuesFrom rdf:resource="&AfricanWildlifeOntology1;Impala"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Lions are animals that eat only herbivores.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/teaching/ontologies/AfricanWildlifeOntology1.owl#plant -->
+
+    <owl:Class rdf:about="&AfricanWildlifeOntology1;plant">
+        <rdfs:comment>Plants are disjoint from animals.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/teaching/ontologies/AfricanWildlifeOntology1.owl#tasty-plant -->
+
+    <owl:Class rdf:about="&AfricanWildlifeOntology1;tasty-plant">
+        <rdfs:subClassOf rdf:resource="&AfricanWildlifeOntology1;plant"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&AfricanWildlifeOntology1;eaten-by"/>
+                        <owl:someValuesFrom rdf:resource="&AfricanWildlifeOntology1;carnivore"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&AfricanWildlifeOntology1;eaten-by"/>
+                        <owl:someValuesFrom rdf:resource="&AfricanWildlifeOntology1;herbivore"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment>Plants eaten both by herbivores and carnivores</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.meteck.org/teaching/ontologies/AfricanWildlifeOntology1.owl#tree -->
+
+    <owl:Class rdf:about="&AfricanWildlifeOntology1;tree">
+        <rdfs:subClassOf rdf:resource="&AfricanWildlifeOntology1;plant"/>
+        <rdfs:comment>Trees are a type of plant.</rdfs:comment>
+        <rdfs:comment>&apos;plant&apos; is here a shorthand for plant kingdom</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="&owl;Thing"/>
+    
+
+
+    <!-- xml:base#Apple -->
+
+    <owl:Class rdf:about="xml:base#Apple">
+        <rdfs:subClassOf rdf:resource="&AfricanWildlifeOntology1;FruitingBody"/>
+    </owl:Class>
+    
+
+
+    <!-- xml:base#Distribution -->
+
+    <owl:Class rdf:about="xml:base#Distribution"/>
+    
+
+
+    <!-- xml:base#Habitat -->
+
+    <owl:Class rdf:about="xml:base#Habitat"/>
+    
+
+
+    <!-- xml:base#Parsnip -->
+
+    <owl:Class rdf:about="xml:base#Parsnip">
+        <rdfs:subClassOf rdf:resource="&AfricanWildlifeOntology1;Root"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&AfricanWildlifeOntology1;Twig"/>
+            <rdf:Description rdf:about="&AfricanWildlifeOntology1;branch"/>
+            <rdf:Description rdf:about="&AfricanWildlifeOntology1;leaf"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+
