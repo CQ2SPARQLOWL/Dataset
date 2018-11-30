@@ -1,0 +1,100 @@
+{
+    "owl:AllDifferent": [], 
+    "owl:AnnotationProperty": [], 
+    "owl:Class": [], 
+    "owl:DataRange": [], 
+    "owl:DatatypeProperty": [], 
+    "owl:DeprecatedClass": [], 
+    "owl:DeprecatedProperty": [], 
+    "owl:FunctionalProperty": [], 
+    "owl:InverseFunctionalProperty": [], 
+    "owl:Nothing": [
+        "SWO", 
+        "AWO", 
+        "Dem@Care"
+    ], 
+    "owl:ObjectProperty": [], 
+    "owl:Ontology": [], 
+    "owl:OntologyProperty": [], 
+    "owl:Restriction": [
+        "SWO", 
+        "Stuff", 
+        "AWO", 
+        "Dem@Care", 
+        "OntoDT"
+    ], 
+    "owl:SymmetricProperty": [], 
+    "owl:Thing": [], 
+    "owl:TransitiveProperty": [], 
+    "owl:allValuesFrom": [
+        "Dem@Care"
+    ], 
+    "owl:backwardCompatibleWith": [], 
+    "owl:cardinality": [
+        "Stuff"
+    ], 
+    "owl:complementOf": [], 
+    "owl:differentFrom": [], 
+    "owl:disjointWith": [
+        "Stuff", 
+        "AWO"
+    ], 
+    "owl:distinctMembers": [], 
+    "owl:equivalentClass": [], 
+    "owl:equivalentProperty": [], 
+    "owl:hasValue": [
+        "SWO"
+    ], 
+    "owl:imports": [], 
+    "owl:incompatibleWith": [], 
+    "owl:intersectionOf": [
+        "SWO"
+    ], 
+    "owl:inverseOf": [], 
+    "owl:maxCardinality": [], 
+    "owl:minCardinality": [], 
+    "owl:onProperty": [
+        "SWO", 
+        "Stuff", 
+        "AWO", 
+        "Dem@Care", 
+        "OntoDT"
+    ], 
+    "owl:oneOf": [], 
+    "owl:priorVersion": [], 
+    "owl:sameAs": [], 
+    "owl:someValuesFrom": [
+        "SWO", 
+        "Stuff", 
+        "AWO", 
+        "Dem@Care", 
+        "OntoDT"
+    ], 
+    "owl:unionOf": [
+        "SWO", 
+        "AWO", 
+        "Dem@Care"
+    ], 
+    "owl:versionInfo": [], 
+    "rdf:List": [], 
+    "rdf:nil": [], 
+    "rdf:type": [
+        "SWO", 
+        "Dem@Care", 
+        "OntoDT"
+    ], 
+    "rdfs:Datatype": [], 
+    "rdfs:Literal": [], 
+    "rdfs:comment": [], 
+    "rdfs:domain": [], 
+    "rdfs:label": [], 
+    "rdfs:range": [], 
+    "rdfs:subClassOf": [
+        "SWO", 
+        "Stuff", 
+        "AWO", 
+        "Dem@Care", 
+        "OntoDT"
+    ], 
+    "rdfs:subPropertyOf": []
+}

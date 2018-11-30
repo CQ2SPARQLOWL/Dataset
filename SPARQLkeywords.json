@@ -1,0 +1,94 @@
+{
+    "ASK": [
+        "SWO", 
+        "Stuff", 
+        "AWO", 
+        "Dem@Care", 
+        "OntoDT"
+    ], 
+    "BASE": [], 
+    "BIND": [
+        "SWO"
+    ], 
+    "BOUND": [], 
+    "CONSTRUCT": [], 
+    "DATATYPE": [], 
+    "DESCRIBE": [], 
+    "DISTINCT": [
+        "SWO", 
+        "Stuff", 
+        "AWO", 
+        "Dem@Care"
+    ], 
+    "FALSE": [], 
+    "FILTER": [
+        "SWO", 
+        "Stuff", 
+        "AWO", 
+        "Dem@Care"
+    ], 
+    "FROM": [
+        "SWO", 
+        "Stuff", 
+        "AWO", 
+        "Dem@Care", 
+        "OntoDT"
+    ], 
+    "FROM NAMED": [], 
+    "GRAPH": [], 
+    "LANG": [], 
+    "LANGMATCHES": [], 
+    "LIMIT": [], 
+    "NOT EXISTS": [
+        "SWO", 
+        "Stuff", 
+        "AWO", 
+        "Dem@Care"
+    ], 
+    "OFFSET": [], 
+    "OPTIONAL": [], 
+    "ORDER BY": [], 
+    "PREFIX": [
+        "SWO", 
+        "Stuff", 
+        "AWO", 
+        "Dem@Care", 
+        "OntoDT"
+    ], 
+    "REDUCED": [], 
+    "REGEX": [], 
+    "SELECT": [
+        "SWO", 
+        "Stuff", 
+        "AWO", 
+        "Dem@Care", 
+        "OntoDT"
+    ], 
+    "STR": [], 
+    "STRSTARTS": [
+        "SWO"
+    ], 
+    "TRUE": [], 
+    "UNION": [
+        "SWO", 
+        "Dem@Care"
+    ], 
+    "WHERE": [
+        "SWO", 
+        "Stuff", 
+        "AWO", 
+        "Dem@Care", 
+        "OntoDT"
+    ], 
+    "a": [
+        "SWO", 
+        "AWO", 
+        "Dem@Care"
+    ], 
+    "isIRI": [], 
+    "isLITERAL": [], 
+    "isURI": [
+        "SWO"
+    ], 
+    "sameTERM": []
+}
