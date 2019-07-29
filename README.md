@@ -12,11 +12,11 @@ JSON files representing mapping between CQ patterns and SPARQL-OWL signatures.
 In case of pattern to SPARQL-OWL signature mapping, there are empty mappings, because some patterns don’t have SPARQL-OWL translations defined.
 In case of SPARQL-OWL signature to pattern mapping, there are empty mappings, because some SPARQL-OWL signatures map to CQs that don’t form a pattern (don’t utilize placeholders and are unique in their surface form).
 * [linguistic_patterns.txt](Analysis/linguistic_patterns.txt), 
-[linguistic_higher_level_patterns.txt](linguistic_higher_level_patterns.txt): 
+[linguistic_higher_level_patterns.txt](Analysis/linguistic_higher_level_patterns.txt): 
 linguistic pattern lists
 * [signatures.json](Analysis/signatures.json): a list of signatures calculated.
-* [OWLkeywords.json](Analysis/owlkeywords.json): a list of OWL keywords with listed ontologies against which CQ translation contain given keyword.
-* [SPARQLkeywords.json](Analysis/sparqlkeywords.json): a list of SPARQL keywords with listed ontologies against which CQ translation contain given keyword.
+* [OWLkeywords.json](Analysis/OWLkeywords.json): a list of OWL keywords with listed ontologies against which CQ translation contain given keyword.
+* [SPARQLkeywords.json](Analysis/SPARQLkeywords.json): a list of SPARQL keywords with listed ontologies against which CQ translation contain given keyword.
 * [Pattern extractor/Entity and Predicate chunk extractor](Analysis/pattern_extractor.py): an implementation of pattern extracting algorithm written in python.
 
 The competency questions were obtained from the following sources:
