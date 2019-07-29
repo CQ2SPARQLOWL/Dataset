@@ -7,7 +7,7 @@ ID,CQ
 swo01,What is the algorithm used to process [this data]?
 swo02,What are the alternatives to [this software]?
 swo03,What other alternatives to [this software] are there?
-swo04,Which of the named and published “algorithms” does [this tool] use?
+swo04,Which of the named and published "algorithms" does [this tool] use?
 swo05,Are there any modification to [the algorithm] [the tool] uses?
 swo06,Does [this software] provide XML editing?
 swo07,What type of software is [it]?
@@ -76,7 +76,7 @@ swo69,Are there any usage examples for [it]?
 swo70,Is there any documentation for [it] and where can I find it?
 swo71,Does [it] have a tutorial?
 swo72,Where is the documentation of [it]?
-swo73,Where’s the documentation of [it]?
+swo73,Where's the documentation of [it]?
 swo74,How well documented is [the software] for developers?
 swo75,How do I cite [the software]?
 swo76,Is there a publication with [it]?
@@ -257,7 +257,7 @@ DemCare_CQ_107,What are the possible types processing components?
 ,
 Ontology name:,OntoDT
 URI: ,http://ontodm.com/ontodt/OntoDT.owl
-Publication:,"P.Panov, L.N.Soldatova, S.Dzeroski,Generic ontology of datatypes, Inf. Sci. 329 (C) (2016) 900–920. doi:10.1016/j.ins.2015.08.006. URL https://doi.org/10.1016/j.ins.2015.08.006"
+Publication:,"P.Panov, L.N.Soldatova, S.Dzeroski,Generic ontology of datatypes, Inf. Sci. 329 (C) (2016) 900 920. doi:10.1016/j.ins.2015.08.006. URL https://doi.org/10.1016/j.ins.2015.08.006"
 CQs URI:,http://www.ontodm.com/doku.php?id=ontodt
 Comments,dematerialised components highlighted
 ID,CQ
