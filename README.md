@@ -1,7 +1,9 @@
 A benchmark of schema-level Competency Questions and corresponding SPARQL-OWL patterns. 
 The details are described in the paper: 
 Dawid Wisniewski, Jedrzej Potoniec, Agnieszka Lawrynowicz, C. Maria Keet  
-_Competency Questions and SPARQL-OWL Queries Dataset and Analysis_, available on [https://arxiv.org/abs/1811.09529](https://arxiv.org/abs/1811.09529).
+_Competency Questions and SPARQL-OWL Queries Dataset and Analysis_, available on [https://arxiv.org/abs/1811.09529](https://arxiv.org/abs/1811.09529). 
+* To cite the analysis: Wisniewski, D., Potoniec, J., Lawrynowicz, A., Keet, C.M. [Analysis of Ontology Competency Questions and their Formalisations in SPARQL-OWL](https://doi.org/10.1016/j.websem.2019.100534). Journal of Web Semantics, 2019, 59:100534
+* To cite the dataset: Potoniec, J., Wisniewski, D., Lawrynowicz, A., Keet, C.M. [Dataset of Ontology Competency Questions to SPARQL-OWL Queries Translations](https://doi.org/10.1016/j.dib.2019.105098). Data in Brief, 2020, 29: 105098.
 
 Description of files:
 * [signature_to_patterns.json](Analysis/signature_to_patterns.json), 
