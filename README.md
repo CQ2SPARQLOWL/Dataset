@@ -1,4 +1,4 @@
-*CQ2SPARQLOWL Dataset*
+**CQ2SPARQLOWL Dataset**
 
 A benchmark of schema-level Competency Questions and corresponding SPARQL-OWL patterns. 
 The details are described in the paper: 
